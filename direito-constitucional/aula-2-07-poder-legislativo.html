@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2.7 Poder Legislativo | Direito Constitucional, EPPGG Bahia 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--ink:#131C33;--ink-2:#4B5772;--line:#D8DEEA;--line-2:#AEB8CE;
+  --acc:#2346C7;--acc-soft:#E4EAFC;--ok:#0B7A64;--ok-soft:#DBF1EB;--err:#B3261E;--err-soft:#FBE4E2;
+  --done:#E8A008;--done-soft:#FCEFCF;--done-ink:#7A5200;
+  --r1:#2346C7;--r2:#0B7A64;--r3:#A85A00;--r4:#B4236B;--r5:#6D3FC9;--r6:#0E7490;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3,p,ul,ol{margin:0}
+button{font:inherit;color:inherit}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:6px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+.aulas{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;padding-top:1.5rem;font-family:var(--display);font-size:.875rem}
+.aulas span{margin-right:.5rem;color:var(--ink-2)}
+.aulas a{padding:.2rem .55rem;border-radius:8px;color:var(--ink-2);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.aulas a:hover{background:var(--surface);color:var(--ink)}
+.aulas a[aria-current]{background:var(--acc);color:var(--surface)}
+
+.topo{padding-top:2.75rem;padding-bottom:2rem}
+.topo .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,11vw,6.5rem);line-height:.85;letter-spacing:-.045em;color:var(--acc)}
+h1{margin-top:1rem;font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.04;letter-spacing:-.03em;max-width:20ch}
+.lede{margin-top:1rem;max-width:58ch;font-size:1.1875rem;color:var(--ink-2)}
+.saltos{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;font-family:var(--display);font-size:.9375rem}
+.saltos a{padding:.4rem .9rem;border:1.5px solid var(--line-2);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.saltos a:hover{border-color:var(--acc);color:var(--acc)}
+
+.folha{background:var(--surface);border-radius:22px;padding:2rem;margin-bottom:1rem;scroll-margin-top:1rem}
+.folha>h2{font-family:var(--display);font-weight:800;font-size:1.75rem;line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+.prosa h3{margin:2rem 0 .5rem;font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:var(--acc)}
+.prosa>h3:first-of-type{margin-top:.5rem}
+.prosa p{max-width:68ch}
+.prosa p + p,.prosa ul + p,.prosa .rolagem + p{margin-top:.8rem}
+.prosa ul{margin:.6rem 0;padding-left:1.25rem;max-width:68ch}
+.prosa li{margin:.35rem 0}
+.prosa li::marker{color:var(--acc)}
+.nota{margin:1rem 0;padding:.8rem 1rem;border-left:4px solid var(--done);border-radius:0 12px 12px 0;background:var(--done-soft);font-family:var(--display);font-size:.9375rem;line-height:1.5}
+.rolagem{overflow-x:auto;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.9375rem;line-height:1.4}
+th,td{padding:.6rem .75rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--acc-soft);color:var(--acc);font-weight:700;border-bottom:0}
+thead th:first-child{border-radius:10px 0 0 10px}
+thead th:last-child{border-radius:0 10px 10px 0}
+tbody td:first-child{font-weight:600}
+
+.caem{display:grid;gap:.6rem}
+.caem li{list-style:none;padding:.75rem 1rem .75rem 2.75rem;border-radius:14px;background:var(--done-soft);font-family:var(--display);font-size:.9688rem;line-height:1.45;position:relative}
+.caem li::before{content:"!";position:absolute;left:.9rem;top:.75rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--done);color:#131C33;font-weight:800;font-size:.85rem;line-height:1.3rem;text-align:center}
+
+.mm-rolagem{overflow-x:auto;padding-bottom:.5rem}
+.mm{display:flex;align-items:center;min-width:46rem}
+.mm ul{padding:0;list-style:none}
+.mm-raiz{position:relative;flex:none;max-width:10.5rem;padding:1.1rem;border-radius:20px;background:var(--ink);color:var(--surface);font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1;text-align:center}
+.mm-raiz::after{content:"";position:absolute;left:100%;top:50%;width:1.5rem;border-top:2px solid var(--line-2)}
+.mm-ramos{flex:1;margin-left:1.5rem}
+.mm-ramos>li{position:relative;display:flex;align-items:center;padding:.55rem 0 .55rem 1.75rem}
+.mm-ramos>li::before{content:"";position:absolute;left:0;top:50%;width:1.75rem;border-top:2px solid var(--h)}
+.mm-ramos>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--line-2)}
+.mm-ramos>li:first-child::after{top:50%}
+.mm-ramos>li:last-child::after{bottom:50%}
+.mm-ramo{position:relative;flex:none;width:10.5rem;padding:.55rem .8rem;border-radius:12px;background:var(--h);color:var(--surface);font-family:var(--display);font-weight:700;font-size:.9375rem;line-height:1.2}
+.mm-ramo::after{content:"";position:absolute;left:100%;top:50%;width:1.25rem;border-top:2px solid var(--h)}
+.mm-folhas{margin-left:1.25rem}
+.mm-folhas>li{position:relative;padding:.2rem 0 .2rem 1.1rem;font-family:var(--display);font-size:.875rem;line-height:1.3}
+.mm-folhas>li::before{content:"";position:absolute;left:0;top:50%;width:.85rem;border-top:2px solid var(--h)}
+.mm-folhas>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--h)}
+.mm-folhas>li:first-child::after{top:50%}
+.mm-folhas>li:last-child::after{bottom:50%}
+.mm-folhas span{display:inline-block;padding:.2rem .6rem;border-radius:8px;background:color-mix(in srgb,var(--h) 13%,var(--surface))}
+
+.aviso{max-width:66ch;margin-bottom:1.25rem;color:var(--ink-2);font-size:.9688rem}
+.qs{padding:0;list-style:none;counter-reset:q}
+.q{counter-increment:q;padding:1.5rem 0;border-top:1px solid var(--line)}
+.enun{max-width:68ch}
+.enun::before{content:"Questão " counter(q);display:block;margin-bottom:.35rem;font-family:var(--display);font-weight:800;font-size:.9375rem;color:var(--acc)}
+.alts{display:grid;gap:.4rem;margin-top:.9rem}
+.alt{display:grid;grid-template-columns:1.9rem minmax(0,1fr);gap:.6rem;align-items:start;width:100%;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:transparent;text-align:left;cursor:pointer;font-family:var(--text);font-size:1rem;line-height:1.5}
+.alt b{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg);font-family:var(--display);font-weight:800;font-size:.875rem}
+.alt:hover:not(:disabled){border-color:var(--acc)}
+.alt:disabled{cursor:default;color:var(--ink)}
+.alt.certa{border-color:var(--ok);background:var(--ok-soft)}
+.alt.certa b{background:var(--ok);color:var(--surface)}
+.alt.errada{border-color:var(--err);background:var(--err-soft)}
+.alt.errada b{background:var(--err);color:var(--surface)}
+.com{margin-top:.9rem;padding:.9rem 1rem;border-radius:12px;background:var(--bg);max-width:68ch;font-size:.9688rem}
+.com strong{display:block;font-family:var(--display);font-weight:800}
+.com strong.acertou{color:var(--ok)}
+.com strong.errou{color:var(--err)}
+.placar{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-top:1.25rem;border-top:1px solid var(--line);font-family:var(--display)}
+.placar button{padding:.5rem 1rem;border:1.5px solid var(--line-2);border-radius:10px;background:transparent;font-weight:600;cursor:pointer}
+.placar button:hover{border-color:var(--acc);color:var(--acc)}
+
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:.5rem;padding-bottom:3rem;font-family:var(--display)}
+.pager a{display:block;padding:1rem 1.25rem;border-radius:16px;background:var(--surface);color:var(--ink);text-decoration:none;line-height:1.3}
+.pager a small{display:block;margin-bottom:.2rem;font-size:.8125rem;color:var(--ink-2)}
+.pager a strong{font-weight:700}
+.pager a:hover strong{color:var(--acc)}
+.pager .prox{grid-column:2;text-align:right}
+
+@media (max-width:720px){
+  .wrap{padding:0 1rem}
+  .topo{padding-top:2rem;padding-bottom:1.5rem}
+  .folha{padding:1.25rem 1rem;border-radius:16px}
+  .mm{display:block;min-width:0}
+  .mm-raiz{max-width:none}
+  .mm-raiz::after{display:none}
+  .mm-ramos{margin:0 0 0 1rem}
+  .mm-ramos>li{display:block;padding:.75rem 0 .25rem 1.25rem}
+  .mm-ramos>li::before{top:1.75rem;width:1.25rem}
+  .mm-ramos>li:first-child::after{top:0}
+  .mm-ramos>li:last-child::after{bottom:auto;height:1.75rem}
+  .mm-ramo{display:inline-block;width:auto}
+  .mm-ramo::after{display:none}
+  .mm-folhas{margin:.5rem 0 0 .75rem}
+  .pager{grid-template-columns:1fr}
+  .pager .prox{grid-column:1;text-align:left}
+}
+</style>
+</head>
+<body>
+<nav class="aulas wrap" aria-label="Aulas de Direito Constitucional"><span>Direito Constitucional</span><a href="aula-2-01-constituicao-federal.html" title="Constituição da República Federativa do Brasil">2.1</a><a href="aula-2-02-principios-fundamentais-e-eficacia.html" title="Princípios fundamentais e aplicabilidade das normas constitucionais">2.2</a><a href="aula-2-03-direitos-e-garantias-fundamentais.html" title="Direitos e garantias fundamentais">2.3</a><a href="aula-2-04-organizacao-politico-administrativa.html" title="Organização político-administrativa do Estado">2.4</a><a href="aula-2-05-administracao-publica-e-servidores.html" title="Administração Pública: disposições gerais e servidores públicos">2.5</a><a href="aula-2-06-poder-executivo.html" title="Poder Executivo: atribuições e responsabilidades do presidente da República">2.6</a><a href="aula-2-07-poder-legislativo.html" aria-current="page" title="Poder Legislativo">2.7</a><a href="aula-2-08-poder-judiciario-e-funcoes-essenciais.html" title="Poder Judiciário e funções essenciais à justiça">2.8</a><a href="aula-2-09-defesa-do-estado-e-seguranca-publica.html" title="Defesa do Estado e das instituições democráticas. Segurança pública">2.9</a><a href="aula-2-10-ordem-economica-e-financeira.html" title="Ordem econômica e financeira">2.10</a><a href="aula-2-11-ordem-social.html" title="Ordem social">2.11</a><a href="aula-2-12-constituicao-do-estado-da-bahia.html" title="Constituição do Estado da Bahia">2.12</a></nav>
+<header class="topo wrap">
+  <span class="num">2.7</span>
+  <h1>Poder Legislativo</h1>
+  <p class="lede">Estrutura do Congresso, atribuições de cada Casa, processo legislativo, fiscalização com o Tribunal de Contas e comissões parlamentares de inquérito.</p>
+  <nav class="saltos" aria-label="Partes da aula">
+    <a href="#explicacao">Explicação</a><a href="#caem">O que mais cai</a><a href="#mapa">Mapa mental</a><a href="#questoes">Questões</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="folha prosa" id="explicacao"><h2>Explicação</h2>
+<h3>Estrutura e funcionamento</h3>
+<p>Na esfera federal, o Legislativo é bicameral: o Congresso Nacional compõe-se da Câmara dos Deputados e do Senado Federal. Nos estados e municípios é unicameral (assembleia legislativa e câmara municipal).</p>
+<div class="rolagem"><table>
+<thead><tr><th></th><th>Câmara dos Deputados</th><th>Senado Federal</th></tr></thead>
+<tbody>
+<tr><td>Representa</td><td>O povo</td><td>Os estados e o Distrito Federal</td></tr>
+<tr><td>Sistema eleitoral</td><td>Proporcional</td><td>Majoritário</td></tr>
+<tr><td>Mandato</td><td>4 anos</td><td>8 anos, com renovação de um terço e dois terços a cada 4 anos</td></tr>
+<tr><td>Composição</td><td>Mínimo de 8 e máximo de 70 deputados por estado</td><td>3 senadores por unidade, cada um com 2 suplentes</td></tr>
+</tbody></table></div>
+<p>A legislatura dura quatro anos. A sessão legislativa anual vai de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro, e não se interrompe sem a aprovação do projeto de lei de diretrizes orçamentárias. Salvo regra em contrário, as deliberações são tomadas por maioria dos votos, presente a maioria absoluta dos membros (art. 47).</p>
+
+<h3>Atribuições</h3>
+<ul>
+<li><strong>Congresso, com sanção do presidente (art. 48):</strong> as matérias de competência da União em geral, como tributos, orçamento e criação de cargos.</li>
+<li><strong>Congresso, competência exclusiva, sem sanção (art. 49):</strong> resolver definitivamente sobre tratados; autorizar o presidente a declarar guerra e a se ausentar do país por mais de quinze dias; aprovar o estado de defesa e a intervenção federal e autorizar o estado de sítio; sustar atos normativos do Executivo que exorbitem do poder regulamentar; julgar anualmente as contas do presidente; autorizar referendo e convocar plebiscito.</li>
+<li><strong>Câmara (art. 51):</strong> autorizar, por dois terços, a instauração de processo contra o presidente, o vice e os ministros de Estado; tomar as contas do presidente quando não apresentadas em sessenta dias.</li>
+<li><strong>Senado (art. 52):</strong> processar e julgar o presidente e o vice nos crimes de responsabilidade, bem como ministros do STF, o procurador-geral da República e o advogado-geral da União; aprovar a escolha de autoridades; autorizar operações externas de natureza financeira; fixar limites da dívida; suspender a execução de lei declarada inconstitucional por decisão definitiva do STF.</li>
+</ul>
+
+<h3>Estatuto dos parlamentares</h3>
+<p>Deputados e senadores são invioláveis, civil e penalmente, por suas opiniões, palavras e votos (imunidade material). Desde a expedição do diploma, são julgados pelo STF e só podem ser presos em flagrante de crime inafiançável, caso em que os autos seguem em vinte e quatro horas à Casa, que decide sobre a prisão pelo voto da maioria de seus membros (imunidade formal).</p>
+
+<h3>Processo legislativo</h3>
+<p>O art. 59 lista as espécies normativas: emendas à Constituição, leis complementares, leis ordinárias, leis delegadas, medidas provisórias, decretos legislativos e resoluções.</p>
+<ul>
+<li><strong>Iniciativa (art. 61).</strong> Qualquer deputado, senador ou comissão; o presidente da República; o STF; os tribunais superiores; o procurador-geral da República; e os cidadãos.</li>
+<li><strong>Iniciativa privativa do presidente.</strong> Leis que fixem ou modifiquem os efetivos das Forças Armadas, criem cargos ou aumentem a remuneração na administração direta e autárquica, tratem do regime jurídico dos servidores ou criem e extingam ministérios e órgãos.</li>
+<li><strong>Iniciativa popular.</strong> Projeto subscrito por, no mínimo, um por cento do eleitorado nacional, distribuído por pelo menos cinco estados, com não menos de três décimos por cento dos eleitores de cada um. É apresentado à Câmara dos Deputados.</li>
+<li><strong>Tramitação.</strong> O projeto aprovado em uma Casa é revisto pela outra. Se a revisora emendar, volta à iniciadora.</li>
+<li><strong>Sanção e veto (art. 66).</strong> O presidente tem quinze dias úteis para sancionar ou vetar; o silêncio importa sanção. O veto pode ser total ou parcial, mas o parcial deve abranger o texto integral de artigo, parágrafo, inciso ou alínea. O Congresso aprecia o veto em sessão conjunta, em trinta dias, e pode rejeitá-lo pelo voto da maioria absoluta dos deputados e senadores.</li>
+<li><strong>Lei complementar.</strong> Exige maioria absoluta e só cabe quando a Constituição a pede expressamente.</li>
+</ul>
+
+<h3>Medida provisória (art. 62)</h3>
+<p>Em caso de relevância e urgência, o presidente pode adotar medida provisória, com força de lei, submetendo-a de imediato ao Congresso. Ela vale por sessenta dias, prorrogáveis uma vez por igual período. Se não for apreciada em quarenta e cinco dias, tranca a pauta da Casa em que estiver.</p>
+<p>É vedada medida provisória sobre: nacionalidade, cidadania, direitos políticos, partidos políticos e direito eleitoral; direito penal, processual penal e processual civil; organização do Judiciário e do Ministério Público; planos plurianuais, diretrizes orçamentárias e orçamento, ressalvada a abertura de crédito extraordinário; detenção ou sequestro de bens e de poupança; matéria reservada a lei complementar; e matéria já aprovada pelo Congresso e pendente de sanção ou veto.</p>
+
+<h3>Fiscalização contábil, financeira e orçamentária (arts. 70 a 75)</h3>
+<p>A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União é exercida pelo Congresso Nacional, mediante controle externo, e pelo sistema de controle interno de cada Poder. Os critérios são legalidade, legitimidade e economicidade.</p>
+<p>O controle externo é do Congresso, com o auxílio do Tribunal de Contas da União. O TCU não é subordinado ao Congresso nem integra o Judiciário. Suas principais competências:</p>
+<ul>
+<li>apreciar as contas anuais do presidente, mediante parecer prévio elaborado em sessenta dias (quem julga é o Congresso);</li>
+<li>julgar as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos;</li>
+<li>apreciar, para fins de registro, a legalidade das admissões de pessoal e das concessões de aposentadorias, reformas e pensões;</li>
+<li>realizar inspeções e auditorias;</li>
+<li>aplicar sanções e fixar prazo para a correção de ilegalidades;</li>
+<li>sustar a execução de ato impugnado. No caso de contrato, a sustação cabe ao Congresso; se ele não agir em noventa dias, o Tribunal decide.</li>
+</ul>
+<p>As decisões do Tribunal que imputem débito ou multa têm eficácia de título executivo. O TCU tem nove ministros: um terço escolhido pelo presidente da República, com aprovação do Senado, e dois terços pelo Congresso. Essas regras aplicam-se, no que couber, aos tribunais de contas dos estados, compostos por sete conselheiros (art. 75).</p>
+<p>Qualquer cidadão, partido político, associação ou sindicato pode denunciar irregularidades ao Tribunal. Os responsáveis pelo controle interno que souberem de irregularidade e não a comunicarem respondem solidariamente.</p>
+
+<h3>Comissões parlamentares de inquérito (art. 58, § 3º)</h3>
+<p>A criação de uma CPI depende de três requisitos: requerimento de um terço dos membros da Casa, fato determinado e prazo certo. As CPIs têm poderes de investigação próprios das autoridades judiciais, e suas conclusões são encaminhadas ao Ministério Público, se for o caso, para a responsabilização civil ou criminal.</p>
+<div class="rolagem"><table>
+<thead><tr><th>A CPI pode</th><th>A CPI não pode</th></tr></thead>
+<tbody>
+<tr><td>Convocar testemunhas e investigados</td><td>Determinar interceptação telefônica</td></tr>
+<tr><td>Quebrar sigilo bancário, fiscal e de registros telefônicos, por decisão fundamentada</td><td>Ordenar busca e apreensão em domicílio</td></tr>
+<tr><td>Requisitar documentos e informações</td><td>Decretar prisão, salvo em flagrante</td></tr>
+<tr><td>Realizar perícias e diligências</td><td>Decretar indisponibilidade de bens e outras medidas cautelares</td></tr>
+</tbody></table></div>
+<p>O que a CPI não pode fazer está sob reserva de jurisdição: só um juiz pode determinar.</p>
+</section>
+  <section class="folha" id="caem"><h2>O que mais cai</h2><ul class="caem"><li>O Tribunal de Contas julga as contas dos administradores, mas apenas aprecia as do presidente. Quem julga as contas do presidente é o Congresso.</li><li>Veto é derrubado por maioria absoluta, em sessão conjunta. Não é por três quintos nem por dois terços.</li><li>Medida provisória não pode tratar de direito penal nem de processo civil, mas pode instituir tributo.</li><li>Quebra de sigilo de dados telefônicos (registros) é diferente de interceptação telefônica (conteúdo das conversas).</li><li>Competência exclusiva do Congresso (art. 49) dispensa sanção e é exercida por decreto legislativo.</li><li>Sustação de contrato cabe primeiro ao Congresso, não ao Tribunal de Contas.</li></ul></section>
+  <section class="folha" id="mapa"><h2>Mapa mental</h2><div class="mm-rolagem"><div class="mm"><div class="mm-raiz">Poder Legislativo</div><ul class="mm-ramos"><li style="--h:var(--r1)"><div class="mm-ramo">Estrutura</div><ul class="mm-folhas"><li><span>Câmara: povo, proporcional, 4 anos</span></li><li><span>Senado: estados, majoritário, 8 anos</span></li><li><span>Legislatura de 4 anos</span></li></ul></li><li style="--h:var(--r2)"><div class="mm-ramo">Atribuições</div><ul class="mm-folhas"><li><span>Congresso com sanção, art. 48</span></li><li><span>Exclusivas sem sanção, art. 49</span></li><li><span>Câmara: autoriza processo por 2/3</span></li><li><span>Senado: julga crime de responsabilidade</span></li></ul></li><li style="--h:var(--r3)"><div class="mm-ramo">Processo legislativo</div><ul class="mm-folhas"><li><span>Iniciativa popular: 1%, 5 estados, 0,3%</span></li><li><span>Sanção ou veto em 15 dias úteis</span></li><li><span>Veto cai por maioria absoluta</span></li><li><span>Lei complementar: maioria absoluta</span></li></ul></li><li style="--h:var(--r4)"><div class="mm-ramo">Medida provisória</div><ul class="mm-folhas"><li><span>Relevância e urgência</span></li><li><span>60 dias, prorrogável uma vez</span></li><li><span>Tranca a pauta após 45 dias</span></li><li><span>Vedada em penal, processual e eleitoral</span></li></ul></li><li style="--h:var(--r5)"><div class="mm-ramo">Fiscalização</div><ul class="mm-folhas"><li><span>Controle externo: Congresso com o TCU</span></li><li><span>Parecer prévio em 60 dias</span></li><li><span>Julga contas de administradores</span></li><li><span>TCE: 7 conselheiros</span></li></ul></li><li style="--h:var(--r6)"><div class="mm-ramo">CPI</div><ul class="mm-folhas"><li><span>1/3, fato determinado, prazo certo</span></li><li><span>Poderes de investigação judicial</span></li><li><span>Reserva de jurisdição</span></li></ul></li></ul></div></div></section>
+  <section class="folha" id="questoes"><h2>Questões</h2>
+    <p class="aviso">Questões inéditas, escritas no formato de múltipla escolha com cinco alternativas usado pela banca. Não são reproduções de provas anteriores.</p>
+    <ol class="qs"><li class="q" data-c="3"><p class="enun">O veto do Presidente da República a projeto de lei será apreciado em sessão conjunta e só poderá ser rejeitado pelo voto</p><div class="alts"><button type="button" class="alt"><b>A</b><span>da maioria simples dos Deputados e Senadores</span></button><button type="button" class="alt"><b>B</b><span>de três quintos dos Deputados e Senadores</span></button><button type="button" class="alt"><b>C</b><span>de dois terços dos membros de cada Casa</span></button><button type="button" class="alt"><b>D</b><span>da maioria absoluta dos Deputados e Senadores</span></button><button type="button" class="alt"><b>E</b><span>da maioria absoluta do Senado Federal, apenas</span></button></div><div class="com" hidden><strong></strong>Art. 66, § 4º. O veto é apreciado em trinta dias, a contar do recebimento, em sessão conjunta, e sua rejeição exige a maioria absoluta dos deputados e dos senadores.</div></li><li class="q" data-c="0"><p class="enun">As comissões parlamentares de inquérito, embora dotadas de poderes de investigação próprios das autoridades judiciais, NÃO podem</p><div class="alts"><button type="button" class="alt"><b>A</b><span>determinar a interceptação telefônica de investigado</span></button><button type="button" class="alt"><b>B</b><span>convocar testemunhas para depor</span></button><button type="button" class="alt"><b>C</b><span>requisitar documentos a órgãos públicos</span></button><button type="button" class="alt"><b>D</b><span>quebrar o sigilo bancário de investigado, por decisão fundamentada</span></button><button type="button" class="alt"><b>E</b><span>encaminhar suas conclusões ao Ministério Público</span></button></div><div class="com" hidden><strong></strong>A interceptação telefônica está sob reserva de jurisdição (art. 5º, XII): só o juiz pode determiná-la. As CPIs podem quebrar sigilos bancário, fiscal e de registros telefônicos, desde que fundamentem a decisão.</div></li><li class="q" data-c="2"><p class="enun">Em relação às contas prestadas anualmente pelo Presidente da República, compete ao Tribunal de Contas da União</p><div class="alts"><button type="button" class="alt"><b>A</b><span>julgá-las, no prazo de sessenta dias</span></button><button type="button" class="alt"><b>B</b><span>julgá-las, após parecer do Congresso Nacional</span></button><button type="button" class="alt"><b>C</b><span>apreciá-las, mediante parecer prévio que deverá ser elaborado em sessenta dias a contar de seu recebimento</span></button><button type="button" class="alt"><b>D</b><span>aprová-las ou rejeitá-las, por decisão irrecorrível</span></button><button type="button" class="alt"><b>E</b><span>encaminhá-las ao Supremo Tribunal Federal para julgamento</span></button></div><div class="com" hidden><strong></strong>Art. 71, I. O Tribunal emite parecer prévio; o julgamento das contas do presidente é competência exclusiva do Congresso Nacional (art. 49, IX). Já as contas dos demais administradores são julgadas pelo próprio Tribunal (art. 71, II).</div></li><li class="q" data-c="4"><p class="enun">É vedada a edição de medida provisória sobre matéria relativa a</p><div class="alts"><button type="button" class="alt"><b>A</b><span>direito administrativo</span></button><button type="button" class="alt"><b>B</b><span>direito do trabalho</span></button><button type="button" class="alt"><b>C</b><span>abertura de crédito extraordinário</span></button><button type="button" class="alt"><b>D</b><span>instituição de impostos</span></button><button type="button" class="alt"><b>E</b><span>direito penal</span></button></div><div class="com" hidden><strong></strong>Art. 62, § 1º, I, b. Direito penal, processual penal e processual civil não podem ser objeto de medida provisória. A abertura de crédito extraordinário é a exceção permitida em matéria orçamentária, e a instituição ou majoração de impostos é admitida, com regras próprias de vigência (§ 2º).</div></li><li class="q" data-c="1"><p class="enun">A iniciativa popular de lei, na esfera federal, é exercida pela apresentação, à Câmara dos Deputados, de projeto subscrito por, no mínimo,</p><div class="alts"><button type="button" class="alt"><b>A</b><span>meio por cento do eleitorado nacional, distribuído por três estados</span></button><button type="button" class="alt"><b>B</b><span>um por cento do eleitorado nacional, distribuído pelo menos por cinco estados, com não menos de três décimos por cento dos eleitores de cada um deles</span></button><button type="button" class="alt"><b>C</b><span>dois por cento do eleitorado nacional, distribuído por todos os estados</span></button><button type="button" class="alt"><b>D</b><span>um por cento do eleitorado nacional, distribuído por nove estados, com não menos de um por cento dos eleitores de cada um deles</span></button><button type="button" class="alt"><b>E</b><span>cinco por cento do eleitorado nacional, em qualquer distribuição</span></button></div><div class="com" hidden><strong></strong>Art. 61, § 2º. Memorize a sequência 1, 5 e 0,3: um por cento do eleitorado, cinco estados, três décimos por cento em cada um.</div></li></ol>
+    <div class="placar"><span id="placarTxt" aria-live="polite"></span><button type="button" id="refazer">Refazer questões</button></div>
+  </section>
+</main>
+<nav class="pager wrap" aria-label="Aula anterior e próxima"><a href="aula-2-06-poder-executivo.html"><small>Aula anterior</small><strong>2.6 Poder Executivo: atribuições e responsabilidades do presidente da República</strong></a><a class="prox" href="aula-2-08-poder-judiciario-e-funcoes-essenciais.html"><small>Próxima aula</small><strong>2.8 Poder Judiciário e funções essenciais à justiça</strong></a></nav>
+<script>
+(function(){
+  var L=["A","B","C","D","E"], qs=Array.prototype.slice.call(document.querySelectorAll(".q"));
+  var placar=document.getElementById("placarTxt"), feitas=0, acertos=0;
+  function atualizar(){
+    placar.textContent = feitas===0 ? "Escolha uma alternativa em cada questão para ver o gabarito comentado."
+      : (feitas<qs.length ? feitas+" de "+qs.length+" respondidas, "+acertos+" certas." : "Você acertou "+acertos+" de "+qs.length+".");
+  }
+  qs.forEach(function(q){
+    var c=Number(q.dataset.c), alts=q.querySelectorAll(".alt"), com=q.querySelector(".com"), ver=com.querySelector("strong");
+    alts.forEach(function(b,i){
+      b.addEventListener("click",function(){
+        if(q.dataset.feita) return;
+        q.dataset.feita="1"; feitas++;
+        alts.forEach(function(x){x.disabled=true});
+        alts[c].classList.add("certa");
+        if(i===c){ acertos++; ver.textContent="Certo. Gabarito: "+L[c]; ver.className="acertou"; }
+        else { b.classList.add("errada"); ver.textContent="Errado. Gabarito: "+L[c]; ver.className="errou"; }
+        com.hidden=false; atualizar();
+      });
+    });
+  });
+  document.getElementById("refazer").addEventListener("click",function(){
+    feitas=0; acertos=0;
+    qs.forEach(function(q){
+      delete q.dataset.feita; q.querySelector(".com").hidden=true;
+      q.querySelectorAll(".alt").forEach(function(x){x.disabled=false;x.classList.remove("certa","errada")});
+    });
+    atualizar(); document.getElementById("questoes").scrollIntoView();
+  });
+  atualizar();
+})();
+</script>
+</body>
+</html>

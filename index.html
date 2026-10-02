@@ -119,6 +119,8 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,6.2vw,4.75r
 .exp{margin-top:.3rem;max-width:66ch;color:var(--ink-2)}
 .leis{display:flex;flex-wrap:wrap;gap:.375rem;margin-top:.6rem}
 .leis li{padding:.15rem .6rem;border-radius:999px;background:var(--acc-soft);color:var(--acc);font-family:var(--display);font-size:.8125rem;font-weight:600}
+.aula{display:inline-block;margin-top:.75rem;padding:.35rem .9rem;border-radius:999px;background:var(--acc);color:var(--surface);font-family:var(--display);font-size:.875rem;font-weight:600;text-decoration:none}
+.aula:hover{text-decoration:underline;text-underline-offset:3px}
 .marca{position:relative;display:block;width:1.75rem;height:1.75rem;cursor:pointer}
 .marca input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
 .marca .cx{display:grid;place-items:center;width:100%;height:100%;border:2px solid var(--line-2);border-radius:8px;transition:background .15s,border-color .15s}
@@ -473,6 +475,21 @@ const D=[
   function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
   function norm(s){ return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
   function $(id){ return document.getElementById(id); }
+  var PASTA="direito-constitucional/";
+  var AULAS={
+    "2.1":"aula-2-01-constituicao-federal.html",
+    "2.2":"aula-2-02-principios-fundamentais-e-eficacia.html",
+    "2.3":"aula-2-03-direitos-e-garantias-fundamentais.html",
+    "2.4":"aula-2-04-organizacao-politico-administrativa.html",
+    "2.5":"aula-2-05-administracao-publica-e-servidores.html",
+    "2.6":"aula-2-06-poder-executivo.html",
+    "2.7":"aula-2-07-poder-legislativo.html",
+    "2.8":"aula-2-08-poder-judiciario-e-funcoes-essenciais.html",
+    "2.9":"aula-2-09-defesa-do-estado-e-seguranca-publica.html",
+    "2.10":"aula-2-10-ordem-economica-e-financeira.html",
+    "2.11":"aula-2-11-ordem-social.html",
+    "2.12":"aula-2-12-constituicao-do-estado-da-bahia.html"
+  };
   var CHECK='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>';
 
   var total=0;
@@ -499,6 +516,7 @@ const D=[
         var busca=norm([it[0],it[1],it[2],leis.join(" "),d.nome,g.t].join(" "));
         html+='<li class="item" data-num="'+it[0]+'" data-busca="'+esc(busca)+'"><span class="num">'+it[0]+'</span><div class="corpo"><div class="tit">'+esc(it[1])+'</div><p class="exp">'+esc(it[2])+'</p>'+
           (leis.length?'<ul class="leis" aria-label="Normas citadas no edital">'+leis.map(function(l){return '<li>'+esc(l)+'</li>'}).join("")+'</ul>':'')+
+          (AULAS[it[0]]?'<a class="aula" href="'+PASTA+AULAS[it[0]]+'">Abrir a aula '+it[0]+'</a>':'')+
           '</div><label class="marca"><input type="checkbox"><span class="cx">'+CHECK+'</span><span class="vh">Marcar '+it[0]+' como estudado</span></label></li>';
       });
       html+='</ul></div>';

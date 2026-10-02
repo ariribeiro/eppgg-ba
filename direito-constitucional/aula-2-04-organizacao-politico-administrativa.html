@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2.4 Organização político-administrativa do Estado | Direito Constitucional, EPPGG Bahia 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--ink:#131C33;--ink-2:#4B5772;--line:#D8DEEA;--line-2:#AEB8CE;
+  --acc:#2346C7;--acc-soft:#E4EAFC;--ok:#0B7A64;--ok-soft:#DBF1EB;--err:#B3261E;--err-soft:#FBE4E2;
+  --done:#E8A008;--done-soft:#FCEFCF;--done-ink:#7A5200;
+  --r1:#2346C7;--r2:#0B7A64;--r3:#A85A00;--r4:#B4236B;--r5:#6D3FC9;--r6:#0E7490;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3,p,ul,ol{margin:0}
+button{font:inherit;color:inherit}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:6px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+.aulas{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;padding-top:1.5rem;font-family:var(--display);font-size:.875rem}
+.aulas span{margin-right:.5rem;color:var(--ink-2)}
+.aulas a{padding:.2rem .55rem;border-radius:8px;color:var(--ink-2);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.aulas a:hover{background:var(--surface);color:var(--ink)}
+.aulas a[aria-current]{background:var(--acc);color:var(--surface)}
+
+.topo{padding-top:2.75rem;padding-bottom:2rem}
+.topo .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,11vw,6.5rem);line-height:.85;letter-spacing:-.045em;color:var(--acc)}
+h1{margin-top:1rem;font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.04;letter-spacing:-.03em;max-width:20ch}
+.lede{margin-top:1rem;max-width:58ch;font-size:1.1875rem;color:var(--ink-2)}
+.saltos{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;font-family:var(--display);font-size:.9375rem}
+.saltos a{padding:.4rem .9rem;border:1.5px solid var(--line-2);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.saltos a:hover{border-color:var(--acc);color:var(--acc)}
+
+.folha{background:var(--surface);border-radius:22px;padding:2rem;margin-bottom:1rem;scroll-margin-top:1rem}
+.folha>h2{font-family:var(--display);font-weight:800;font-size:1.75rem;line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+.prosa h3{margin:2rem 0 .5rem;font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:var(--acc)}
+.prosa>h3:first-of-type{margin-top:.5rem}
+.prosa p{max-width:68ch}
+.prosa p + p,.prosa ul + p,.prosa .rolagem + p{margin-top:.8rem}
+.prosa ul{margin:.6rem 0;padding-left:1.25rem;max-width:68ch}
+.prosa li{margin:.35rem 0}
+.prosa li::marker{color:var(--acc)}
+.nota{margin:1rem 0;padding:.8rem 1rem;border-left:4px solid var(--done);border-radius:0 12px 12px 0;background:var(--done-soft);font-family:var(--display);font-size:.9375rem;line-height:1.5}
+.rolagem{overflow-x:auto;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.9375rem;line-height:1.4}
+th,td{padding:.6rem .75rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--acc-soft);color:var(--acc);font-weight:700;border-bottom:0}
+thead th:first-child{border-radius:10px 0 0 10px}
+thead th:last-child{border-radius:0 10px 10px 0}
+tbody td:first-child{font-weight:600}
+
+.caem{display:grid;gap:.6rem}
+.caem li{list-style:none;padding:.75rem 1rem .75rem 2.75rem;border-radius:14px;background:var(--done-soft);font-family:var(--display);font-size:.9688rem;line-height:1.45;position:relative}
+.caem li::before{content:"!";position:absolute;left:.9rem;top:.75rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--done);color:#131C33;font-weight:800;font-size:.85rem;line-height:1.3rem;text-align:center}
+
+.mm-rolagem{overflow-x:auto;padding-bottom:.5rem}
+.mm{display:flex;align-items:center;min-width:46rem}
+.mm ul{padding:0;list-style:none}
+.mm-raiz{position:relative;flex:none;max-width:10.5rem;padding:1.1rem;border-radius:20px;background:var(--ink);color:var(--surface);font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1;text-align:center}
+.mm-raiz::after{content:"";position:absolute;left:100%;top:50%;width:1.5rem;border-top:2px solid var(--line-2)}
+.mm-ramos{flex:1;margin-left:1.5rem}
+.mm-ramos>li{position:relative;display:flex;align-items:center;padding:.55rem 0 .55rem 1.75rem}
+.mm-ramos>li::before{content:"";position:absolute;left:0;top:50%;width:1.75rem;border-top:2px solid var(--h)}
+.mm-ramos>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--line-2)}
+.mm-ramos>li:first-child::after{top:50%}
+.mm-ramos>li:last-child::after{bottom:50%}
+.mm-ramo{position:relative;flex:none;width:10.5rem;padding:.55rem .8rem;border-radius:12px;background:var(--h);color:var(--surface);font-family:var(--display);font-weight:700;font-size:.9375rem;line-height:1.2}
+.mm-ramo::after{content:"";position:absolute;left:100%;top:50%;width:1.25rem;border-top:2px solid var(--h)}
+.mm-folhas{margin-left:1.25rem}
+.mm-folhas>li{position:relative;padding:.2rem 0 .2rem 1.1rem;font-family:var(--display);font-size:.875rem;line-height:1.3}
+.mm-folhas>li::before{content:"";position:absolute;left:0;top:50%;width:.85rem;border-top:2px solid var(--h)}
+.mm-folhas>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--h)}
+.mm-folhas>li:first-child::after{top:50%}
+.mm-folhas>li:last-child::after{bottom:50%}
+.mm-folhas span{display:inline-block;padding:.2rem .6rem;border-radius:8px;background:color-mix(in srgb,var(--h) 13%,var(--surface))}
+
+.aviso{max-width:66ch;margin-bottom:1.25rem;color:var(--ink-2);font-size:.9688rem}
+.qs{padding:0;list-style:none;counter-reset:q}
+.q{counter-increment:q;padding:1.5rem 0;border-top:1px solid var(--line)}
+.enun{max-width:68ch}
+.enun::before{content:"Questão " counter(q);display:block;margin-bottom:.35rem;font-family:var(--display);font-weight:800;font-size:.9375rem;color:var(--acc)}
+.alts{display:grid;gap:.4rem;margin-top:.9rem}
+.alt{display:grid;grid-template-columns:1.9rem minmax(0,1fr);gap:.6rem;align-items:start;width:100%;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:transparent;text-align:left;cursor:pointer;font-family:var(--text);font-size:1rem;line-height:1.5}
+.alt b{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg);font-family:var(--display);font-weight:800;font-size:.875rem}
+.alt:hover:not(:disabled){border-color:var(--acc)}
+.alt:disabled{cursor:default;color:var(--ink)}
+.alt.certa{border-color:var(--ok);background:var(--ok-soft)}
+.alt.certa b{background:var(--ok);color:var(--surface)}
+.alt.errada{border-color:var(--err);background:var(--err-soft)}
+.alt.errada b{background:var(--err);color:var(--surface)}
+.com{margin-top:.9rem;padding:.9rem 1rem;border-radius:12px;background:var(--bg);max-width:68ch;font-size:.9688rem}
+.com strong{display:block;font-family:var(--display);font-weight:800}
+.com strong.acertou{color:var(--ok)}
+.com strong.errou{color:var(--err)}
+.placar{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-top:1.25rem;border-top:1px solid var(--line);font-family:var(--display)}
+.placar button{padding:.5rem 1rem;border:1.5px solid var(--line-2);border-radius:10px;background:transparent;font-weight:600;cursor:pointer}
+.placar button:hover{border-color:var(--acc);color:var(--acc)}
+
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:.5rem;padding-bottom:3rem;font-family:var(--display)}
+.pager a{display:block;padding:1rem 1.25rem;border-radius:16px;background:var(--surface);color:var(--ink);text-decoration:none;line-height:1.3}
+.pager a small{display:block;margin-bottom:.2rem;font-size:.8125rem;color:var(--ink-2)}
+.pager a strong{font-weight:700}
+.pager a:hover strong{color:var(--acc)}
+.pager .prox{grid-column:2;text-align:right}
+
+@media (max-width:720px){
+  .wrap{padding:0 1rem}
+  .topo{padding-top:2rem;padding-bottom:1.5rem}
+  .folha{padding:1.25rem 1rem;border-radius:16px}
+  .mm{display:block;min-width:0}
+  .mm-raiz{max-width:none}
+  .mm-raiz::after{display:none}
+  .mm-ramos{margin:0 0 0 1rem}
+  .mm-ramos>li{display:block;padding:.75rem 0 .25rem 1.25rem}
+  .mm-ramos>li::before{top:1.75rem;width:1.25rem}
+  .mm-ramos>li:first-child::after{top:0}
+  .mm-ramos>li:last-child::after{bottom:auto;height:1.75rem}
+  .mm-ramo{display:inline-block;width:auto}
+  .mm-ramo::after{display:none}
+  .mm-folhas{margin:.5rem 0 0 .75rem}
+  .pager{grid-template-columns:1fr}
+  .pager .prox{grid-column:1;text-align:left}
+}
+</style>
+</head>
+<body>
+<nav class="aulas wrap" aria-label="Aulas de Direito Constitucional"><span>Direito Constitucional</span><a href="aula-2-01-constituicao-federal.html" title="Constituição da República Federativa do Brasil">2.1</a><a href="aula-2-02-principios-fundamentais-e-eficacia.html" title="Princípios fundamentais e aplicabilidade das normas constitucionais">2.2</a><a href="aula-2-03-direitos-e-garantias-fundamentais.html" title="Direitos e garantias fundamentais">2.3</a><a href="aula-2-04-organizacao-politico-administrativa.html" aria-current="page" title="Organização político-administrativa do Estado">2.4</a><a href="aula-2-05-administracao-publica-e-servidores.html" title="Administração Pública: disposições gerais e servidores públicos">2.5</a><a href="aula-2-06-poder-executivo.html" title="Poder Executivo: atribuições e responsabilidades do presidente da República">2.6</a><a href="aula-2-07-poder-legislativo.html" title="Poder Legislativo">2.7</a><a href="aula-2-08-poder-judiciario-e-funcoes-essenciais.html" title="Poder Judiciário e funções essenciais à justiça">2.8</a><a href="aula-2-09-defesa-do-estado-e-seguranca-publica.html" title="Defesa do Estado e das instituições democráticas. Segurança pública">2.9</a><a href="aula-2-10-ordem-economica-e-financeira.html" title="Ordem econômica e financeira">2.10</a><a href="aula-2-11-ordem-social.html" title="Ordem social">2.11</a><a href="aula-2-12-constituicao-do-estado-da-bahia.html" title="Constituição do Estado da Bahia">2.12</a></nav>
+<header class="topo wrap">
+  <span class="num">2.4</span>
+  <h1>Organização político-administrativa do Estado</h1>
+  <p class="lede">Como a federação brasileira distribui autonomia e competências entre União, estados, Distrito Federal e municípios, e quando um ente pode intervir em outro.</p>
+  <nav class="saltos" aria-label="Partes da aula">
+    <a href="#explicacao">Explicação</a><a href="#caem">O que mais cai</a><a href="#mapa">Mapa mental</a><a href="#questoes">Questões</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="folha prosa" id="explicacao"><h2>Explicação</h2>
+<h3>Os entes e a autonomia</h3>
+<p>A organização político-administrativa do Brasil compreende a União, os estados, o Distrito Federal e os municípios, todos autônomos (art. 18). Autonomia não é soberania: soberana é a República Federativa do Brasil; os entes têm autonomia, que se desdobra em quatro capacidades:</p>
+<ul>
+<li><strong>Auto-organização:</strong> elaborar a própria constituição (estados) ou lei orgânica (municípios e Distrito Federal).</li>
+<li><strong>Autolegislação:</strong> editar as próprias leis.</li>
+<li><strong>Autogoverno:</strong> eleger os próprios governantes.</li>
+<li><strong>Autoadministração:</strong> gerir os próprios serviços, pessoal e receitas.</li>
+</ul>
+<p>A federação é indissolúvel: não existe direito de secessão. Brasília é a capital federal. Os Territórios Federais, se criados, integram a União e não têm autonomia política. Hoje não existe nenhum.</p>
+
+<h3>Criação de estados e municípios</h3>
+<div class="rolagem"><table>
+<thead><tr><th></th><th>Estados (art. 18, § 3º)</th><th>Municípios (art. 18, § 4º)</th></tr></thead>
+<tbody>
+<tr><td>Consulta popular</td><td>Plebiscito com a população diretamente interessada</td><td>Plebiscito com as populações dos municípios envolvidos</td></tr>
+<tr><td>Ato de criação</td><td>Lei complementar do Congresso Nacional</td><td>Lei estadual</td></tr>
+<tr><td>Outros requisitos</td><td>Oitiva das assembleias legislativas</td><td>Período definido em lei complementar federal e Estudos de Viabilidade Municipal</td></tr>
+</tbody></table></div>
+
+<h3>Vedações comuns a todos os entes (art. 19)</h3>
+<p>É proibido estabelecer cultos religiosos ou igrejas, subvencioná-los ou manter com eles relação de dependência ou aliança, ressalvada a colaboração de interesse público prevista em lei. Também é proibido recusar fé a documentos públicos e criar distinções ou preferências entre brasileiros.</p>
+
+<h3>Repartição de competências</h3>
+<p>O critério geral é o da predominância do interesse: assuntos de interesse nacional ficam com a União, os regionais com os estados e os locais com os municípios. Há dois tipos de competência: a administrativa ou material (fazer) e a legislativa (editar leis).</p>
+<div class="rolagem"><table>
+<thead><tr><th>Competência</th><th>Tipo</th><th>Quem</th><th>Regra central</th></tr></thead>
+<tbody>
+<tr><td>Exclusiva (art. 21)</td><td>Administrativa</td><td>União</td><td>Indelegável. Exemplos: emitir moeda, declarar guerra, manter o serviço postal.</td></tr>
+<tr><td>Privativa (art. 22)</td><td>Legislativa</td><td>União</td><td>Lei complementar pode autorizar os estados a legislar sobre questões específicas.</td></tr>
+<tr><td>Comum (art. 23)</td><td>Administrativa</td><td>União, estados, Distrito Federal e municípios</td><td>Todos atuam juntos. Exemplos: cuidar da saúde, proteger o meio ambiente, combater a pobreza.</td></tr>
+<tr><td>Concorrente (art. 24)</td><td>Legislativa</td><td>União, estados e Distrito Federal</td><td>A União edita normas gerais; os estados suplementam.</td></tr>
+<tr><td>Residual (art. 25, § 1º)</td><td>Ambas</td><td>Estados</td><td>Cabe aos estados o que não lhes for vedado pela Constituição.</td></tr>
+<tr><td>Interesse local (art. 30)</td><td>Ambas</td><td>Municípios</td><td>Legislar sobre interesse local e suplementar a legislação federal e estadual no que couber.</td></tr>
+</tbody></table></div>
+<p><strong>Exemplos de competência privativa da União (art. 22):</strong> direito civil, comercial, penal, processual, eleitoral, agrário, marítimo, aeronáutico, espacial e do trabalho; desapropriação; águas, energia, informática e telecomunicações; trânsito e transporte; diretrizes e bases da educação; normas gerais de licitação e contratação; proteção de dados pessoais.</p>
+<p><strong>Exemplos de competência concorrente (art. 24):</strong> direito tributário, financeiro, penitenciário, econômico e urbanístico; orçamento; produção e consumo; florestas e proteção do meio ambiente; educação, cultura e ensino; previdência social e defesa da saúde; procedimentos em matéria processual.</p>
+
+<h3>Como funciona a competência concorrente</h3>
+<ul>
+<li>A União limita-se a estabelecer normas gerais.</li>
+<li>Os estados exercem competência suplementar, detalhando as normas gerais.</li>
+<li>Se não houver lei federal de normas gerais, o estado exerce competência legislativa plena.</li>
+<li>Se a lei federal vier depois, ela suspende a eficácia da lei estadual naquilo que for contrário. Suspender não é revogar: se a lei federal deixar de existir, a estadual volta a valer.</li>
+</ul>
+
+<h3>Estados, municípios e Distrito Federal</h3>
+<p><strong>Estados.</strong> Regem-se pelas constituições e leis que adotarem (art. 25). Exploram os serviços locais de gás canalizado e podem, por lei complementar estadual, instituir regiões metropolitanas, aglomerações urbanas e microrregiões.</p>
+<p><strong>Municípios.</strong> Regem-se por lei orgânica, votada em dois turnos, com intervalo mínimo de dez dias, e aprovada por dois terços da câmara municipal (art. 29). Organizam o transporte coletivo e mantêm, com cooperação da União e do estado, a educação infantil e o ensino fundamental.</p>
+<p><strong>Distrito Federal.</strong> Rege-se por lei orgânica, acumula as competências legislativas de estado e de município e não pode ser dividido em municípios (art. 32). O Judiciário, o Ministério Público e as polícias do Distrito Federal são organizados e mantidos pela União.</p>
+
+<h3>Intervenção</h3>
+<p>A regra é a autonomia; a intervenção é medida excepcional e temporária. A União intervém nos estados e no Distrito Federal (art. 34); os estados intervêm em seus municípios (art. 35). A União não intervém em município de estado.</p>
+<p>As hipóteses de intervenção federal são: manter a integridade nacional; repelir invasão estrangeira ou de uma unidade da federação em outra; pôr termo a grave comprometimento da ordem pública; garantir o livre exercício dos Poderes; reorganizar as finanças do estado que suspender o pagamento da dívida fundada por mais de dois anos consecutivos ou deixar de repassar receitas aos municípios; prover a execução de lei federal, ordem ou decisão judicial; e assegurar os princípios constitucionais sensíveis.</p>
+<p>Os princípios sensíveis são: forma republicana, sistema representativo e regime democrático; direitos da pessoa humana; autonomia municipal; prestação de contas da administração; e aplicação do mínimo exigido em ensino e saúde. Nesse caso, a intervenção depende de o STF dar provimento a representação do procurador-geral da República.</p>
+<p>A intervenção é decretada pelo presidente da República. Em regra, o decreto é submetido ao Congresso Nacional em vinte e quatro horas.</p>
+</section>
+  <section class="folha" id="caem"><h2>O que mais cai</h2><ul class="caem"><li>Municípios não aparecem no caput do art. 24, mas podem suplementar a legislação federal e estadual no que couber (art. 30, II).</li><li>Lei federal superveniente suspende a eficácia da lei estadual. Não revoga.</li><li>Exclusiva é indelegável; privativa pode ser delegada aos estados por lei complementar, para questões específicas.</li><li>Estado novo nasce por lei complementar federal; município novo, por lei estadual.</li><li>Territórios não são entes federativos.</li><li>A União não intervém diretamente em município localizado em estado.</li></ul></section>
+  <section class="folha" id="mapa"><h2>Mapa mental</h2><div class="mm-rolagem"><div class="mm"><div class="mm-raiz">Federação brasileira</div><ul class="mm-ramos"><li style="--h:var(--r1)"><div class="mm-ramo">Entes autônomos</div><ul class="mm-folhas"><li><span>União, estados, Distrito Federal e municípios</span></li><li><span>Autonomia não é soberania</span></li><li><span>Territórios integram a União</span></li><li><span>Sem direito de secessão</span></li></ul></li><li style="--h:var(--r2)"><div class="mm-ramo">Competências da União</div><ul class="mm-folhas"><li><span>Exclusiva, art. 21: indelegável</span></li><li><span>Privativa, art. 22: delegável por lei complementar</span></li></ul></li><li style="--h:var(--r3)"><div class="mm-ramo">Competências partilhadas</div><ul class="mm-folhas"><li><span>Comum, art. 23: todos os entes</span></li><li><span>Concorrente, art. 24: normas gerais e suplementação</span></li><li><span>Lei federal posterior suspende a estadual</span></li></ul></li><li style="--h:var(--r4)"><div class="mm-ramo">Estados e municípios</div><ul class="mm-folhas"><li><span>Estados: competência residual</span></li><li><span>Municípios: interesse local</span></li><li><span>Distrito Federal: acumula as duas</span></li></ul></li><li style="--h:var(--r5)"><div class="mm-ramo">Criação de entes</div><ul class="mm-folhas"><li><span>Estados: plebiscito e lei complementar federal</span></li><li><span>Municípios: plebiscito e lei estadual</span></li></ul></li><li style="--h:var(--r6)"><div class="mm-ramo">Intervenção</div><ul class="mm-folhas"><li><span>Excepcional e temporária</span></li><li><span>União nos estados; estados nos municípios</span></li><li><span>Princípios sensíveis: depende do STF</span></li></ul></li></ul></div></div></section>
+  <section class="folha" id="questoes"><h2>Questões</h2>
+    <p class="aviso">Questões inéditas, escritas no formato de múltipla escolha com cinco alternativas usado pela banca. Não são reproduções de provas anteriores.</p>
+    <ol class="qs"><li class="q" data-c="1"><p class="enun">No âmbito da competência legislativa concorrente, a superveniência de lei federal sobre normas gerais</p><div class="alts"><button type="button" class="alt"><b>A</b><span>revoga a lei estadual anterior, em todos os seus dispositivos</span></button><button type="button" class="alt"><b>B</b><span>suspende a eficácia da lei estadual, no que lhe for contrário</span></button><button type="button" class="alt"><b>C</b><span>torna nula a lei estadual desde a sua edição</span></button><button type="button" class="alt"><b>D</b><span>não produz efeito sobre a lei estadual, que prevalece em razão da autonomia do estado</span></button><button type="button" class="alt"><b>E</b><span>depende de ratificação da assembleia legislativa para valer no território do estado</span></button></div><div class="com" hidden><strong></strong>Art. 24, § 4º. A lei federal de normas gerais apenas suspende a eficácia da lei estadual naquilo em que houver contrariedade. Não há revogação, porque não existe hierarquia entre lei federal e lei estadual.</div></li><li class="q" data-c="4"><p class="enun">Compete privativamente à União legislar sobre direito</p><div class="alts"><button type="button" class="alt"><b>A</b><span>tributário</span></button><button type="button" class="alt"><b>B</b><span>urbanístico</span></button><button type="button" class="alt"><b>C</b><span>penitenciário</span></button><button type="button" class="alt"><b>D</b><span>econômico</span></button><button type="button" class="alt"><b>E</b><span>agrário</span></button></div><div class="com" hidden><strong></strong>Direito agrário está no art. 22, I. Direito tributário, financeiro, penitenciário, econômico e urbanístico são matérias de competência concorrente (art. 24, I).</div></li><li class="q" data-c="0"><p class="enun">A criação de um novo município, segundo a Constituição Federal, far-se-á por</p><div class="alts"><button type="button" class="alt"><b>A</b><span>lei estadual, dentro do período determinado por lei complementar federal, após consulta prévia, mediante plebiscito, às populações dos municípios envolvidos e divulgação dos Estudos de Viabilidade Municipal</span></button><button type="button" class="alt"><b>B</b><span>lei complementar federal, após aprovação da assembleia legislativa do estado</span></button><button type="button" class="alt"><b>C</b><span>decreto do governador, referendado pela população diretamente interessada</span></button><button type="button" class="alt"><b>D</b><span>lei orgânica do município de origem, aprovada por dois terços dos vereadores</span></button><button type="button" class="alt"><b>E</b><span>resolução do Senado Federal, ouvida a assembleia legislativa</span></button></div><div class="com" hidden><strong></strong>É o art. 18, § 4º. A lei complementar federal apenas define o período em que os municípios podem ser criados; o ato de criação é lei estadual, precedida de plebiscito e de estudos de viabilidade.</div></li><li class="q" data-c="2"><p class="enun">A respeito dos entes que compõem a federação brasileira, é correto afirmar que</p><div class="alts"><button type="button" class="alt"><b>A</b><span>a União é soberana, e os estados e municípios são apenas autônomos</span></button><button type="button" class="alt"><b>B</b><span>os municípios não integram a federação, por serem subdivisões administrativas dos estados</span></button><button type="button" class="alt"><b>C</b><span>os Territórios Federais integram a União e não são dotados de autonomia política</span></button><button type="button" class="alt"><b>D</b><span>o Distrito Federal pode ser dividido em municípios, mediante lei orgânica</span></button><button type="button" class="alt"><b>E</b><span>os estados podem se desligar da federação, mediante plebiscito</span></button></div><div class="com" hidden><strong></strong>Art. 18, § 2º. A União é autônoma, como os demais entes: soberana é a República Federativa do Brasil. Os municípios integram a federação, o Distrito Federal não pode ser dividido em municípios e a união dos entes é indissolúvel.</div></li><li class="q" data-c="3"><p class="enun">Determinado estado deixou de aplicar o mínimo exigido da receita de impostos nas ações e serviços públicos de saúde. Nessa hipótese, a intervenção federal</p><div class="alts"><button type="button" class="alt"><b>A</b><span>é incabível, pois a matéria está sujeita apenas ao controle do tribunal de contas</span></button><button type="button" class="alt"><b>B</b><span>pode ser decretada de ofício pelo Senado Federal</span></button><button type="button" class="alt"><b>C</b><span>é decretada pelo Congresso Nacional, por maioria absoluta</span></button><button type="button" class="alt"><b>D</b><span>depende de provimento, pelo Supremo Tribunal Federal, de representação do Procurador-Geral da República</span></button><button type="button" class="alt"><b>E</b><span>é decretada pelo Superior Tribunal de Justiça, a pedido do governador</span></button></div><div class="com" hidden><strong></strong>A aplicação do mínimo em ensino e saúde é princípio constitucional sensível (art. 34, VII, e). A intervenção, nesse caso, depende de o STF acolher representação do procurador-geral da República (art. 36, III), e o decreto é do presidente da República.</div></li></ol>
+    <div class="placar"><span id="placarTxt" aria-live="polite"></span><button type="button" id="refazer">Refazer questões</button></div>
+  </section>
+</main>
+<nav class="pager wrap" aria-label="Aula anterior e próxima"><a href="aula-2-03-direitos-e-garantias-fundamentais.html"><small>Aula anterior</small><strong>2.3 Direitos e garantias fundamentais</strong></a><a class="prox" href="aula-2-05-administracao-publica-e-servidores.html"><small>Próxima aula</small><strong>2.5 Administração Pública: disposições gerais e servidores públicos</strong></a></nav>
+<script>
+(function(){
+  var L=["A","B","C","D","E"], qs=Array.prototype.slice.call(document.querySelectorAll(".q"));
+  var placar=document.getElementById("placarTxt"), feitas=0, acertos=0;
+  function atualizar(){
+    placar.textContent = feitas===0 ? "Escolha uma alternativa em cada questão para ver o gabarito comentado."
+      : (feitas<qs.length ? feitas+" de "+qs.length+" respondidas, "+acertos+" certas." : "Você acertou "+acertos+" de "+qs.length+".");
+  }
+  qs.forEach(function(q){
+    var c=Number(q.dataset.c), alts=q.querySelectorAll(".alt"), com=q.querySelector(".com"), ver=com.querySelector("strong");
+    alts.forEach(function(b,i){
+      b.addEventListener("click",function(){
+        if(q.dataset.feita) return;
+        q.dataset.feita="1"; feitas++;
+        alts.forEach(function(x){x.disabled=true});
+        alts[c].classList.add("certa");
+        if(i===c){ acertos++; ver.textContent="Certo. Gabarito: "+L[c]; ver.className="acertou"; }
+        else { b.classList.add("errada"); ver.textContent="Errado. Gabarito: "+L[c]; ver.className="errou"; }
+        com.hidden=false; atualizar();
+      });
+    });
+  });
+  document.getElementById("refazer").addEventListener("click",function(){
+    feitas=0; acertos=0;
+    qs.forEach(function(q){
+      delete q.dataset.feita; q.querySelector(".com").hidden=true;
+      q.querySelectorAll(".alt").forEach(function(x){x.disabled=false;x.classList.remove("certa","errada")});
+    });
+    atualizar(); document.getElementById("questoes").scrollIntoView();
+  });
+  atualizar();
+})();
+</script>
+</body>
+</html>

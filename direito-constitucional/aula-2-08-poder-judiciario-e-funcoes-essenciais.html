@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2.8 Poder Judiciário e funções essenciais à justiça | Direito Constitucional, EPPGG Bahia 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--ink:#131C33;--ink-2:#4B5772;--line:#D8DEEA;--line-2:#AEB8CE;
+  --acc:#2346C7;--acc-soft:#E4EAFC;--ok:#0B7A64;--ok-soft:#DBF1EB;--err:#B3261E;--err-soft:#FBE4E2;
+  --done:#E8A008;--done-soft:#FCEFCF;--done-ink:#7A5200;
+  --r1:#2346C7;--r2:#0B7A64;--r3:#A85A00;--r4:#B4236B;--r5:#6D3FC9;--r6:#0E7490;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3,p,ul,ol{margin:0}
+button{font:inherit;color:inherit}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:6px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+.aulas{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;padding-top:1.5rem;font-family:var(--display);font-size:.875rem}
+.aulas span{margin-right:.5rem;color:var(--ink-2)}
+.aulas a{padding:.2rem .55rem;border-radius:8px;color:var(--ink-2);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.aulas a:hover{background:var(--surface);color:var(--ink)}
+.aulas a[aria-current]{background:var(--acc);color:var(--surface)}
+
+.topo{padding-top:2.75rem;padding-bottom:2rem}
+.topo .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,11vw,6.5rem);line-height:.85;letter-spacing:-.045em;color:var(--acc)}
+h1{margin-top:1rem;font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.04;letter-spacing:-.03em;max-width:20ch}
+.lede{margin-top:1rem;max-width:58ch;font-size:1.1875rem;color:var(--ink-2)}
+.saltos{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;font-family:var(--display);font-size:.9375rem}
+.saltos a{padding:.4rem .9rem;border:1.5px solid var(--line-2);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.saltos a:hover{border-color:var(--acc);color:var(--acc)}
+
+.folha{background:var(--surface);border-radius:22px;padding:2rem;margin-bottom:1rem;scroll-margin-top:1rem}
+.folha>h2{font-family:var(--display);font-weight:800;font-size:1.75rem;line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+.prosa h3{margin:2rem 0 .5rem;font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:var(--acc)}
+.prosa>h3:first-of-type{margin-top:.5rem}
+.prosa p{max-width:68ch}
+.prosa p + p,.prosa ul + p,.prosa .rolagem + p{margin-top:.8rem}
+.prosa ul{margin:.6rem 0;padding-left:1.25rem;max-width:68ch}
+.prosa li{margin:.35rem 0}
+.prosa li::marker{color:var(--acc)}
+.nota{margin:1rem 0;padding:.8rem 1rem;border-left:4px solid var(--done);border-radius:0 12px 12px 0;background:var(--done-soft);font-family:var(--display);font-size:.9375rem;line-height:1.5}
+.rolagem{overflow-x:auto;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.9375rem;line-height:1.4}
+th,td{padding:.6rem .75rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--acc-soft);color:var(--acc);font-weight:700;border-bottom:0}
+thead th:first-child{border-radius:10px 0 0 10px}
+thead th:last-child{border-radius:0 10px 10px 0}
+tbody td:first-child{font-weight:600}
+
+.caem{display:grid;gap:.6rem}
+.caem li{list-style:none;padding:.75rem 1rem .75rem 2.75rem;border-radius:14px;background:var(--done-soft);font-family:var(--display);font-size:.9688rem;line-height:1.45;position:relative}
+.caem li::before{content:"!";position:absolute;left:.9rem;top:.75rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--done);color:#131C33;font-weight:800;font-size:.85rem;line-height:1.3rem;text-align:center}
+
+.mm-rolagem{overflow-x:auto;padding-bottom:.5rem}
+.mm{display:flex;align-items:center;min-width:46rem}
+.mm ul{padding:0;list-style:none}
+.mm-raiz{position:relative;flex:none;max-width:10.5rem;padding:1.1rem;border-radius:20px;background:var(--ink);color:var(--surface);font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1;text-align:center}
+.mm-raiz::after{content:"";position:absolute;left:100%;top:50%;width:1.5rem;border-top:2px solid var(--line-2)}
+.mm-ramos{flex:1;margin-left:1.5rem}
+.mm-ramos>li{position:relative;display:flex;align-items:center;padding:.55rem 0 .55rem 1.75rem}
+.mm-ramos>li::before{content:"";position:absolute;left:0;top:50%;width:1.75rem;border-top:2px solid var(--h)}
+.mm-ramos>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--line-2)}
+.mm-ramos>li:first-child::after{top:50%}
+.mm-ramos>li:last-child::after{bottom:50%}
+.mm-ramo{position:relative;flex:none;width:10.5rem;padding:.55rem .8rem;border-radius:12px;background:var(--h);color:var(--surface);font-family:var(--display);font-weight:700;font-size:.9375rem;line-height:1.2}
+.mm-ramo::after{content:"";position:absolute;left:100%;top:50%;width:1.25rem;border-top:2px solid var(--h)}
+.mm-folhas{margin-left:1.25rem}
+.mm-folhas>li{position:relative;padding:.2rem 0 .2rem 1.1rem;font-family:var(--display);font-size:.875rem;line-height:1.3}
+.mm-folhas>li::before{content:"";position:absolute;left:0;top:50%;width:.85rem;border-top:2px solid var(--h)}
+.mm-folhas>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--h)}
+.mm-folhas>li:first-child::after{top:50%}
+.mm-folhas>li:last-child::after{bottom:50%}
+.mm-folhas span{display:inline-block;padding:.2rem .6rem;border-radius:8px;background:color-mix(in srgb,var(--h) 13%,var(--surface))}
+
+.aviso{max-width:66ch;margin-bottom:1.25rem;color:var(--ink-2);font-size:.9688rem}
+.qs{padding:0;list-style:none;counter-reset:q}
+.q{counter-increment:q;padding:1.5rem 0;border-top:1px solid var(--line)}
+.enun{max-width:68ch}
+.enun::before{content:"Questão " counter(q);display:block;margin-bottom:.35rem;font-family:var(--display);font-weight:800;font-size:.9375rem;color:var(--acc)}
+.alts{display:grid;gap:.4rem;margin-top:.9rem}
+.alt{display:grid;grid-template-columns:1.9rem minmax(0,1fr);gap:.6rem;align-items:start;width:100%;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:transparent;text-align:left;cursor:pointer;font-family:var(--text);font-size:1rem;line-height:1.5}
+.alt b{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg);font-family:var(--display);font-weight:800;font-size:.875rem}
+.alt:hover:not(:disabled){border-color:var(--acc)}
+.alt:disabled{cursor:default;color:var(--ink)}
+.alt.certa{border-color:var(--ok);background:var(--ok-soft)}
+.alt.certa b{background:var(--ok);color:var(--surface)}
+.alt.errada{border-color:var(--err);background:var(--err-soft)}
+.alt.errada b{background:var(--err);color:var(--surface)}
+.com{margin-top:.9rem;padding:.9rem 1rem;border-radius:12px;background:var(--bg);max-width:68ch;font-size:.9688rem}
+.com strong{display:block;font-family:var(--display);font-weight:800}
+.com strong.acertou{color:var(--ok)}
+.com strong.errou{color:var(--err)}
+.placar{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-top:1.25rem;border-top:1px solid var(--line);font-family:var(--display)}
+.placar button{padding:.5rem 1rem;border:1.5px solid var(--line-2);border-radius:10px;background:transparent;font-weight:600;cursor:pointer}
+.placar button:hover{border-color:var(--acc);color:var(--acc)}
+
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:.5rem;padding-bottom:3rem;font-family:var(--display)}
+.pager a{display:block;padding:1rem 1.25rem;border-radius:16px;background:var(--surface);color:var(--ink);text-decoration:none;line-height:1.3}
+.pager a small{display:block;margin-bottom:.2rem;font-size:.8125rem;color:var(--ink-2)}
+.pager a strong{font-weight:700}
+.pager a:hover strong{color:var(--acc)}
+.pager .prox{grid-column:2;text-align:right}
+
+@media (max-width:720px){
+  .wrap{padding:0 1rem}
+  .topo{padding-top:2rem;padding-bottom:1.5rem}
+  .folha{padding:1.25rem 1rem;border-radius:16px}
+  .mm{display:block;min-width:0}
+  .mm-raiz{max-width:none}
+  .mm-raiz::after{display:none}
+  .mm-ramos{margin:0 0 0 1rem}
+  .mm-ramos>li{display:block;padding:.75rem 0 .25rem 1.25rem}
+  .mm-ramos>li::before{top:1.75rem;width:1.25rem}
+  .mm-ramos>li:first-child::after{top:0}
+  .mm-ramos>li:last-child::after{bottom:auto;height:1.75rem}
+  .mm-ramo{display:inline-block;width:auto}
+  .mm-ramo::after{display:none}
+  .mm-folhas{margin:.5rem 0 0 .75rem}
+  .pager{grid-template-columns:1fr}
+  .pager .prox{grid-column:1;text-align:left}
+}
+</style>
+</head>
+<body>
+<nav class="aulas wrap" aria-label="Aulas de Direito Constitucional"><span>Direito Constitucional</span><a href="aula-2-01-constituicao-federal.html" title="Constituição da República Federativa do Brasil">2.1</a><a href="aula-2-02-principios-fundamentais-e-eficacia.html" title="Princípios fundamentais e aplicabilidade das normas constitucionais">2.2</a><a href="aula-2-03-direitos-e-garantias-fundamentais.html" title="Direitos e garantias fundamentais">2.3</a><a href="aula-2-04-organizacao-politico-administrativa.html" title="Organização político-administrativa do Estado">2.4</a><a href="aula-2-05-administracao-publica-e-servidores.html" title="Administração Pública: disposições gerais e servidores públicos">2.5</a><a href="aula-2-06-poder-executivo.html" title="Poder Executivo: atribuições e responsabilidades do presidente da República">2.6</a><a href="aula-2-07-poder-legislativo.html" title="Poder Legislativo">2.7</a><a href="aula-2-08-poder-judiciario-e-funcoes-essenciais.html" aria-current="page" title="Poder Judiciário e funções essenciais à justiça">2.8</a><a href="aula-2-09-defesa-do-estado-e-seguranca-publica.html" title="Defesa do Estado e das instituições democráticas. Segurança pública">2.9</a><a href="aula-2-10-ordem-economica-e-financeira.html" title="Ordem econômica e financeira">2.10</a><a href="aula-2-11-ordem-social.html" title="Ordem social">2.11</a><a href="aula-2-12-constituicao-do-estado-da-bahia.html" title="Constituição do Estado da Bahia">2.12</a></nav>
+<header class="topo wrap">
+  <span class="num">2.8</span>
+  <h1>Poder Judiciário e funções essenciais à justiça</h1>
+  <p class="lede">Órgãos e garantias do Judiciário, competências dos tribunais e o papel do Ministério Público, da Advocacia Pública e da Defensoria Pública.</p>
+  <nav class="saltos" aria-label="Partes da aula">
+    <a href="#explicacao">Explicação</a><a href="#caem">O que mais cai</a><a href="#mapa">Mapa mental</a><a href="#questoes">Questões</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="folha prosa" id="explicacao"><h2>Explicação</h2>
+<h3>Órgãos do Poder Judiciário (art. 92)</h3>
+<p>São órgãos do Judiciário: o Supremo Tribunal Federal; o Conselho Nacional de Justiça; o Superior Tribunal de Justiça; o Tribunal Superior do Trabalho; os tribunais regionais federais e juízes federais; os tribunais e juízes do trabalho; os tribunais e juízes eleitorais; os tribunais e juízes militares; e os tribunais e juízes dos estados e do Distrito Federal e Territórios.</p>
+<p>O Conselho Nacional de Justiça integra o Judiciário, mas não exerce jurisdição: sua função é administrativa. Os tribunais de contas não aparecem na lista, porque não são órgãos do Judiciário.</p>
+
+<h3>Disposições gerais</h3>
+<ul>
+<li><strong>Ingresso na carreira.</strong> Concurso público de provas e títulos, com participação da OAB, exigindo-se do bacharel em direito três anos de atividade jurídica.</li>
+<li><strong>Decisões.</strong> Todos os julgamentos são públicos e todas as decisões fundamentadas, sob pena de nulidade (art. 93, IX).</li>
+<li><strong>Quinto constitucional (art. 94).</strong> Um quinto das vagas dos tribunais regionais federais e dos tribunais de justiça é reservado a membros do Ministério Público com mais de dez anos de carreira e a advogados de notório saber jurídico e reputação ilibada, com mais de dez anos de atividade. A classe forma lista sêxtupla, o tribunal a reduz a tríplice e o chefe do Executivo escolhe.</li>
+<li><strong>Autonomia.</strong> O Judiciário tem autonomia administrativa e financeira e elabora sua proposta orçamentária (art. 99).</li>
+</ul>
+<div class="rolagem"><table>
+<thead><tr><th>Garantias dos juízes (art. 95)</th><th>Vedações aos juízes</th></tr></thead>
+<tbody>
+<tr><td>Vitaliciedade: no primeiro grau, adquirida após dois anos de exercício; depois disso, a perda do cargo depende de sentença transitada em julgado</td><td>Exercer outro cargo ou função, salvo uma de magistério</td></tr>
+<tr><td>Inamovibilidade, salvo por motivo de interesse público</td><td>Receber custas ou participação em processo</td></tr>
+<tr><td>Irredutibilidade de subsídio</td><td>Dedicar-se a atividade político-partidária</td></tr>
+<tr><td></td><td>Exercer a advocacia no juízo ou tribunal do qual se afastou, antes de três anos</td></tr>
+</tbody></table></div>
+
+<h3>Supremo Tribunal Federal e Conselho Nacional de Justiça</h3>
+<p><strong>STF (arts. 101 a 103-A).</strong> Compõe-se de onze ministros, escolhidos entre cidadãos com mais de trinta e cinco e menos de setenta anos, de notável saber jurídico e reputação ilibada, nomeados pelo presidente da República depois de aprovados pela maioria absoluta do Senado. É o guardião da Constituição: julga as ações diretas de inconstitucionalidade e as declaratórias de constitucionalidade, as infrações penais comuns do presidente, do vice, dos parlamentares federais e de seus próprios ministros, e o recurso extraordinário, que exige repercussão geral.</p>
+<p><strong>Súmula vinculante.</strong> O STF pode aprová-la por decisão de dois terços de seus membros, após reiteradas decisões sobre matéria constitucional. Ela vincula os demais órgãos do Judiciário e a administração pública direta e indireta, nas esferas federal, estadual e municipal. Contra o ato que a descumpre cabe reclamação ao STF.</p>
+<p><strong>Quem pode propor ação direta (art. 103).</strong> O presidente da República; as Mesas do Senado, da Câmara e das assembleias legislativas; os governadores; o procurador-geral da República; o Conselho Federal da OAB; partido político com representação no Congresso; e confederação sindical ou entidade de classe de âmbito nacional.</p>
+<p><strong>CNJ (art. 103-B).</strong> Tem quinze membros, com mandato de dois anos, admitida uma recondução, e é presidido pelo presidente do STF. Controla a atuação administrativa e financeira do Judiciário e o cumprimento dos deveres funcionais dos juízes.</p>
+
+<h3>Demais tribunais</h3>
+<div class="rolagem"><table>
+<thead><tr><th>Órgão</th><th>O essencial</th></tr></thead>
+<tbody>
+<tr><td>Superior Tribunal de Justiça</td><td>No mínimo trinta e três ministros. Uniformiza a interpretação da lei federal pelo recurso especial e julga os governadores nos crimes comuns.</td></tr>
+<tr><td>Justiça Federal</td><td>Julga as causas em que a União, autarquia ou empresa pública federal for interessada, exceto falência, acidente de trabalho e as sujeitas à Justiça Eleitoral e à do Trabalho (art. 109).</td></tr>
+<tr><td>Justiça do Trabalho</td><td>Julga as ações oriundas da relação de trabalho (art. 114).</td></tr>
+<tr><td>Justiça Eleitoral</td><td>Tribunal Superior Eleitoral, tribunais regionais, juízes e juntas eleitorais.</td></tr>
+<tr><td>Justiça Militar</td><td>Julga os crimes militares definidos em lei.</td></tr>
+<tr><td>Justiça Estadual</td><td>Competência residual. A competência do Tribunal de Justiça é definida na constituição do estado, e a lei de organização judiciária é de iniciativa do próprio tribunal (art. 125).</td></tr>
+</tbody></table></div>
+
+<h3>Funções essenciais à justiça</h3>
+<p><strong>Ministério Público (arts. 127 a 130-A).</strong> Instituição permanente, essencial à função jurisdicional do Estado, incumbida da defesa da ordem jurídica, do regime democrático e dos interesses sociais e individuais indisponíveis. Seus princípios são a unidade, a indivisibilidade e a independência funcional. Tem autonomia funcional e administrativa.</p>
+<ul>
+<li>O procurador-geral da República é nomeado pelo presidente entre integrantes da carreira maiores de trinta e cinco anos, após aprovação da maioria absoluta do Senado, para mandato de dois anos, permitida a recondução.</li>
+<li>O procurador-geral de justiça do estado é escolhido pelo governador em lista tríplice de integrantes da carreira, para mandato de dois anos, permitida uma recondução.</li>
+<li>Os membros têm vitaliciedade após dois anos, inamovibilidade e irredutibilidade de subsídio.</li>
+<li>Funções institucionais: promover, privativamente, a ação penal pública; promover o inquérito civil e a ação civil pública; exercer o controle externo da atividade policial; defender os direitos das populações indígenas.</li>
+<li>É vedado ao Ministério Público exercer a representação judicial e a consultoria jurídica de entidades públicas.</li>
+</ul>
+<p><strong>Advocacia Pública (arts. 131 e 132).</strong> A Advocacia-Geral da União representa a União, judicial e extrajudicialmente, e presta consultoria e assessoramento jurídico ao Poder Executivo. O advogado-geral da União é de livre nomeação pelo presidente, entre cidadãos maiores de trinta e cinco anos, de notável saber jurídico e reputação ilibada. Nos estados, a representação judicial e a consultoria jurídica cabem aos procuradores dos estados, organizados em carreira, com ingresso por concurso de provas e títulos, com participação da OAB, e estabilidade após três anos.</p>
+<p><strong>Advocacia (art. 133).</strong> O advogado é indispensável à administração da justiça e inviolável por seus atos e manifestações no exercício da profissão, nos limites da lei.</p>
+<p><strong>Defensoria Pública (art. 134).</strong> Instituição permanente, essencial à função jurisdicional, incumbida da orientação jurídica, da promoção dos direitos humanos e da defesa, em todos os graus, judicial e extrajudicial, dos direitos individuais e coletivos dos necessitados, de forma integral e gratuita. Tem autonomia funcional e administrativa, seus membros são inamovíveis e não podem advogar fora das atribuições institucionais.</p>
+</section>
+  <section class="folha" id="caem"><h2>O que mais cai</h2><ul class="caem"><li>O Conselho Nacional de Justiça é órgão do Judiciário, mas não julga processos judiciais.</li><li>Súmula vinculante exige dois terços dos ministros do STF e não vincula o Legislativo na função de legislar.</li><li>Vitaliciedade de juiz e de membro do Ministério Público: dois anos. Estabilidade de servidor e de procurador de estado: três anos.</li><li>Governador é julgado pelo Superior Tribunal de Justiça nos crimes comuns.</li><li>O advogado-geral da União não precisa ser da carreira nem passa pelo Senado; o procurador-geral da República precisa das duas coisas.</li><li>Ministério Público não representa judicialmente o estado. Isso é papel da procuradoria.</li></ul></section>
+  <section class="folha" id="mapa"><h2>Mapa mental</h2><div class="mm-rolagem"><div class="mm"><div class="mm-raiz">Justiça</div><ul class="mm-ramos"><li style="--h:var(--r1)"><div class="mm-ramo">Garantias e regras</div><ul class="mm-folhas"><li><span>Vitaliciedade após 2 anos</span></li><li><span>Inamovibilidade</span></li><li><span>Irredutibilidade</span></li><li><span>Quinto constitucional</span></li><li><span>Decisões fundamentadas</span></li></ul></li><li style="--h:var(--r2)"><div class="mm-ramo">STF</div><ul class="mm-folhas"><li><span>11 ministros, 35 a 70 anos</span></li><li><span>Guarda da Constituição</span></li><li><span>Súmula vinculante: 2/3</span></li><li><span>Legitimados do art. 103</span></li></ul></li><li style="--h:var(--r3)"><div class="mm-ramo">CNJ</div><ul class="mm-folhas"><li><span>15 membros, 2 anos</span></li><li><span>Controle administrativo e financeiro</span></li><li><span>Não exerce jurisdição</span></li></ul></li><li style="--h:var(--r4)"><div class="mm-ramo">Outros tribunais</div><ul class="mm-folhas"><li><span>STJ: lei federal e governadores</span></li><li><span>Justiça Federal: União e autarquias</span></li><li><span>Justiça Estadual: residual</span></li></ul></li><li style="--h:var(--r5)"><div class="mm-ramo">Ministério Público</div><ul class="mm-folhas"><li><span>Unidade, indivisibilidade, independência</span></li><li><span>Ação penal pública</span></li><li><span>Não faz consultoria a entes públicos</span></li></ul></li><li style="--h:var(--r6)"><div class="mm-ramo">Advocacia e Defensoria</div><ul class="mm-folhas"><li><span>AGU: representa a União</span></li><li><span>Procuradores de estado: carreira e concurso</span></li><li><span>Defensoria: necessitados, integral e gratuita</span></li></ul></li></ul></div></div></section>
+  <section class="folha" id="questoes"><h2>Questões</h2>
+    <p class="aviso">Questões inéditas, escritas no formato de múltipla escolha com cinco alternativas usado pela banca. Não são reproduções de provas anteriores.</p>
+    <ol class="qs"><li class="q" data-c="1"><p class="enun">O Conselho Nacional de Justiça</p><div class="alts"><button type="button" class="alt"><b>A</b><span>é órgão de controle externo do Poder Judiciário, vinculado ao Congresso Nacional</span></button><button type="button" class="alt"><b>B</b><span>integra o Poder Judiciário, mas não exerce função jurisdicional, cabendo-lhe o controle da atuação administrativa e financeira desse Poder</span></button><button type="button" class="alt"><b>C</b><span>é presidido pelo Procurador-Geral da República</span></button><button type="button" class="alt"><b>D</b><span>pode rever o mérito de decisões judiciais proferidas em última instância</span></button><button type="button" class="alt"><b>E</b><span>compõe-se de onze membros, com mandato de quatro anos</span></button></div><div class="com" hidden><strong></strong>O Conselho está no rol do art. 92 e, segundo o art. 103-B, tem quinze membros com mandato de dois anos, é presidido pelo presidente do STF e exerce controle administrativo, financeiro e disciplinar. Não revisa decisões judiciais.</div></li><li class="q" data-c="4"><p class="enun">A súmula vinculante, aprovada pelo Supremo Tribunal Federal após reiteradas decisões sobre matéria constitucional, exige decisão de</p><div class="alts"><button type="button" class="alt"><b>A</b><span>maioria absoluta de seus membros e vincula todos os Poderes, inclusive o Legislativo em sua função típica</span></button><button type="button" class="alt"><b>B</b><span>três quintos de seus membros e vincula apenas os demais órgãos do Poder Judiciário</span></button><button type="button" class="alt"><b>C</b><span>dois terços de seus membros e vincula apenas a administração pública federal</span></button><button type="button" class="alt"><b>D</b><span>maioria simples de seus membros e tem efeito meramente persuasivo</span></button><button type="button" class="alt"><b>E</b><span>dois terços de seus membros e vincula os demais órgãos do Poder Judiciário e a administração pública direta e indireta, nas esferas federal, estadual e municipal</span></button></div><div class="com" hidden><strong></strong>Art. 103-A. A súmula vinculante não alcança o Poder Legislativo na função de legislar, nem o próprio STF, que pode revê-la ou cancelá-la.</div></li><li class="q" data-c="0"><p class="enun">Entre as garantias constitucionais dos juízes está a vitaliciedade, que, no primeiro grau, é adquirida após</p><div class="alts"><button type="button" class="alt"><b>A</b><span>dois anos de exercício</span></button><button type="button" class="alt"><b>B</b><span>três anos de efetivo exercício, mediante avaliação especial de desempenho</span></button><button type="button" class="alt"><b>C</b><span>a posse no cargo</span></button><button type="button" class="alt"><b>D</b><span>cinco anos de exercício</span></button><button type="button" class="alt"><b>E</b><span>aprovação do Conselho Nacional de Justiça</span></button></div><div class="com" hidden><strong></strong>Art. 95, I. Três anos com avaliação especial é o requisito da estabilidade dos servidores (art. 41). Nos tribunais, quem ingressa pelo quinto constitucional adquire a vitaliciedade com a posse.</div></li><li class="q" data-c="3"><p class="enun">A respeito do Ministério Público, é correto afirmar que</p><div class="alts"><button type="button" class="alt"><b>A</b><span>lhe compete a representação judicial da União e dos estados</span></button><button type="button" class="alt"><b>B</b><span>seus membros adquirem vitaliciedade após três anos de exercício</span></button><button type="button" class="alt"><b>C</b><span>é órgão vinculado ao Poder Executivo, sem autonomia administrativa</span></button><button type="button" class="alt"><b>D</b><span>lhe é vedado exercer a representação judicial e a consultoria jurídica de entidades públicas</span></button><button type="button" class="alt"><b>E</b><span>a ação penal pública pode ser promovida, em concorrência com ele, pela autoridade policial</span></button></div><div class="com" hidden><strong></strong>Art. 129, IX. A representação judicial dos entes públicos é da Advocacia Pública. Os membros do Ministério Público tornam-se vitalícios após dois anos, a instituição tem autonomia funcional e administrativa e promove a ação penal pública privativamente.</div></li><li class="q" data-c="2"><p class="enun">A representação judicial e a consultoria jurídica dos estados cabem</p><div class="alts"><button type="button" class="alt"><b>A</b><span>ao Ministério Público estadual, por meio do Procurador-Geral de Justiça</span></button><button type="button" class="alt"><b>B</b><span>à Defensoria Pública do estado</span></button><button type="button" class="alt"><b>C</b><span>aos Procuradores dos estados, organizados em carreira, com ingresso por concurso público de provas e títulos</span></button><button type="button" class="alt"><b>D</b><span>à Advocacia-Geral da União</span></button><button type="button" class="alt"><b>E</b><span>a advogados contratados livremente pelo governador</span></button></div><div class="com" hidden><strong></strong>Art. 132. Os procuradores dos estados e do Distrito Federal ingressam por concurso de provas e títulos, com participação da OAB, e adquirem estabilidade após três anos, mediante avaliação de desempenho.</div></li></ol>
+    <div class="placar"><span id="placarTxt" aria-live="polite"></span><button type="button" id="refazer">Refazer questões</button></div>
+  </section>
+</main>
+<nav class="pager wrap" aria-label="Aula anterior e próxima"><a href="aula-2-07-poder-legislativo.html"><small>Aula anterior</small><strong>2.7 Poder Legislativo</strong></a><a class="prox" href="aula-2-09-defesa-do-estado-e-seguranca-publica.html"><small>Próxima aula</small><strong>2.9 Defesa do Estado e das instituições democráticas. Segurança pública</strong></a></nav>
+<script>
+(function(){
+  var L=["A","B","C","D","E"], qs=Array.prototype.slice.call(document.querySelectorAll(".q"));
+  var placar=document.getElementById("placarTxt"), feitas=0, acertos=0;
+  function atualizar(){
+    placar.textContent = feitas===0 ? "Escolha uma alternativa em cada questão para ver o gabarito comentado."
+      : (feitas<qs.length ? feitas+" de "+qs.length+" respondidas, "+acertos+" certas." : "Você acertou "+acertos+" de "+qs.length+".");
+  }
+  qs.forEach(function(q){
+    var c=Number(q.dataset.c), alts=q.querySelectorAll(".alt"), com=q.querySelector(".com"), ver=com.querySelector("strong");
+    alts.forEach(function(b,i){
+      b.addEventListener("click",function(){
+        if(q.dataset.feita) return;
+        q.dataset.feita="1"; feitas++;
+        alts.forEach(function(x){x.disabled=true});
+        alts[c].classList.add("certa");
+        if(i===c){ acertos++; ver.textContent="Certo. Gabarito: "+L[c]; ver.className="acertou"; }
+        else { b.classList.add("errada"); ver.textContent="Errado. Gabarito: "+L[c]; ver.className="errou"; }
+        com.hidden=false; atualizar();
+      });
+    });
+  });
+  document.getElementById("refazer").addEventListener("click",function(){
+    feitas=0; acertos=0;
+    qs.forEach(function(q){
+      delete q.dataset.feita; q.querySelector(".com").hidden=true;
+      q.querySelectorAll(".alt").forEach(function(x){x.disabled=false;x.classList.remove("certa","errada")});
+    });
+    atualizar(); document.getElementById("questoes").scrollIntoView();
+  });
+  atualizar();
+})();
+</script>
+</body>
+</html>

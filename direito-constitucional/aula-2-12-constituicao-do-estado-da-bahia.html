@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2.12 Constituição do Estado da Bahia | Direito Constitucional, EPPGG Bahia 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--ink:#131C33;--ink-2:#4B5772;--line:#D8DEEA;--line-2:#AEB8CE;
+  --acc:#2346C7;--acc-soft:#E4EAFC;--ok:#0B7A64;--ok-soft:#DBF1EB;--err:#B3261E;--err-soft:#FBE4E2;
+  --done:#E8A008;--done-soft:#FCEFCF;--done-ink:#7A5200;
+  --r1:#2346C7;--r2:#0B7A64;--r3:#A85A00;--r4:#B4236B;--r5:#6D3FC9;--r6:#0E7490;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3,p,ul,ol{margin:0}
+button{font:inherit;color:inherit}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:6px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+.aulas{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;padding-top:1.5rem;font-family:var(--display);font-size:.875rem}
+.aulas span{margin-right:.5rem;color:var(--ink-2)}
+.aulas a{padding:.2rem .55rem;border-radius:8px;color:var(--ink-2);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.aulas a:hover{background:var(--surface);color:var(--ink)}
+.aulas a[aria-current]{background:var(--acc);color:var(--surface)}
+
+.topo{padding-top:2.75rem;padding-bottom:2rem}
+.topo .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,11vw,6.5rem);line-height:.85;letter-spacing:-.045em;color:var(--acc)}
+h1{margin-top:1rem;font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.04;letter-spacing:-.03em;max-width:20ch}
+.lede{margin-top:1rem;max-width:58ch;font-size:1.1875rem;color:var(--ink-2)}
+.saltos{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;font-family:var(--display);font-size:.9375rem}
+.saltos a{padding:.4rem .9rem;border:1.5px solid var(--line-2);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.saltos a:hover{border-color:var(--acc);color:var(--acc)}
+
+.folha{background:var(--surface);border-radius:22px;padding:2rem;margin-bottom:1rem;scroll-margin-top:1rem}
+.folha>h2{font-family:var(--display);font-weight:800;font-size:1.75rem;line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+.prosa h3{margin:2rem 0 .5rem;font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:var(--acc)}
+.prosa>h3:first-of-type{margin-top:.5rem}
+.prosa p{max-width:68ch}
+.prosa p + p,.prosa ul + p,.prosa .rolagem + p{margin-top:.8rem}
+.prosa ul{margin:.6rem 0;padding-left:1.25rem;max-width:68ch}
+.prosa li{margin:.35rem 0}
+.prosa li::marker{color:var(--acc)}
+.nota{margin:1rem 0;padding:.8rem 1rem;border-left:4px solid var(--done);border-radius:0 12px 12px 0;background:var(--done-soft);font-family:var(--display);font-size:.9375rem;line-height:1.5}
+.rolagem{overflow-x:auto;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.9375rem;line-height:1.4}
+th,td{padding:.6rem .75rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--acc-soft);color:var(--acc);font-weight:700;border-bottom:0}
+thead th:first-child{border-radius:10px 0 0 10px}
+thead th:last-child{border-radius:0 10px 10px 0}
+tbody td:first-child{font-weight:600}
+
+.caem{display:grid;gap:.6rem}
+.caem li{list-style:none;padding:.75rem 1rem .75rem 2.75rem;border-radius:14px;background:var(--done-soft);font-family:var(--display);font-size:.9688rem;line-height:1.45;position:relative}
+.caem li::before{content:"!";position:absolute;left:.9rem;top:.75rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--done);color:#131C33;font-weight:800;font-size:.85rem;line-height:1.3rem;text-align:center}
+
+.mm-rolagem{overflow-x:auto;padding-bottom:.5rem}
+.mm{display:flex;align-items:center;min-width:46rem}
+.mm ul{padding:0;list-style:none}
+.mm-raiz{position:relative;flex:none;max-width:10.5rem;padding:1.1rem;border-radius:20px;background:var(--ink);color:var(--surface);font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1;text-align:center}
+.mm-raiz::after{content:"";position:absolute;left:100%;top:50%;width:1.5rem;border-top:2px solid var(--line-2)}
+.mm-ramos{flex:1;margin-left:1.5rem}
+.mm-ramos>li{position:relative;display:flex;align-items:center;padding:.55rem 0 .55rem 1.75rem}
+.mm-ramos>li::before{content:"";position:absolute;left:0;top:50%;width:1.75rem;border-top:2px solid var(--h)}
+.mm-ramos>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--line-2)}
+.mm-ramos>li:first-child::after{top:50%}
+.mm-ramos>li:last-child::after{bottom:50%}
+.mm-ramo{position:relative;flex:none;width:10.5rem;padding:.55rem .8rem;border-radius:12px;background:var(--h);color:var(--surface);font-family:var(--display);font-weight:700;font-size:.9375rem;line-height:1.2}
+.mm-ramo::after{content:"";position:absolute;left:100%;top:50%;width:1.25rem;border-top:2px solid var(--h)}
+.mm-folhas{margin-left:1.25rem}
+.mm-folhas>li{position:relative;padding:.2rem 0 .2rem 1.1rem;font-family:var(--display);font-size:.875rem;line-height:1.3}
+.mm-folhas>li::before{content:"";position:absolute;left:0;top:50%;width:.85rem;border-top:2px solid var(--h)}
+.mm-folhas>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--h)}
+.mm-folhas>li:first-child::after{top:50%}
+.mm-folhas>li:last-child::after{bottom:50%}
+.mm-folhas span{display:inline-block;padding:.2rem .6rem;border-radius:8px;background:color-mix(in srgb,var(--h) 13%,var(--surface))}
+
+.aviso{max-width:66ch;margin-bottom:1.25rem;color:var(--ink-2);font-size:.9688rem}
+.qs{padding:0;list-style:none;counter-reset:q}
+.q{counter-increment:q;padding:1.5rem 0;border-top:1px solid var(--line)}
+.enun{max-width:68ch}
+.enun::before{content:"Questão " counter(q);display:block;margin-bottom:.35rem;font-family:var(--display);font-weight:800;font-size:.9375rem;color:var(--acc)}
+.alts{display:grid;gap:.4rem;margin-top:.9rem}
+.alt{display:grid;grid-template-columns:1.9rem minmax(0,1fr);gap:.6rem;align-items:start;width:100%;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:transparent;text-align:left;cursor:pointer;font-family:var(--text);font-size:1rem;line-height:1.5}
+.alt b{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg);font-family:var(--display);font-weight:800;font-size:.875rem}
+.alt:hover:not(:disabled){border-color:var(--acc)}
+.alt:disabled{cursor:default;color:var(--ink)}
+.alt.certa{border-color:var(--ok);background:var(--ok-soft)}
+.alt.certa b{background:var(--ok);color:var(--surface)}
+.alt.errada{border-color:var(--err);background:var(--err-soft)}
+.alt.errada b{background:var(--err);color:var(--surface)}
+.com{margin-top:.9rem;padding:.9rem 1rem;border-radius:12px;background:var(--bg);max-width:68ch;font-size:.9688rem}
+.com strong{display:block;font-family:var(--display);font-weight:800}
+.com strong.acertou{color:var(--ok)}
+.com strong.errou{color:var(--err)}
+.placar{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-top:1.25rem;border-top:1px solid var(--line);font-family:var(--display)}
+.placar button{padding:.5rem 1rem;border:1.5px solid var(--line-2);border-radius:10px;background:transparent;font-weight:600;cursor:pointer}
+.placar button:hover{border-color:var(--acc);color:var(--acc)}
+
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:.5rem;padding-bottom:3rem;font-family:var(--display)}
+.pager a{display:block;padding:1rem 1.25rem;border-radius:16px;background:var(--surface);color:var(--ink);text-decoration:none;line-height:1.3}
+.pager a small{display:block;margin-bottom:.2rem;font-size:.8125rem;color:var(--ink-2)}
+.pager a strong{font-weight:700}
+.pager a:hover strong{color:var(--acc)}
+.pager .prox{grid-column:2;text-align:right}
+
+@media (max-width:720px){
+  .wrap{padding:0 1rem}
+  .topo{padding-top:2rem;padding-bottom:1.5rem}
+  .folha{padding:1.25rem 1rem;border-radius:16px}
+  .mm{display:block;min-width:0}
+  .mm-raiz{max-width:none}
+  .mm-raiz::after{display:none}
+  .mm-ramos{margin:0 0 0 1rem}
+  .mm-ramos>li{display:block;padding:.75rem 0 .25rem 1.25rem}
+  .mm-ramos>li::before{top:1.75rem;width:1.25rem}
+  .mm-ramos>li:first-child::after{top:0}
+  .mm-ramos>li:last-child::after{bottom:auto;height:1.75rem}
+  .mm-ramo{display:inline-block;width:auto}
+  .mm-ramo::after{display:none}
+  .mm-folhas{margin:.5rem 0 0 .75rem}
+  .pager{grid-template-columns:1fr}
+  .pager .prox{grid-column:1;text-align:left}
+}
+</style>
+</head>
+<body>
+<nav class="aulas wrap" aria-label="Aulas de Direito Constitucional"><span>Direito Constitucional</span><a href="aula-2-01-constituicao-federal.html" title="Constituição da República Federativa do Brasil">2.1</a><a href="aula-2-02-principios-fundamentais-e-eficacia.html" title="Princípios fundamentais e aplicabilidade das normas constitucionais">2.2</a><a href="aula-2-03-direitos-e-garantias-fundamentais.html" title="Direitos e garantias fundamentais">2.3</a><a href="aula-2-04-organizacao-politico-administrativa.html" title="Organização político-administrativa do Estado">2.4</a><a href="aula-2-05-administracao-publica-e-servidores.html" title="Administração Pública: disposições gerais e servidores públicos">2.5</a><a href="aula-2-06-poder-executivo.html" title="Poder Executivo: atribuições e responsabilidades do presidente da República">2.6</a><a href="aula-2-07-poder-legislativo.html" title="Poder Legislativo">2.7</a><a href="aula-2-08-poder-judiciario-e-funcoes-essenciais.html" title="Poder Judiciário e funções essenciais à justiça">2.8</a><a href="aula-2-09-defesa-do-estado-e-seguranca-publica.html" title="Defesa do Estado e das instituições democráticas. Segurança pública">2.9</a><a href="aula-2-10-ordem-economica-e-financeira.html" title="Ordem econômica e financeira">2.10</a><a href="aula-2-11-ordem-social.html" title="Ordem social">2.11</a><a href="aula-2-12-constituicao-do-estado-da-bahia.html" aria-current="page" title="Constituição do Estado da Bahia">2.12</a></nav>
+<header class="topo wrap">
+  <span class="num">2.12</span>
+  <h1>Constituição do Estado da Bahia</h1>
+  <p class="lede">De onde vem o poder de o estado ter sua própria constituição, quais são seus limites e o que a Carta baiana de 1989 traz nos pontos citados pelo edital.</p>
+  <nav class="saltos" aria-label="Partes da aula">
+    <a href="#explicacao">Explicação</a><a href="#caem">O que mais cai</a><a href="#mapa">Mapa mental</a><a href="#questoes">Questões</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="folha prosa" id="explicacao"><h2>Explicação</h2>
+<p class="nota">Esta aula combina as regras da Constituição Federal que se aplicam a qualquer constituição estadual com os pontos da Carta baiana mencionados no edital. Para a prova, leia também o texto atualizado da Constituição do Estado no site da Assembleia Legislativa da Bahia, porque emendas podem ter alterado a redação e a numeração dos artigos.</p>
+
+<h3>De onde vem a Constituição estadual</h3>
+<p>Os estados organizam-se e regem-se pelas constituições e leis que adotarem, observados os princípios da Constituição Federal (art. 25). O art. 11 do ADCT deu às assembleias legislativas poderes constituintes para elaborar as constituições estaduais no prazo de um ano. A da Bahia foi promulgada em 5 de outubro de 1989.</p>
+<p>Esse poder é o constituinte derivado decorrente. Por ser derivado, é limitado: a constituição estadual não pode contrariar a Federal e está sujeita a controle de constitucionalidade pelo STF.</p>
+
+<h3>Limites do constituinte estadual</h3>
+<ul>
+<li><strong>Princípios constitucionais sensíveis (art. 34, VII).</strong> Forma republicana, sistema representativo e regime democrático; direitos da pessoa humana; autonomia municipal; prestação de contas; aplicação do mínimo em ensino e saúde. A violação pode levar à intervenção federal.</li>
+<li><strong>Princípios estabelecidos.</strong> Regras da Constituição Federal dirigidas diretamente aos estados, como as dos arts. 27 e 28 (deputados e governador), 37 a 41 (administração e servidores) e 125 (Justiça estadual).</li>
+<li><strong>Princípios extensíveis e simetria.</strong> Regras de organização da União que os estados devem reproduzir, como o processo legislativo, as regras de fiscalização e os tribunais de contas.</li>
+</ul>
+<p>Pelo princípio da simetria, o estado segue o modelo federal na organização dos Poderes. O STF aplica essa ideia com frequência:</p>
+<div class="rolagem"><table>
+<thead><tr><th>A constituição estadual não pode</th><th>A constituição estadual pode</th></tr></thead>
+<tbody>
+<tr><td>Exigir autorização prévia da assembleia para que o governador seja processado por crime comum no Superior Tribunal de Justiça</td><td>Prever a edição de medidas provisórias pelo governador, desde que siga o modelo federal</td></tr>
+<tr><td>Estender ao governador as imunidades do presidente quanto à prisão e à responsabilização por atos estranhos ao mandato</td><td>Prever iniciativa popular de lei estadual (art. 27, § 4º, da Constituição Federal)</td></tr>
+<tr><td>Definir crimes de responsabilidade e seu processo, matéria privativa da União (Súmula Vinculante 46)</td><td>Definir a competência do Tribunal de Justiça</td></tr>
+<tr><td>Criar órgãos de segurança pública diferentes dos previstos no art. 144</td><td>Instituir representação de inconstitucionalidade contra leis estaduais e municipais</td></tr>
+</tbody></table></div>
+
+<h3>Organização dos Poderes do estado</h3>
+<p><strong>Legislativo.</strong> É unicameral e exercido pela Assembleia Legislativa. O número de deputados estaduais corresponde ao triplo da representação do estado na Câmara dos Deputados; atingido o número de trinta e seis, acrescentam-se tantos quantos forem os deputados federais acima de doze (art. 27 da Constituição Federal). Com trinta e nove deputados federais, a Bahia tem sessenta e três estaduais (36 mais 27). O mandato é de quatro anos, e aplicam-se aos deputados estaduais as regras federais sobre sistema eleitoral, inviolabilidade, imunidades, remuneração e perda de mandato.</p>
+<p><strong>Executivo.</strong> Exercido pelo governador, auxiliado pelos secretários de Estado. Governador e vice são eleitos para mandato de quatro anos, pelas mesmas regras da eleição presidencial, com posse em 6 de janeiro a partir dos eleitos em 2026 (art. 28 da Constituição Federal, com a Emenda 111/2021). Nos crimes comuns, o governador é julgado pelo Superior Tribunal de Justiça.</p>
+<p><strong>Judiciário.</strong> O Tribunal de Justiça é o órgão de cúpula. Sua competência é definida na Constituição do Estado, e a lei de organização judiciária é de iniciativa do próprio tribunal (art. 125, § 1º, da Constituição Federal).</p>
+
+<h3>Controle e fiscalização na Bahia</h3>
+<p>O edital, no item de Direito Administrativo, aponta os artigos da Constituição baiana sobre o tema:</p>
+<ul>
+<li><strong>Controle interno (arts. 89 e 90).</strong> Cada Poder mantém sistema de controle interno, integrado aos demais, para avaliar o cumprimento das metas do plano plurianual e a execução dos orçamentos, comprovar a legalidade e avaliar os resultados da gestão, e apoiar o controle externo. É o mesmo desenho do art. 74 da Constituição Federal.</li>
+<li><strong>Tribunal de Contas do Estado (arts. 91 a 95).</strong> Auxilia a Assembleia Legislativa no controle externo da administração estadual. Compõe-se de sete conselheiros, e a ele se aplicam, no que couber, as regras do Tribunal de Contas da União (art. 75 da Constituição Federal).</li>
+<li><strong>Tribunal de Contas dos Municípios.</strong> A Bahia é um dos poucos estados que mantêm um órgão estadual específico para auxiliar as câmaras municipais na fiscalização dos municípios, ao lado do Tribunal de Contas do Estado.</li>
+</ul>
+
+<h3>Controle de constitucionalidade estadual</h3>
+<p>Cabe aos estados instituir a representação de inconstitucionalidade de leis ou atos normativos estaduais ou municipais em face da Constituição Estadual, vedada a atribuição da legitimação para agir a um único órgão (art. 125, § 2º, da Constituição Federal). Quem julga é o Tribunal de Justiça.</p>
+
+<h3>Municípios e intervenção estadual</h3>
+<p>Os municípios regem-se por lei orgânica, que deve respeitar os princípios da Constituição Federal e da Constituição do Estado (art. 29). O estado só intervém em município quando (art. 35):</p>
+<ul>
+<li>deixar de ser paga, sem motivo de força maior, por dois anos consecutivos, a dívida fundada;</li>
+<li>não forem prestadas as contas devidas;</li>
+<li>não tiver sido aplicado o mínimo exigido em ensino e saúde;</li>
+<li>o Tribunal de Justiça der provimento a representação para assegurar a observância de princípios indicados na Constituição Estadual, ou para prover a execução de lei, ordem ou decisão judicial.</li>
+</ul>
+
+<h3>O capítulo Do Negro</h3>
+<p>O item 6.8 do edital cobra o capítulo XXIII da Constituição baiana, intitulado Do Negro. Em linhas gerais, o capítulo:</p>
+<ul>
+<li>reconhece que a sociedade baiana é cultural e historicamente marcada pela presença da comunidade afro-brasileira e reafirma o racismo como crime inafiançável e imprescritível;</li>
+<li>veda ao estado manter intercâmbio cultural ou desportivo com países que adotem política oficial de discriminação racial;</li>
+<li>determina que a rede estadual de ensino e os cursos de formação de servidores valorizem a participação do negro na formação histórica da sociedade brasileira;</li>
+<li>assegura a presença de pessoas negras na publicidade estadual;</li>
+<li>inclui o dia 20 de novembro no calendário oficial como Dia da Consciência Negra.</li>
+</ul>
+<p>Confira a redação exata desses artigos no texto oficial antes da prova: é um capítulo curto, e a banca costuma cobrar a literalidade.</p>
+</section>
+  <section class="folha" id="caem"><h2>O que mais cai</h2><ul class="caem"><li>Constituição estadual é obra do poder constituinte derivado decorrente: limitado e sujeito a controle pelo STF.</li><li>Governador não tem as imunidades do presidente, e a assembleia não precisa autorizar o processo contra ele.</li><li>Crime de responsabilidade é matéria de lei federal, mesmo quando o acusado é governador.</li><li>Tribunal de Contas do Estado tem sete conselheiros.</li><li>Representação de inconstitucionalidade estadual: julgada pelo Tribunal de Justiça, com mais de um legitimado.</li><li>Bahia: Tribunal de Contas do Estado e Tribunal de Contas dos Municípios são órgãos distintos.</li></ul></section>
+  <section class="folha" id="mapa"><h2>Mapa mental</h2><div class="mm-rolagem"><div class="mm"><div class="mm-raiz">Constituição da Bahia</div><ul class="mm-ramos"><li style="--h:var(--r1)"><div class="mm-ramo">Origem</div><ul class="mm-folhas"><li><span>Art. 25 da Constituição Federal</span></li><li><span>Art. 11 do ADCT</span></li><li><span>Promulgada em 5 de outubro de 1989</span></li><li><span>Poder derivado decorrente</span></li></ul></li><li style="--h:var(--r2)"><div class="mm-ramo">Limites</div><ul class="mm-folhas"><li><span>Princípios sensíveis</span></li><li><span>Princípios estabelecidos</span></li><li><span>Princípios extensíveis</span></li><li><span>Simetria com o modelo federal</span></li></ul></li><li style="--h:var(--r3)"><div class="mm-ramo">Poderes do estado</div><ul class="mm-folhas"><li><span>Assembleia Legislativa: 63 deputados</span></li><li><span>Governador: 4 anos, julgado no STJ</span></li><li><span>Tribunal de Justiça</span></li></ul></li><li style="--h:var(--r4)"><div class="mm-ramo">Controle</div><ul class="mm-folhas"><li><span>Controle interno, arts. 89 e 90</span></li><li><span>Tribunal de Contas do Estado, arts. 91 a 95</span></li><li><span>Tribunal de Contas dos Municípios</span></li><li><span>Representação de inconstitucionalidade</span></li></ul></li><li style="--h:var(--r5)"><div class="mm-ramo">Municípios</div><ul class="mm-folhas"><li><span>Lei orgânica</span></li><li><span>Intervenção estadual, art. 35</span></li></ul></li><li style="--h:var(--r6)"><div class="mm-ramo">Do Negro</div><ul class="mm-folhas"><li><span>Racismo: inafiançável e imprescritível</span></li><li><span>Ensino valoriza a participação do negro</span></li><li><span>20 de novembro</span></li></ul></li></ul></div></div></section>
+  <section class="folha" id="questoes"><h2>Questões</h2>
+    <p class="aviso">Questões inéditas, escritas no formato de múltipla escolha com cinco alternativas usado pela banca. Não são reproduções de provas anteriores.</p>
+    <ol class="qs"><li class="q" data-c="4"><p class="enun">A Constituição do Estado da Bahia, promulgada em 1989, é fruto do exercício do poder constituinte</p><div class="alts"><button type="button" class="alt"><b>A</b><span>originário, sendo juridicamente ilimitada</span></button><button type="button" class="alt"><b>B</b><span>derivado reformador, por alterar a Constituição Federal no âmbito do estado</span></button><button type="button" class="alt"><b>C</b><span>derivado revisor, previsto no Ato das Disposições Constitucionais Transitórias</span></button><button type="button" class="alt"><b>D</b><span>difuso, por decorrer da interpretação dos tribunais</span></button><button type="button" class="alt"><b>E</b><span>derivado decorrente, devendo observar os princípios da Constituição Federal</span></button></div><div class="com" hidden><strong></strong>O art. 25 da Constituição Federal e o art. 11 do ADCT atribuem aos estados o poder de se auto-organizarem. Trata-se de poder derivado, limitado pelos princípios sensíveis, estabelecidos e extensíveis.</div></li><li class="q" data-c="1"><p class="enun">Determinada constituição estadual prevê que o governador só pode ser processado por crime comum após autorização de dois terços da assembleia legislativa. Segundo a jurisprudência do Supremo Tribunal Federal, essa norma é</p><div class="alts"><button type="button" class="alt"><b>A</b><span>válida, por reproduzir, por simetria, a regra aplicável ao Presidente da República</span></button><button type="button" class="alt"><b>B</b><span>inconstitucional, pois não cabe à constituição estadual condicionar a instauração de ação penal contra o governador à autorização da assembleia legislativa</span></button><button type="button" class="alt"><b>C</b><span>válida, desde que o quórum exigido seja de maioria absoluta</span></button><button type="button" class="alt"><b>D</b><span>inconstitucional, pois o governador não pode ser processado durante o mandato</span></button><button type="button" class="alt"><b>E</b><span>válida, por tratar de matéria de interesse predominantemente regional</span></button></div><div class="com" hidden><strong></strong>O STF firmou que a exigência de autorização da Câmara é prerrogativa excepcional do presidente da República e não se estende aos governadores. O Superior Tribunal de Justiça pode receber a denúncia sem licença da assembleia e decide, de forma fundamentada, sobre eventual afastamento.</div></li><li class="q" data-c="2"><p class="enun">Um estado é representado na Câmara dos Deputados por trinta e nove deputados federais. Aplicando-se a regra do art. 27 da Constituição Federal, o número de deputados à assembleia legislativa desse estado será de</p><div class="alts"><button type="button" class="alt"><b>A</b><span>trinta e nove</span></button><button type="button" class="alt"><b>B</b><span>cinquenta e um</span></button><button type="button" class="alt"><b>C</b><span>sessenta e três</span></button><button type="button" class="alt"><b>D</b><span>setenta</span></button><button type="button" class="alt"><b>E</b><span>cento e dezessete</span></button></div><div class="com" hidden><strong></strong>O número é o triplo da representação na Câmara até chegar a trinta e seis (o que ocorre com doze deputados federais). A partir daí, soma-se um deputado estadual para cada federal acima de doze: 36 + (39 - 12) = 63. É o caso da Bahia.</div></li><li class="q" data-c="0"><p class="enun">Quanto ao controle abstrato de constitucionalidade no âmbito estadual, a Constituição Federal estabelece que cabe aos estados a instituição de representação de inconstitucionalidade de leis ou atos normativos</p><div class="alts"><button type="button" class="alt"><b>A</b><span>estaduais ou municipais em face da Constituição Estadual, vedada a atribuição da legitimação para agir a um único órgão</span></button><button type="button" class="alt"><b>B</b><span>estaduais, municipais ou federais em face da Constituição Estadual</span></button><button type="button" class="alt"><b>C</b><span>municipais em face da Constituição Federal, com julgamento pelo Tribunal de Justiça</span></button><button type="button" class="alt"><b>D</b><span>estaduais em face da Constituição Estadual, com legitimação exclusiva do Procurador-Geral de Justiça</span></button><button type="button" class="alt"><b>E</b><span>estaduais ou municipais em face da Constituição Estadual, com julgamento pelo Superior Tribunal de Justiça</span></button></div><div class="com" hidden><strong></strong>Art. 125, § 2º. O julgamento cabe ao Tribunal de Justiça. Leis federais não são objeto desse controle, e o parâmetro é a Constituição do Estado.</div></li><li class="q" data-c="3"><p class="enun">De acordo com a Constituição Federal, os Tribunais de Contas dos estados</p><div class="alts"><button type="button" class="alt"><b>A</b><span>integram o Poder Judiciário estadual</span></button><button type="button" class="alt"><b>B</b><span>são compostos por nove conselheiros, nomeados pelo governador</span></button><button type="button" class="alt"><b>C</b><span>julgam as contas do governador, sem participação da assembleia legislativa</span></button><button type="button" class="alt"><b>D</b><span>são integrados por sete conselheiros, aplicando-se-lhes, no que couber, as normas relativas ao Tribunal de Contas da União</span></button><button type="button" class="alt"><b>E</b><span>subordinam-se hierarquicamente à assembleia legislativa</span></button></div><div class="com" hidden><strong></strong>Art. 75 e seu parágrafo único. Os tribunais de contas auxiliam o Legislativo sem subordinação hierárquica, não integram o Judiciário e, quanto às contas do chefe do Executivo, apenas emitem parecer prévio.</div></li></ol>
+    <div class="placar"><span id="placarTxt" aria-live="polite"></span><button type="button" id="refazer">Refazer questões</button></div>
+  </section>
+</main>
+<nav class="pager wrap" aria-label="Aula anterior e próxima"><a href="aula-2-11-ordem-social.html"><small>Aula anterior</small><strong>2.11 Ordem social</strong></a></nav>
+<script>
+(function(){
+  var L=["A","B","C","D","E"], qs=Array.prototype.slice.call(document.querySelectorAll(".q"));
+  var placar=document.getElementById("placarTxt"), feitas=0, acertos=0;
+  function atualizar(){
+    placar.textContent = feitas===0 ? "Escolha uma alternativa em cada questão para ver o gabarito comentado."
+      : (feitas<qs.length ? feitas+" de "+qs.length+" respondidas, "+acertos+" certas." : "Você acertou "+acertos+" de "+qs.length+".");
+  }
+  qs.forEach(function(q){
+    var c=Number(q.dataset.c), alts=q.querySelectorAll(".alt"), com=q.querySelector(".com"), ver=com.querySelector("strong");
+    alts.forEach(function(b,i){
+      b.addEventListener("click",function(){
+        if(q.dataset.feita) return;
+        q.dataset.feita="1"; feitas++;
+        alts.forEach(function(x){x.disabled=true});
+        alts[c].classList.add("certa");
+        if(i===c){ acertos++; ver.textContent="Certo. Gabarito: "+L[c]; ver.className="acertou"; }
+        else { b.classList.add("errada"); ver.textContent="Errado. Gabarito: "+L[c]; ver.className="errou"; }
+        com.hidden=false; atualizar();
+      });
+    });
+  });
+  document.getElementById("refazer").addEventListener("click",function(){
+    feitas=0; acertos=0;
+    qs.forEach(function(q){
+      delete q.dataset.feita; q.querySelector(".com").hidden=true;
+      q.querySelectorAll(".alt").forEach(function(x){x.disabled=false;x.classList.remove("certa","errada")});
+    });
+    atualizar(); document.getElementById("questoes").scrollIntoView();
+  });
+  atualizar();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2.2 Princípios fundamentais e aplicabilidade das normas constitucionais | Direito Constitucional, EPPGG Bahia 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--ink:#131C33;--ink-2:#4B5772;--line:#D8DEEA;--line-2:#AEB8CE;
+  --acc:#2346C7;--acc-soft:#E4EAFC;--ok:#0B7A64;--ok-soft:#DBF1EB;--err:#B3261E;--err-soft:#FBE4E2;
+  --done:#E8A008;--done-soft:#FCEFCF;--done-ink:#7A5200;
+  --r1:#2346C7;--r2:#0B7A64;--r3:#A85A00;--r4:#B4236B;--r5:#6D3FC9;--r6:#0E7490;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1424;--surface:#161E33;--ink:#E9EDF7;--ink-2:#A3AEC7;--line:#2A3552;--line-2:#4A5879;
+  --acc:#94AAFF;--acc-soft:#1C2850;--ok:#62D2B8;--ok-soft:#12382F;--err:#FF9A91;--err-soft:#43201D;
+  --done:#F4B63A;--done-soft:#3A2D0E;--done-ink:#F4B63A;
+  --r1:#94AAFF;--r2:#62D2B8;--r3:#F4B63A;--r4:#F58CBF;--r5:#B79CFF;--r6:#5CCBE6;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+h1,h2,h3,p,ul,ol{margin:0}
+button{font:inherit;color:inherit}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:6px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+.aulas{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;padding-top:1.5rem;font-family:var(--display);font-size:.875rem}
+.aulas span{margin-right:.5rem;color:var(--ink-2)}
+.aulas a{padding:.2rem .55rem;border-radius:8px;color:var(--ink-2);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.aulas a:hover{background:var(--surface);color:var(--ink)}
+.aulas a[aria-current]{background:var(--acc);color:var(--surface)}
+
+.topo{padding-top:2.75rem;padding-bottom:2rem}
+.topo .num{display:block;font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,11vw,6.5rem);line-height:.85;letter-spacing:-.045em;color:var(--acc)}
+h1{margin-top:1rem;font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.04;letter-spacing:-.03em;max-width:20ch}
+.lede{margin-top:1rem;max-width:58ch;font-size:1.1875rem;color:var(--ink-2)}
+.saltos{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;font-family:var(--display);font-size:.9375rem}
+.saltos a{padding:.4rem .9rem;border:1.5px solid var(--line-2);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.saltos a:hover{border-color:var(--acc);color:var(--acc)}
+
+.folha{background:var(--surface);border-radius:22px;padding:2rem;margin-bottom:1rem;scroll-margin-top:1rem}
+.folha>h2{font-family:var(--display);font-weight:800;font-size:1.75rem;line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem}
+.prosa h3{margin:2rem 0 .5rem;font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.2;letter-spacing:-.01em;color:var(--acc)}
+.prosa>h3:first-of-type{margin-top:.5rem}
+.prosa p{max-width:68ch}
+.prosa p + p,.prosa ul + p,.prosa .rolagem + p{margin-top:.8rem}
+.prosa ul{margin:.6rem 0;padding-left:1.25rem;max-width:68ch}
+.prosa li{margin:.35rem 0}
+.prosa li::marker{color:var(--acc)}
+.nota{margin:1rem 0;padding:.8rem 1rem;border-left:4px solid var(--done);border-radius:0 12px 12px 0;background:var(--done-soft);font-family:var(--display);font-size:.9375rem;line-height:1.5}
+.rolagem{overflow-x:auto;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-family:var(--display);font-size:.9375rem;line-height:1.4}
+th,td{padding:.6rem .75rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--acc-soft);color:var(--acc);font-weight:700;border-bottom:0}
+thead th:first-child{border-radius:10px 0 0 10px}
+thead th:last-child{border-radius:0 10px 10px 0}
+tbody td:first-child{font-weight:600}
+
+.caem{display:grid;gap:.6rem}
+.caem li{list-style:none;padding:.75rem 1rem .75rem 2.75rem;border-radius:14px;background:var(--done-soft);font-family:var(--display);font-size:.9688rem;line-height:1.45;position:relative}
+.caem li::before{content:"!";position:absolute;left:.9rem;top:.75rem;width:1.3rem;height:1.3rem;border-radius:50%;background:var(--done);color:#131C33;font-weight:800;font-size:.85rem;line-height:1.3rem;text-align:center}
+
+.mm-rolagem{overflow-x:auto;padding-bottom:.5rem}
+.mm{display:flex;align-items:center;min-width:46rem}
+.mm ul{padding:0;list-style:none}
+.mm-raiz{position:relative;flex:none;max-width:10.5rem;padding:1.1rem;border-radius:20px;background:var(--ink);color:var(--surface);font-family:var(--display);font-weight:800;font-size:1.25rem;line-height:1.1;text-align:center}
+.mm-raiz::after{content:"";position:absolute;left:100%;top:50%;width:1.5rem;border-top:2px solid var(--line-2)}
+.mm-ramos{flex:1;margin-left:1.5rem}
+.mm-ramos>li{position:relative;display:flex;align-items:center;padding:.55rem 0 .55rem 1.75rem}
+.mm-ramos>li::before{content:"";position:absolute;left:0;top:50%;width:1.75rem;border-top:2px solid var(--h)}
+.mm-ramos>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--line-2)}
+.mm-ramos>li:first-child::after{top:50%}
+.mm-ramos>li:last-child::after{bottom:50%}
+.mm-ramo{position:relative;flex:none;width:10.5rem;padding:.55rem .8rem;border-radius:12px;background:var(--h);color:var(--surface);font-family:var(--display);font-weight:700;font-size:.9375rem;line-height:1.2}
+.mm-ramo::after{content:"";position:absolute;left:100%;top:50%;width:1.25rem;border-top:2px solid var(--h)}
+.mm-folhas{margin-left:1.25rem}
+.mm-folhas>li{position:relative;padding:.2rem 0 .2rem 1.1rem;font-family:var(--display);font-size:.875rem;line-height:1.3}
+.mm-folhas>li::before{content:"";position:absolute;left:0;top:50%;width:.85rem;border-top:2px solid var(--h)}
+.mm-folhas>li::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--h)}
+.mm-folhas>li:first-child::after{top:50%}
+.mm-folhas>li:last-child::after{bottom:50%}
+.mm-folhas span{display:inline-block;padding:.2rem .6rem;border-radius:8px;background:color-mix(in srgb,var(--h) 13%,var(--surface))}
+
+.aviso{max-width:66ch;margin-bottom:1.25rem;color:var(--ink-2);font-size:.9688rem}
+.qs{padding:0;list-style:none;counter-reset:q}
+.q{counter-increment:q;padding:1.5rem 0;border-top:1px solid var(--line)}
+.enun{max-width:68ch}
+.enun::before{content:"Questão " counter(q);display:block;margin-bottom:.35rem;font-family:var(--display);font-weight:800;font-size:.9375rem;color:var(--acc)}
+.alts{display:grid;gap:.4rem;margin-top:.9rem}
+.alt{display:grid;grid-template-columns:1.9rem minmax(0,1fr);gap:.6rem;align-items:start;width:100%;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:12px;background:transparent;text-align:left;cursor:pointer;font-family:var(--text);font-size:1rem;line-height:1.5}
+.alt b{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--bg);font-family:var(--display);font-weight:800;font-size:.875rem}
+.alt:hover:not(:disabled){border-color:var(--acc)}
+.alt:disabled{cursor:default;color:var(--ink)}
+.alt.certa{border-color:var(--ok);background:var(--ok-soft)}
+.alt.certa b{background:var(--ok);color:var(--surface)}
+.alt.errada{border-color:var(--err);background:var(--err-soft)}
+.alt.errada b{background:var(--err);color:var(--surface)}
+.com{margin-top:.9rem;padding:.9rem 1rem;border-radius:12px;background:var(--bg);max-width:68ch;font-size:.9688rem}
+.com strong{display:block;font-family:var(--display);font-weight:800}
+.com strong.acertou{color:var(--ok)}
+.com strong.errou{color:var(--err)}
+.placar{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-top:1.25rem;border-top:1px solid var(--line);font-family:var(--display)}
+.placar button{padding:.5rem 1rem;border:1.5px solid var(--line-2);border-radius:10px;background:transparent;font-weight:600;cursor:pointer}
+.placar button:hover{border-color:var(--acc);color:var(--acc)}
+
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding-top:.5rem;padding-bottom:3rem;font-family:var(--display)}
+.pager a{display:block;padding:1rem 1.25rem;border-radius:16px;background:var(--surface);color:var(--ink);text-decoration:none;line-height:1.3}
+.pager a small{display:block;margin-bottom:.2rem;font-size:.8125rem;color:var(--ink-2)}
+.pager a strong{font-weight:700}
+.pager a:hover strong{color:var(--acc)}
+.pager .prox{grid-column:2;text-align:right}
+
+@media (max-width:720px){
+  .wrap{padding:0 1rem}
+  .topo{padding-top:2rem;padding-bottom:1.5rem}
+  .folha{padding:1.25rem 1rem;border-radius:16px}
+  .mm{display:block;min-width:0}
+  .mm-raiz{max-width:none}
+  .mm-raiz::after{display:none}
+  .mm-ramos{margin:0 0 0 1rem}
+  .mm-ramos>li{display:block;padding:.75rem 0 .25rem 1.25rem}
+  .mm-ramos>li::before{top:1.75rem;width:1.25rem}
+  .mm-ramos>li:first-child::after{top:0}
+  .mm-ramos>li:last-child::after{bottom:auto;height:1.75rem}
+  .mm-ramo{display:inline-block;width:auto}
+  .mm-ramo::after{display:none}
+  .mm-folhas{margin:.5rem 0 0 .75rem}
+  .pager{grid-template-columns:1fr}
+  .pager .prox{grid-column:1;text-align:left}
+}
+</style>
+</head>
+<body>
+<nav class="aulas wrap" aria-label="Aulas de Direito Constitucional"><span>Direito Constitucional</span><a href="aula-2-01-constituicao-federal.html" title="Constituição da República Federativa do Brasil">2.1</a><a href="aula-2-02-principios-fundamentais-e-eficacia.html" aria-current="page" title="Princípios fundamentais e aplicabilidade das normas constitucionais">2.2</a><a href="aula-2-03-direitos-e-garantias-fundamentais.html" title="Direitos e garantias fundamentais">2.3</a><a href="aula-2-04-organizacao-politico-administrativa.html" title="Organização político-administrativa do Estado">2.4</a><a href="aula-2-05-administracao-publica-e-servidores.html" title="Administração Pública: disposições gerais e servidores públicos">2.5</a><a href="aula-2-06-poder-executivo.html" title="Poder Executivo: atribuições e responsabilidades do presidente da República">2.6</a><a href="aula-2-07-poder-legislativo.html" title="Poder Legislativo">2.7</a><a href="aula-2-08-poder-judiciario-e-funcoes-essenciais.html" title="Poder Judiciário e funções essenciais à justiça">2.8</a><a href="aula-2-09-defesa-do-estado-e-seguranca-publica.html" title="Defesa do Estado e das instituições democráticas. Segurança pública">2.9</a><a href="aula-2-10-ordem-economica-e-financeira.html" title="Ordem econômica e financeira">2.10</a><a href="aula-2-11-ordem-social.html" title="Ordem social">2.11</a><a href="aula-2-12-constituicao-do-estado-da-bahia.html" title="Constituição do Estado da Bahia">2.12</a></nav>
+<header class="topo wrap">
+  <span class="num">2.2</span>
+  <h1>Princípios fundamentais e aplicabilidade das normas constitucionais</h1>
+  <p class="lede">Os quatro primeiros artigos da Constituição, que a banca cobra quase literalmente, e a classificação das normas pela capacidade de produzir efeitos.</p>
+  <nav class="saltos" aria-label="Partes da aula">
+    <a href="#explicacao">Explicação</a><a href="#caem">O que mais cai</a><a href="#mapa">Mapa mental</a><a href="#questoes">Questões</a>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="folha prosa" id="explicacao"><h2>Explicação</h2>
+<h3>Art. 1º: a identidade do Estado brasileiro</h3>
+<p>O art. 1º diz que a República Federativa do Brasil é formada pela união indissolúvel dos estados, dos municípios e do Distrito Federal e constitui-se em Estado Democrático de Direito. Dessa frase saem quatro definições que as provas misturam de propósito:</p>
+<div class="rolagem"><table>
+<thead><tr><th>Pergunta</th><th>Resposta</th></tr></thead>
+<tbody>
+<tr><td>Forma de Estado</td><td>Federação</td></tr>
+<tr><td>Forma de governo</td><td>República</td></tr>
+<tr><td>Sistema de governo</td><td>Presidencialismo</td></tr>
+<tr><td>Regime político</td><td>Democracia</td></tr>
+</tbody></table></div>
+<p>Os cinco <strong>fundamentos</strong> da República são: soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa e pluralismo político. O mnemônico tradicional é SO-CI-DI-VA-PLU.</p>
+<p>O parágrafo único completa: todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente. É a democracia semidireta: representação combinada com plebiscito, referendo e iniciativa popular.</p>
+
+<h3>Art. 2º: separação dos Poderes</h3>
+<p>São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário. Cada um tem funções típicas (legislar e fiscalizar, administrar, julgar) e atípicas, e todos se controlam mutuamente pelo sistema de freios e contrapesos. O veto presidencial, a sabatina de ministros pelo Senado e o controle judicial das leis são exemplos.</p>
+
+<h3>Art. 3º: objetivos fundamentais</h3>
+<p>Os objetivos são metas, e por isso começam com verbos no infinitivo:</p>
+<ul>
+<li>construir uma sociedade livre, justa e solidária;</li>
+<li>garantir o desenvolvimento nacional;</li>
+<li>erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;</li>
+<li>promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.</li>
+</ul>
+<p class="nota">Atalho de prova: fundamento é substantivo (soberania, cidadania); objetivo é verbo (construir, garantir, erradicar, promover).</p>
+
+<h3>Art. 4º: princípios das relações internacionais</h3>
+<p>O Brasil rege-se, nas relações com outros países, por dez princípios: independência nacional; prevalência dos direitos humanos; autodeterminação dos povos; não intervenção; igualdade entre os Estados; defesa da paz; solução pacífica dos conflitos; repúdio ao terrorismo e ao racismo; cooperação entre os povos para o progresso da humanidade; e concessão de asilo político.</p>
+<p>O parágrafo único acrescenta que o Brasil buscará a integração econômica, política, social e cultural dos povos da América Latina, visando à formação de uma comunidade latino-americana de nações.</p>
+
+<h3>Aplicabilidade das normas constitucionais</h3>
+<p>Toda norma constitucional tem alguma eficácia. O que varia é quanto ela consegue produzir sozinha, sem ajuda de lei. A classificação cobrada é a de José Afonso da Silva:</p>
+<div class="rolagem"><table>
+<thead><tr><th>Tipo</th><th>Aplicabilidade</th><th>Papel da lei</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Eficácia plena</td><td>Direta, imediata e integral</td><td>Não precisa de lei e a lei não pode restringir</td><td>Art. 2º (separação dos Poderes); art. 13 (língua portuguesa como idioma oficial)</td></tr>
+<tr><td>Eficácia contida</td><td>Direta e imediata, mas possivelmente não integral</td><td>Vale por inteiro desde já; a lei pode vir depois para restringir</td><td>Art. 5º, XIII: é livre o exercício de qualquer profissão, atendidas as qualificações que a lei estabelecer</td></tr>
+<tr><td>Eficácia limitada</td><td>Indireta, mediata e reduzida</td><td>Só produz todos os efeitos depois da lei regulamentadora</td><td>Art. 37, VII: direito de greve do servidor, nos termos de lei específica</td></tr>
+</tbody></table></div>
+<p>As normas de eficácia limitada dividem-se em dois grupos:</p>
+<ul>
+<li><strong>De princípio institutivo.</strong> Mandam o legislador estruturar órgãos ou institutos. Exemplo: a lei disporá sobre a organização dos Territórios (art. 33).</li>
+<li><strong>De princípio programático.</strong> Fixam programas e metas para o Estado, como os objetivos do art. 3º e o direito à saúde do art. 196.</li>
+</ul>
+<p>Mesmo sem regulamentação, a norma limitada já produz efeitos mínimos: revoga a legislação anterior incompatível, impede leis novas em sentido contrário e orienta a interpretação. Quando o legislador se omite, os instrumentos de reação são o mandado de injunção e a ação direta de inconstitucionalidade por omissão.</p>
+</section>
+  <section class="folha" id="caem"><h2>O que mais cai</h2><ul class="caem"><li>Trocar listas: a banca coloca um objetivo (erradicar a pobreza) entre os fundamentos, ou um fundamento (pluralismo político) entre os princípios internacionais.</li><li>Pluralismo político não é o mesmo que pluripartidarismo: é a convivência de ideias e grupos diversos na sociedade.</li><li>Contida não é limitada. A contida nasce plena e pode ser reduzida; a limitada nasce dependente de lei.</li><li>Norma programática também vincula: não é mera promessa sem efeito jurídico.</li><li>Asilo político e repúdio ao racismo estão no art. 4º, não no art. 5º.</li><li>Os municípios fazem parte da união indissolúvel do art. 1º.</li></ul></section>
+  <section class="folha" id="mapa"><h2>Mapa mental</h2><div class="mm-rolagem"><div class="mm"><div class="mm-raiz">Princípios e eficácia</div><ul class="mm-ramos"><li style="--h:var(--r1)"><div class="mm-ramo">Fundamentos, art. 1º</div><ul class="mm-folhas"><li><span>Soberania</span></li><li><span>Cidadania</span></li><li><span>Dignidade da pessoa humana</span></li><li><span>Valores sociais do trabalho e da livre iniciativa</span></li><li><span>Pluralismo político</span></li></ul></li><li style="--h:var(--r2)"><div class="mm-ramo">Objetivos, art. 3º</div><ul class="mm-folhas"><li><span>Construir sociedade livre, justa e solidária</span></li><li><span>Garantir o desenvolvimento nacional</span></li><li><span>Erradicar a pobreza e reduzir desigualdades</span></li><li><span>Promover o bem de todos</span></li></ul></li><li style="--h:var(--r3)"><div class="mm-ramo">Relações internacionais, art. 4º</div><ul class="mm-folhas"><li><span>Independência e autodeterminação</span></li><li><span>Direitos humanos e paz</span></li><li><span>Repúdio ao terrorismo e ao racismo</span></li><li><span>Asilo político</span></li><li><span>Integração latino-americana</span></li></ul></li><li style="--h:var(--r4)"><div class="mm-ramo">Eficácia das normas</div><ul class="mm-folhas"><li><span>Plena: imediata e integral</span></li><li><span>Contida: imediata, pode ser restringida</span></li><li><span>Limitada: depende de lei</span></li><li><span>Limitada institutiva ou programática</span></li></ul></li><li style="--h:var(--r5)"><div class="mm-ramo">Identidade do Estado</div><ul class="mm-folhas"><li><span>Federação</span></li><li><span>República</span></li><li><span>Presidencialismo</span></li><li><span>Democracia semidireta</span></li></ul></li></ul></div></div></section>
+  <section class="folha" id="questoes"><h2>Questões</h2>
+    <p class="aviso">Questões inéditas, escritas no formato de múltipla escolha com cinco alternativas usado pela banca. Não são reproduções de provas anteriores.</p>
+    <ol class="qs"><li class="q" data-c="2"><p class="enun">Constituem fundamentos da República Federativa do Brasil, entre outros,</p><div class="alts"><button type="button" class="alt"><b>A</b><span>a soberania, a cidadania e a garantia do desenvolvimento nacional</span></button><button type="button" class="alt"><b>B</b><span>a dignidade da pessoa humana, o pluralismo político e a concessão de asilo político</span></button><button type="button" class="alt"><b>C</b><span>a cidadania, a dignidade da pessoa humana e o pluralismo político</span></button><button type="button" class="alt"><b>D</b><span>a independência nacional, a cidadania e a defesa da paz</span></button><button type="button" class="alt"><b>E</b><span>a erradicação da pobreza, a soberania e os valores sociais do trabalho</span></button></div><div class="com" hidden><strong></strong>Os fundamentos estão no art. 1º: soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa e pluralismo político. Garantir o desenvolvimento e erradicar a pobreza são objetivos (art. 3º); asilo político, independência nacional e defesa da paz são princípios das relações internacionais (art. 4º).</div></li><li class="q" data-c="3"><p class="enun">Nos termos da Constituição Federal, é objetivo fundamental da República Federativa do Brasil</p><div class="alts"><button type="button" class="alt"><b>A</b><span>a prevalência dos direitos humanos</span></button><button type="button" class="alt"><b>B</b><span>a solução pacífica dos conflitos</span></button><button type="button" class="alt"><b>C</b><span>o pluralismo político</span></button><button type="button" class="alt"><b>D</b><span>erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais</span></button><button type="button" class="alt"><b>E</b><span>a autodeterminação dos povos</span></button></div><div class="com" hidden><strong></strong>É o art. 3º, III. Prevalência dos direitos humanos, solução pacífica dos conflitos e autodeterminação dos povos são princípios do art. 4º; pluralismo político é fundamento do art. 1º.</div></li><li class="q" data-c="1"><p class="enun">A Constituição assegura que é livre o exercício de qualquer trabalho, ofício ou profissão, atendidas as qualificações profissionais que a lei estabelecer. Segundo a classificação tradicional, trata-se de norma de eficácia</p><div class="alts"><button type="button" class="alt"><b>A</b><span>plena, pois não admite restrição por lei</span></button><button type="button" class="alt"><b>B</b><span>contida, pois tem aplicação imediata, mas pode ter seu alcance restringido por lei</span></button><button type="button" class="alt"><b>C</b><span>limitada de princípio institutivo, pois depende de lei para produzir qualquer efeito</span></button><button type="button" class="alt"><b>D</b><span>limitada de princípio programático, pois fixa meta a ser alcançada pelo Estado</span></button><button type="button" class="alt"><b>E</b><span>exaurida, pois já produziu todos os seus efeitos</span></button></div><div class="com" hidden><strong></strong>O art. 5º, XIII, é o exemplo clássico de norma de eficácia contida: enquanto não houver lei, a liberdade é ampla; a lei pode exigir qualificações e, assim, restringir o alcance da norma.</div></li><li class="q" data-c="4"><p class="enun">As normas constitucionais de eficácia limitada</p><div class="alts"><button type="button" class="alt"><b>A</b><span>não produzem nenhum efeito jurídico enquanto não forem regulamentadas</span></button><button type="button" class="alt"><b>B</b><span>têm aplicabilidade direta, imediata e integral</span></button><button type="button" class="alt"><b>C</b><span>podem ser restringidas por lei, mas independem dela para produzir todos os seus efeitos</span></button><button type="button" class="alt"><b>D</b><span>são apenas aquelas que definem programas sociais a serem implementados pelo Estado</span></button><button type="button" class="alt"><b>E</b><span>produzem desde logo efeitos mínimos, como a revogação da legislação anterior incompatível, embora dependam de lei para alcançar plena eficácia</span></button></div><div class="com" hidden><strong></strong>A norma limitada tem aplicabilidade indireta, mediata e reduzida, mas não é vazia: revoga normas anteriores contrárias e vincula o legislador. Ela abrange tanto as normas programáticas quanto as de princípio institutivo.</div></li><li class="q" data-c="0"><p class="enun">Rege as relações internacionais da República Federativa do Brasil o princípio da</p><div class="alts"><button type="button" class="alt"><b>A</b><span>concessão de asilo político</span></button><button type="button" class="alt"><b>B</b><span>erradicação da marginalização</span></button><button type="button" class="alt"><b>C</b><span>livre iniciativa</span></button><button type="button" class="alt"><b>D</b><span>garantia do desenvolvimento nacional</span></button><button type="button" class="alt"><b>E</b><span>redução das desigualdades regionais</span></button></div><div class="com" hidden><strong></strong>A concessão de asilo político está no art. 4º, X. As demais alternativas trazem objetivos do art. 3º ou parte de um fundamento do art. 1º.</div></li></ol>
+    <div class="placar"><span id="placarTxt" aria-live="polite"></span><button type="button" id="refazer">Refazer questões</button></div>
+  </section>
+</main>
+<nav class="pager wrap" aria-label="Aula anterior e próxima"><a href="aula-2-01-constituicao-federal.html"><small>Aula anterior</small><strong>2.1 Constituição da República Federativa do Brasil</strong></a><a class="prox" href="aula-2-03-direitos-e-garantias-fundamentais.html"><small>Próxima aula</small><strong>2.3 Direitos e garantias fundamentais</strong></a></nav>
+<script>
+(function(){
+  var L=["A","B","C","D","E"], qs=Array.prototype.slice.call(document.querySelectorAll(".q"));
+  var placar=document.getElementById("placarTxt"), feitas=0, acertos=0;
+  function atualizar(){
+    placar.textContent = feitas===0 ? "Escolha uma alternativa em cada questão para ver o gabarito comentado."
+      : (feitas<qs.length ? feitas+" de "+qs.length+" respondidas, "+acertos+" certas." : "Você acertou "+acertos+" de "+qs.length+".");
+  }
+  qs.forEach(function(q){
+    var c=Number(q.dataset.c), alts=q.querySelectorAll(".alt"), com=q.querySelector(".com"), ver=com.querySelector("strong");
+    alts.forEach(function(b,i){
+      b.addEventListener("click",function(){
+        if(q.dataset.feita) return;
+        q.dataset.feita="1"; feitas++;
+        alts.forEach(function(x){x.disabled=true});
+        alts[c].classList.add("certa");
+        if(i===c){ acertos++; ver.textContent="Certo. Gabarito: "+L[c]; ver.className="acertou"; }
+        else { b.classList.add("errada"); ver.textContent="Errado. Gabarito: "+L[c]; ver.className="errou"; }
+        com.hidden=false; atualizar();
+      });
+    });
+  });
+  document.getElementById("refazer").addEventListener("click",function(){
+    feitas=0; acertos=0;
+    qs.forEach(function(q){
+      delete q.dataset.feita; q.querySelector(".com").hidden=true;
+      q.querySelectorAll(".alt").forEach(function(x){x.disabled=false;x.classList.remove("certa","errada")});
+    });
+    atualizar(); document.getElementById("questoes").scrollIntoView();
+  });
+  atualizar();
+})();
+</script>
+</body>
+</html>
