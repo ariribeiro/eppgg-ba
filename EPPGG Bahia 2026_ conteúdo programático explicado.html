@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EPPGG Bahia 2026: conteúdo programático explicado</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8; --surface:#FFFFFF; --ink:#131C33; --ink-2:#4B5772; --line:#D8DEEA; --line-2:#AEB8CE;
+  --geral:#2346C7; --geral-soft:#E4EAFC;
+  --esp:#0B7A64; --esp-soft:#DBF1EB;
+  --done:#E8A008; --done-soft:#FCEFCF; --done-ink:#7A5200;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --col:5.25rem;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1424; --surface:#161E33; --ink:#E9EDF7; --ink-2:#A3AEC7; --line:#2A3552; --line-2:#4A5879;
+    --geral:#94AAFF; --geral-soft:#1C2850;
+    --esp:#62D2B8; --esp-soft:#12382F;
+    --done:#F4B63A; --done-soft:#3A2D0E; --done-ink:#F4B63A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1424; --surface:#161E33; --ink:#E9EDF7; --ink-2:#A3AEC7; --line:#2A3552; --line-2:#4A5879;
+  --geral:#94AAFF; --geral-soft:#1C2850;
+  --esp:#62D2B8; --esp-soft:#12382F;
+  --done:#F4B63A; --done-soft:#3A2D0E; --done-ink:#F4B63A;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.6}
+h1,h2,h3,p,ul,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--geral);outline-offset:2px;border-radius:6px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.b-g{--acc:var(--geral);--acc-soft:var(--geral-soft)}
+.b-e{--acc:var(--esp);--acc-soft:var(--esp-soft)}
+
+/* Abertura */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:3rem;align-items:end;padding-top:4rem;padding-bottom:2.5rem}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,6.2vw,4.75rem);line-height:.98;letter-spacing:-.035em;max-width:13ch}
+.lede{margin-top:1.5rem;max-width:56ch;font-size:1.1875rem;color:var(--ink-2)}
+.datas h2{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:-.005em}
+.datas dl{margin-top:.75rem;border-top:1px solid var(--line)}
+.datas dl div{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:.9375rem}
+.datas dt{color:var(--ink-2)}
+.datas dd{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.datas .prova dt,.datas .prova dd{color:var(--ink);font-weight:700}
+.contagem{margin-top:.875rem;font-family:var(--display);font-weight:700;font-size:1.0625rem;color:var(--done-ink)}
+
+/* Mapa proporcional */
+.mapa{padding-bottom:3rem}
+.mapa-barra{display:flex;gap:3px;height:4rem}
+.seg{position:relative;flex:1 1 0;min-width:1.5rem;display:flex;align-items:flex-end;padding:.375rem .5rem;background:var(--acc-soft);color:var(--acc);font-family:var(--display);font-weight:800;font-size:1.125rem;line-height:1;text-decoration:none;border-radius:6px;overflow:hidden}
+.seg:first-child{border-radius:16px 6px 6px 16px}
+.seg:last-child{border-radius:6px 16px 16px 6px}
+.seg-fill{position:absolute;inset:0 auto 0 0;width:0;background:var(--done);transition:width .35s ease}
+.seg b{position:relative;font-weight:800}
+.seg.has-done{color:var(--ink)}
+:root[data-theme="dark"] .seg.has-done{color:#131C33}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg.has-done{color:#131C33}}
+.seg:hover{outline:2px solid var(--acc);outline-offset:1px}
+.mapa-info{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;margin-top:.875rem;font-family:var(--display);font-size:.9375rem;color:var(--ink-2)}
+.chaves{display:flex;flex-wrap:wrap;gap:.375rem 1.25rem}
+.chave::before{content:"";display:inline-block;width:.75rem;height:.75rem;border-radius:3px;margin-right:.4rem;vertical-align:-1px;background:var(--c)}
+
+/* Estrutura principal */
+.layout{display:grid;grid-template-columns:17rem minmax(0,1fr);gap:2.5rem;align-items:start;padding-bottom:4rem}
+.lateral{position:sticky;top:calc(env(safe-area-inset-top,0px) + 1.25rem);max-height:calc(100vh - 2.5rem);overflow-y:auto;padding:2px}
+.busca{width:100%;padding:.7rem .9rem;border:1.5px solid var(--line-2);border-radius:12px;background:var(--surface);font-family:var(--display);font-size:1rem}
+.busca::placeholder{color:var(--ink-2)}
+.indice{margin-top:1rem;display:flex;flex-direction:column;gap:2px}
+.indice a{display:grid;grid-template-columns:1.5rem 1fr auto;gap:.5rem;align-items:baseline;padding:.45rem .6rem;border-radius:10px;font-family:var(--display);font-size:.9375rem;line-height:1.25;color:var(--ink-2);text-decoration:none}
+.indice a .n{font-weight:800;color:var(--acc)}
+.indice a .c{font-size:.8125rem;font-variant-numeric:tabular-nums}
+.indice a:hover{color:var(--ink)}
+.indice a.ativo{background:var(--surface);color:var(--ink);font-weight:600}
+.indice a.completo .c{color:var(--done-ink);font-weight:700}
+.indice .sep{margin:.75rem .6rem .25rem;font-family:var(--display);font-size:.8125rem;color:var(--ink-2)}
+
+.barra-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;margin-bottom:1.25rem;font-family:var(--display);font-size:.9375rem}
+.filtros{display:inline-flex;padding:3px;border-radius:12px;background:var(--line)}
+.filtros button{border:0;background:transparent;padding:.4rem .85rem;border-radius:9px;cursor:pointer;color:var(--ink-2)}
+.filtros button[aria-pressed="true"]{background:var(--surface);color:var(--ink);font-weight:600}
+.total{color:var(--ink-2)}
+.total strong{color:var(--ink);font-variant-numeric:tabular-nums}
+.zerar{margin-left:auto;border:0;background:none;padding:.3rem 0;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.zerar:hover{color:var(--ink)}
+
+.folha{background:var(--surface);border-radius:22px;overflow:hidden}
+.disc{scroll-margin-top:1.25rem}
+.disc + .disc{border-top:10px solid var(--bg)}
+.disc-topo{display:grid;grid-template-columns:var(--col) minmax(0,1fr);gap:0 1rem;padding:1.75rem 1.75rem 1.5rem;background:var(--acc-soft)}
+.disc-n{font-family:var(--display);font-weight:800;font-size:4.25rem;line-height:.8;letter-spacing:-.04em;color:var(--acc)}
+.disc h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);line-height:1.1;letter-spacing:-.02em}
+.disc-resumo{margin-top:.4rem;max-width:58ch}
+.disc-meta{margin-top:.75rem;font-family:var(--display);font-size:.875rem;color:var(--ink-2)}
+.disc-meta .bloco{color:var(--acc);font-weight:700}
+.disc-meta .prog{margin-left:.75rem;font-variant-numeric:tabular-nums}
+.grupo h3{padding:1.5rem 1.75rem 0 calc(1.75rem + var(--col) + 1rem);font-family:var(--display);font-weight:700;font-size:1.125rem;letter-spacing:-.01em;color:var(--acc)}
+.itens{padding:.25rem 1.75rem .75rem}
+.item{display:grid;grid-template-columns:var(--col) minmax(0,1fr) auto;gap:0 1rem;align-items:start;padding:1.1rem 0}
+.item + .item{border-top:1px solid var(--line)}
+.num{font-family:var(--display);font-weight:700;font-size:.9375rem;line-height:1.5rem;font-variant-numeric:tabular-nums;color:var(--acc)}
+.tit{font-family:var(--display);font-weight:600;font-size:1.0625rem;line-height:1.5rem;letter-spacing:-.005em}
+.exp{margin-top:.3rem;max-width:66ch;color:var(--ink-2)}
+.leis{display:flex;flex-wrap:wrap;gap:.375rem;margin-top:.6rem}
+.leis li{padding:.15rem .6rem;border-radius:999px;background:var(--acc-soft);color:var(--acc);font-family:var(--display);font-size:.8125rem;font-weight:600}
+.marca{position:relative;display:block;width:1.75rem;height:1.75rem;cursor:pointer}
+.marca input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.marca .cx{display:grid;place-items:center;width:100%;height:100%;border:2px solid var(--line-2);border-radius:8px;transition:background .15s,border-color .15s}
+.marca .cx svg{width:1rem;height:1rem;opacity:0;stroke:#131C33;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.marca input:checked + .cx{background:var(--done);border-color:var(--done)}
+.marca input:checked + .cx svg{opacity:1}
+.marca input:focus-visible + .cx{outline:3px solid var(--geral);outline-offset:2px}
+.marca:hover .cx{border-color:var(--done)}
+.item.feito .num{color:var(--done-ink)}
+.item.feito .tit{color:var(--ink-2)}
+
+.vazio{padding:3rem 1.75rem;text-align:center;font-family:var(--display)}
+.vazio button{margin-top:1rem;padding:.6rem 1.1rem;border:0;border-radius:10px;background:var(--geral);color:var(--surface);font-weight:600;cursor:pointer}
+.rodape{padding-bottom:3rem;max-width:74ch;font-size:.9375rem;color:var(--ink-2)}
+.rodape p + p{margin-top:.6rem}
+
+@media (max-width:900px){
+  :root{--col:auto}
+  .wrap{padding:0 1rem}
+  .hero{grid-template-columns:1fr;gap:2rem;padding-top:2.5rem;padding-bottom:2rem}
+  .mapa{padding-bottom:1.75rem}
+  .mapa-barra{height:3.25rem;gap:2px}
+  .seg{padding:.3rem;font-size:.875rem;min-width:1.25rem}
+  .layout{grid-template-columns:minmax(0,1fr);gap:1rem}
+  .lateral{top:env(safe-area-inset-top,0px);z-index:5;max-height:none;overflow:visible;margin:0 -1rem;padding:.6rem 1rem .5rem;background:var(--bg);border-bottom:1px solid var(--line)}
+  .indice{flex-direction:row;gap:.375rem;margin-top:.5rem;overflow-x:auto;padding-bottom:.25rem;scrollbar-width:none}
+  .indice::-webkit-scrollbar{display:none}
+  .indice a{display:flex;flex:none;gap:.4rem;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;white-space:nowrap;font-size:.875rem}
+  .indice a.ativo{border-color:var(--acc)}
+  .indice a .c,.indice .sep{display:none}
+  .disc{scroll-margin-top:7.5rem}
+  .folha{border-radius:16px}
+  .disc-topo{grid-template-columns:auto minmax(0,1fr);padding:1.25rem 1rem}
+  .disc-n{font-size:3rem}
+  .grupo h3{padding:1.25rem 1rem 0}
+  .itens{padding:.25rem 1rem .5rem}
+  .item{grid-template-columns:minmax(0,1fr) auto;gap:0 .75rem}
+  .num{grid-column:1;grid-row:1;font-size:.875rem}
+  .corpo{grid-column:1;grid-row:2}
+  .marca{grid-column:2;grid-row:1 / span 2}
+  .zerar{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){.seg-fill,.marca .cx{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div>
+    <h1>O que cai na prova de EPPGG da Bahia</h1>
+    <p class="lede">Os <span id="totalTopicos">186</span> tópicos do Anexo I do edital publicado no Diário Oficial da Bahia em 2 de outubro de 2026, organizados nas 11 disciplinas e com uma explicação curta de cada um. Concurso para Especialista em Políticas Públicas e Gestão Governamental, com banca da Fundação Cesgranrio.</p>
+  </div>
+  <div class="datas">
+    <h2>Datas do cronograma provisório</h2>
+    <dl>
+      <div><dt>Inscrições</dt><dd>16/10 a 11/11/2026</dd></div>
+      <div><dt>Pagamento da taxa</dt><dd>até 12/11/2026</dd></div>
+      <div class="prova"><dt>Provas objetivas e discursiva</dt><dd>10/01/2027</dd></div>
+      <div><dt>Gabarito preliminar</dt><dd>11/01/2027</dd></div>
+      <div><dt>Resultado final e homologação</dt><dd>01/06/2027</dd></div>
+    </dl>
+    <p class="contagem" id="contagem" hidden></p>
+  </div>
+</header>
+
+<section class="mapa wrap" aria-label="Peso de cada disciplina no conteúdo">
+  <nav class="mapa-barra" id="mapa" aria-label="Ir para uma disciplina"></nav>
+  <div class="mapa-info">
+    <p id="mapaLegenda" aria-live="polite"></p>
+    <p class="chaves">
+      <span class="chave" style="--c:var(--geral)">Conhecimentos gerais (1 a 7)</span>
+      <span class="chave" style="--c:var(--esp)">Conhecimentos específicos (8 a 11)</span>
+      <span class="chave" style="--c:var(--done)">Estudado</span>
+    </p>
+  </div>
+</section>
+
+<div class="layout wrap">
+  <aside class="lateral">
+    <label class="vh" for="busca">Buscar tópico ou lei</label>
+    <input class="busca" id="busca" type="search" placeholder="Buscar tópico ou lei" autocomplete="off">
+    <nav class="indice" id="indice" aria-label="Disciplinas"></nav>
+  </aside>
+
+  <main>
+    <div class="barra-acoes">
+      <div class="filtros" role="group" aria-label="Filtrar tópicos">
+        <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" data-filtro="pendentes" aria-pressed="false">A estudar</button>
+        <button type="button" data-filtro="feitos" aria-pressed="false">Estudados</button>
+      </div>
+      <p class="total"><strong id="totalFeitos">0</strong> de <span id="totalGeral">186</span> tópicos estudados</p>
+      <button type="button" class="zerar" id="zerar">Zerar marcações</button>
+    </div>
+    <div class="folha" id="folha"></div>
+    <div class="folha vazio" id="vazio" hidden>
+      <p>Nenhum tópico corresponde à busca ou ao filtro atual.</p>
+      <button type="button" id="limpar">Limpar busca e filtro</button>
+    </div>
+  </main>
+</div>
+
+<footer class="rodape wrap">
+  <p>As explicações são um guia resumido de estudo e não substituem o edital nem a leitura das normas citadas. Para as normas estaduais de 2026 listadas no Anexo I, leia sempre o texto integral.</p>
+  <p>Pelo item 14.14 do edital, legislação que entrar em vigor depois da publicação não é cobrada, salvo quando listada no Anexo I. Consulte a versão oficial em www.dool.egba.ba.gov.br e os avisos em www.cesgranrio.org.br.</p>
+  <p>As marcações de estudo ficam salvas apenas neste navegador.</p>
+</footer>
+
+<script>
+const D=[
+{n:1,b:"g",nome:"Língua Portuguesa",resumo:"Leitura, gramática aplicada ao texto e reescrita de frases.",grupos:[{t:"",itens:[
+["1.1","Compreensão de texto e organização estrutural","Interpretar o que o texto afirma e o que ele permite inferir: tese, ideias principais e secundárias, e como introdução, desenvolvimento e conclusão se encadeiam."],
+["1.2","Marcas de textualidade: coesão, coerência e intertextualidade","Coesão são os elos entre as partes (pronomes, conectivos, elipses); coerência é a lógica do sentido; intertextualidade é o diálogo com outros textos, como citação, paráfrase e paródia."],
+["1.3","Tipos textuais e suas características","Narração, descrição, exposição, argumentação e injunção. Cada tipo tem finalidade, estrutura e marcas linguísticas próprias, como os tempos verbais predominantes."],
+["1.4","Estrutura da frase: reescrita, norma-padrão, pontuação, sintaxe, regência e concordância","O núcleo gramatical da prova: deslocar, substituir, modificar e corrigir trechos sem perder sentido nem correção. Exige dominar termos da oração, períodos compostos, ordem direta e inversa, pontuação, regência e concordância."],
+["1.5","Estrutura e formação de palavras","Morfemas (radical, afixos, desinências) e processos de formação: derivação, composição, hibridismo e abreviação."],
+["1.6","Classes de palavras","Substantivos, adjetivos, artigos, numerais, pronomes, verbos, advérbios, conjunções e interjeições, analisados pela forma, pela função na frase e pelo papel no texto."],
+["1.7","Semântica","Sentido próprio e figurado, relações entre palavras (sinônimos, antônimos, parônimos, hiperônimos) e fenômenos de múltiplos sentidos, como polissemia e ambiguidade."],
+["1.8","Vocabulário: neologismos, arcaísmos e estrangeirismos","Palavras recém-criadas, palavras em desuso e termos importados de outras línguas, e o efeito de cada escolha no texto."],
+["1.9","Ortografia, acentuação gráfica e crase","Grafia conforme o Acordo Ortográfico, regras de acentuação (oxítonas, paroxítonas, proparoxítonas, hiatos) e o acento grave que marca a fusão da preposição a com artigo ou pronome."]
+]}]},
+{n:2,b:"g",nome:"Direito Constitucional",resumo:"A Constituição Federal de 1988 de ponta a ponta, mais a Constituição da Bahia.",grupos:[{t:"",itens:[
+["2.1","Constituição da República Federativa do Brasil","Visão geral da CF/88: estrutura, supremacia, classificação (promulgada, escrita, rígida, analítica) e mecanismos de reforma por emenda."],
+["2.2","Princípios fundamentais e aplicabilidade das normas constitucionais","Fundamentos, objetivos e princípios da República (arts. 1º a 4º) e a classificação das normas pela eficácia: plena (aplicação imediata), contida (a lei pode restringir), limitada (depende de regulamentação) e programáticas (fixam metas ao Estado)."],
+["2.3","Direitos e garantias fundamentais","Arts. 5º a 17: direitos individuais e coletivos, remédios constitucionais (habeas corpus, mandado de segurança, habeas data, mandado de injunção, ação popular), direitos sociais, nacionalidade, direitos políticos e partidos."],
+["2.4","Organização político-administrativa do Estado","A federação brasileira: autonomia dos entes, repartição de competências (exclusivas, privativas, comuns e concorrentes), criação de estados e municípios e hipóteses de intervenção."],
+["2.5","Administração Pública: disposições gerais e servidores","Arts. 37 a 41: princípios, concurso público, cargos em comissão, acumulação, teto remuneratório, estabilidade e regime previdenciário dos servidores."],
+["2.6","Poder Executivo","Eleição e mandato, competências privativas do presidente (art. 84), crimes de responsabilidade e processo de impeachment."],
+["2.7","Poder Legislativo","Congresso, Câmara e Senado; tramitação de emendas, leis e medidas provisórias; fiscalização contábil, financeira e orçamentária com apoio do Tribunal de Contas; poderes e limites das CPIs."],
+["2.8","Poder Judiciário e funções essenciais à justiça","Órgãos e competências dos tribunais, CNJ e garantias da magistratura. Também o papel do Ministério Público, da Advocacia Pública e da Defensoria Pública."],
+["2.9","Defesa do Estado e das instituições democráticas","Estado de defesa e estado de sítio, Forças Armadas e os órgãos de segurança pública do art. 144."],
+["2.10","Ordem econômica e financeira","Art. 170 em diante: livre iniciativa, valorização do trabalho e função social da propriedade. O Estado explora atividade econômica só em casos excepcionais (art. 173) e atua como agente normativo e regulador (art. 174)."],
+["2.11","Ordem social","Seguridade social (saúde, previdência, assistência), educação, cultura, ciência e tecnologia, comunicação social, meio ambiente, família e povos indígenas."],
+["2.12","Constituição do Estado da Bahia","A Constituição estadual de 1989: organização dos poderes da Bahia, administração pública estadual, municípios e capítulos de políticas específicas."]
+]}]},
+{n:3,b:"g",nome:"Direito Administrativo",resumo:"Regime jurídico, organização e instrumentos da Administração, com forte presença da legislação baiana.",grupos:[{t:"",itens:[
+["3.1","Estado, Governo e Administração Pública: conceitos","Estado é a pessoa jurídica soberana; Governo, a direção política; Administração Pública, o aparelho que executa, em sentido subjetivo (órgãos e entidades) e objetivo (a atividade administrativa)."],
+["3.2","Princípios constitucionais do Direito Administrativo","Os princípios que orientam toda a atuação administrativa: supremacia do interesse público, legalidade, finalidade, impessoalidade, moralidade, publicidade, eficiência, motivação, razoabilidade, proporcionalidade, devido processo legal e controle judicial."],
+["3.3","Regime jurídico administrativo","O conjunto de prerrogativas (supremacia do interesse público) e de sujeições (indisponibilidade do interesse público) que diferencia a Administração dos particulares."],
+["3.4","Segurança jurídica e eficiência na aplicação do direito público (LINDB)","Os arts. 20 a 30 da LINDB, incluídos pela Lei nº 13.655/2018: decisões não podem se apoiar só em valores abstratos, devem pesar consequências práticas, prever regime de transição e responsabilizar o agente apenas por dolo ou erro grosseiro.",["Decreto-Lei 4.657/1942"]],
+["3.5","Poderes da administração pública","Poder hierárquico, disciplinar, regulamentar e de polícia; atuação vinculada e discricionária; abuso de poder por excesso ou desvio de finalidade."],
+["3.6","Regime jurídico dos serviços públicos","O que é serviço público, quem pode prestá-lo e como é delegado: concessões, permissões e autorizações, parcerias público-privadas federais e baianas, convênios e consórcios.",["Lei 8.987/1995","Lei 11.079/2004","Lei est. 9.290/2004"]],
+["3.7","Regulação estatal","Intervenção do Estado sobre atividades econômicas e serviços por meio de normas, fiscalização e sanção, corrigindo falhas de mercado sem prestar o serviço diretamente."],
+["3.8","Organização administrativa do Estado","Desconcentração (órgãos) e descentralização (entidades). Características de autarquias, fundações públicas, empresas públicas e sociedades de economia mista."],
+["3.9","Agências reguladoras","Autarquias em regime especial, com autonomia reforçada, dirigentes com mandato fixo e poder normativo técnico sobre os setores regulados."],
+["3.10","Lei das Estatais","Estatuto jurídico das empresas públicas e sociedades de economia mista: governança, transparência, requisitos para dirigentes e regime próprio de licitações e contratos.",["Lei 13.303/2016"]],
+["3.11","Entidades paraestatais e serviços sociais autônomos","Entidades privadas sem fins lucrativos que atuam ao lado do Estado, como as do Sistema S, financiadas por contribuições e sujeitas a controle."],
+["3.12","Atos administrativos","Perfeição, validade e eficácia do ato; efeitos do silêncio administrativo; atos vinculados e discricionários; e as formas de desfazer ou corrigir: anulação (ilegalidade), revogação (conveniência) e convalidação (vício sanável)."],
+["3.13","Processo administrativo e teoria do ato","As regras do processo administrativo estadual: princípios, direitos do administrado, prazos e recursos. O item também cobra conceitos, espécies, elementos (competência, finalidade, forma, motivo, objeto) e atributos do ato.",["Lei est. 12.209/2011"]],
+["3.14","Responsabilidade civil do Estado","Responsabilidade objetiva por danos causados por agentes públicos (art. 37, § 6º, da CF), teoria do risco administrativo, excludentes e ação regressiva contra o agente em caso de dolo ou culpa."],
+["3.15","Agentes públicos","Classificação de quem exerce função pública: agentes políticos, servidores estatutários, empregados públicos, temporários e particulares em colaboração."],
+["3.16","Servidores públicos do Estado da Bahia","O estatuto dos servidores civis baianos: provimento e vacância, direitos, vantagens e benefícios, deveres, proibições, penalidades e processo disciplinar.",["Lei est. 6.677/1994"]],
+["3.17","Licitação e contratos","A Nova Lei de Licitações: princípios, fases, modalidades (pregão, concorrência, concurso, leilão, diálogo competitivo) e contratação direta, mais a lei que disciplina o tema na Bahia.",["Lei 14.133/2021","Lei est. 14.634/2023"]],
+["3.18","Contratos administrativos","Formalização, cláusulas exorbitantes, garantias, duração, alteração e reequilíbrio econômico-financeiro, fiscalização, sanções e hipóteses de extinção."],
+["3.19","Controle da Administração Pública","Controle interno, externo e judicial. Na Bahia: controle interno (arts. 89 e 90 da Constituição estadual) e Tribunal de Contas do Estado (arts. 91 a 95 e sua Lei Orgânica).",["LC est. 005/1991"]],
+["3.20","Domínio público","Bens de uso comum, de uso especial e dominicais; proteção contra penhora, usucapião e oneração; uso por terceiros, alienação, aquisição, terras públicas, patrimônio histórico e proteção ambiental."]
+]}]},
+{n:4,b:"g",nome:"Administração Pública",resumo:"Teoria do Estado, modelos de gestão pública e formas de parceria.",grupos:[{t:"",itens:[
+["4.1","Poder e dominação","Em Weber, poder é impor a própria vontade; dominação é o poder aceito como legítimo. São três tipos puros: tradicional, carismática e racional-legal."],
+["4.2","Governo e sistemas de governo","Formas de organizar a relação entre Executivo e Legislativo: presidencialismo, parlamentarismo e semipresidencialismo, e seus efeitos sobre a governabilidade."],
+["4.3","Estado: conceito e evolução do Estado moderno","Do Estado absolutista ao liberal e ao social; elementos do Estado (povo, território, soberania) e o aparelho das democracias liberais: separação de poderes, burocracia profissional e estado de direito."],
+["4.4","A questão social como campo de intervenção do Estado","Como pobreza, trabalho e desigualdade, agravados pela industrialização, deixaram de ser assunto privado e passaram a exigir políticas sociais."],
+["4.5","Weber e a burocracia","O tipo ideal weberiano: regras impessoais, hierarquia, especialização, mérito e formalismo. Estude também as disfunções, como rigidez e apego excessivo às normas."],
+["4.6","Paradigma burocrático e paradigma gerencial","A burocracia foca no controle de processos e na legalidade; o gerencialismo, em resultados, autonomia do gestor e atenção ao cidadão. A sequência clássica é patrimonialismo, burocracia e gerencialismo."],
+["4.7","Estado de bem-estar social: evolução e crise","O Estado que garante proteção social ampla (saúde, previdência, educação): origens, tipologias e a crise fiscal e de legitimidade a partir dos anos 1970."],
+["4.8","Estado unitário e federalismo","No Estado unitário o poder político é centralizado; na federação, entes autônomos dividem competências sob uma Constituição comum."],
+["4.9","Relação entre esferas de governo e regime federativo","Relações intergovernamentais no Brasil: cooperação e competição entre União, estados e municípios, coordenação de políticas e conflitos federativos."],
+["4.10","Funcionamento do Estado","Como o Estado opera na prática: funções de legislar, executar e julgar, instituições, processo decisório e capacidades estatais."],
+["4.11","Reforma do Estado","As reformas administrativas brasileiras: DASP nos anos 1930, Decreto-Lei 200/1967, Plano Diretor da Reforma do Aparelho do Estado (1995) e Emenda Constitucional 19/1998."],
+["4.12","Modelos de parceria com organizações da sociedade civil","Dois regimes: o modelo baiano de gestão por Organizações Sociais (contrato de gestão) e o Marco Regulatório das OSC, com termos de colaboração, de fomento e acordos de cooperação, regulamentado na Bahia por decreto próprio.",["Lei est. 15.176/2026","Decreto est. 8.890/2004","Lei 13.019/2014","Decreto est. 17.091/2016"]],
+["4.13","Municipalização","Transferência de responsabilidades e recursos para os municípios, sobretudo em saúde, educação e assistência social, após a Constituição de 1988."],
+["4.14","Consórcios públicos","Associações entre entes federativos para gerir serviços de interesse comum (Lei nº 11.107/2005), com personalidade de direito público ou privado, contrato de programa e contrato de rateio."],
+["4.15","Terceirização","Contratação de empresas para executar atividades da Administração: limites, vantagens e riscos, fiscalização do contrato e responsabilidade por encargos trabalhistas."],
+["4.16","Parceria público-privada","Concessão de longo prazo em que o parceiro privado investe e é remunerado pelo poder público, total (administrativa) ou parcialmente (patrocinada), com repartição de riscos."]
+]}]},
+{n:5,b:"g",nome:"Ética e Integridade Pública",resumo:"Conduta do agente público, combate à corrupção, transparência e apuração de irregularidades.",grupos:[{t:"",itens:[
+["5.1","Princípios e valores éticos do serviço público","A conduta esperada do agente público, com direitos e deveres lidos a partir dos princípios do art. 37 da CF: legalidade, impessoalidade, moralidade, publicidade e eficiência."],
+["5.2","Gestão de riscos e medidas mitigatórias","Identificar, avaliar e tratar riscos que ameaçam os objetivos do órgão, inclusive riscos de integridade, com controles internos proporcionais."],
+["5.3","Improbidade administrativa e Lei Anticorrupção","Improbidade: atos dolosos de enriquecimento ilícito, dano ao erário ou violação de princípios, punidos com perda da função e suspensão de direitos políticos, entre outras sanções. Lei Anticorrupção: responsabilidade objetiva de empresas por atos lesivos e acordo de leniência.",["Lei 8.429/1992","Lei 12.846/2013"]],
+["5.4","Accountability, transparência e qualidade na gestão pública","Accountability é o dever de prestar contas e responder pelos resultados; depende de transparência e de padrões de qualidade nos serviços."],
+["5.5","Acesso à informação","A publicidade é a regra e o sigilo, a exceção: transparência ativa, pedidos de informação, prazos, recursos e graus de classificação. Inclui a lei baiana e o decreto estadual de 2026 listado no edital.",["Lei 12.527/2011","Lei est. 12.618/2012","Decreto est. 24.375/2026"]],
+["5.6","Programa Bahia de Integridade Pública (PBIP)","O programa de integridade do Estado e as orientações da Auditoria Geral do Estado para os órgãos. São normas curtas: vale ler as duas na íntegra.",["Portaria SEFAZ 136/2024","Orientação Técnica AGE 02/2024"]],
+["5.7","Apuração de irregularidades e aplicação de penalidades","Instrumentos como sindicância e processo administrativo disciplinar e os parâmetros para dosar a pena, conforme o decreto estadual de 2026 indicado no edital.",["Decreto est. 24.441/2026"]]
+]}]},
+{n:6,b:"g",nome:"Democracia, Cidadania, Diversidade e Igualdade racial e de gênero",resumo:"Democracia e direitos humanos na teoria, seguidos de um bloco de leis e convenções sobre igualdade racial e de gênero.",grupos:[
+{t:"Democracia, direitos e diversidade",itens:[
+["6.1","Estado de direito e a Constituição de 1988","Como a CF/88 consolidou a democracia: voto, partidos, representação política e participação direta por plebiscito, referendo e iniciativa popular."],
+["6.2","Presidencialismo como sistema de governo","Características do presidencialismo e a experiência brasileira do presidencialismo de coalizão: poderes do presidente, relação com o Congresso e capacidade de governar."],
+["6.3","Efetivação e reparação de direitos humanos","Proteção, promoção e reparação de violações: sistemas internacional e nacional de direitos humanos e políticas de memória, verdade e justiça."],
+["6.4","Combate às discriminações, desigualdades e injustiças","As faces da desigualdade no Brasil (renda, região, raça, idade, gênero) e as políticas para enfrentá-las, da transferência de renda às ações afirmativas."],
+["6.5","Desenvolvimento sustentável, meio ambiente e mudança climática","Equilíbrio entre crescimento, inclusão e preservação; Agenda 2030 e ODS; mitigação e adaptação à mudança do clima."],
+["6.6","Diversidade de sexo, gênero e sexualidade, étnico-racial e cultural","Conceitos de sexo, identidade de gênero e orientação sexual, e a pluralidade étnico-racial e cultural como valor a ser reconhecido pelas políticas públicas."],
+["6.7","Inclusão de grupos vulnerabilizados","Barreiras e políticas voltadas a crianças e adolescentes, idosos, população LGBTQIA+, pessoas com deficiência, pessoas em situação de rua, povos indígenas, quilombolas e outras minorias."]
+]},
+{t:"Legislação de igualdade racial e de gênero",itens:[
+["6.8","Constituição da Bahia, capítulo XXIII, Do Negro","Capítulo da Constituição baiana dedicado à população negra, com diretrizes de combate ao racismo e de valorização da cultura afro-brasileira."],
+["6.9","Estatuto da Igualdade Racial","Garante à população negra igualdade de oportunidades e institui o Sistema Nacional de Promoção da Igualdade Racial (Sinapir).",["Lei 12.288/2010"]],
+["6.10","Crimes resultantes de preconceito de raça ou de cor","Tipifica os crimes de discriminação ou preconceito de raça, cor, etnia, religião ou procedência nacional.",["Lei 7.716/1989"]],
+["6.11","Convenção sobre a eliminação de todas as formas de discriminação racial","Promulga no Brasil a convenção da ONU de 1965: define discriminação racial, obriga os Estados a eliminá-la e admite medidas especiais, como as ações afirmativas.",["Decreto 65.810/1969"]],
+["6.12","Convenção sobre a eliminação da discriminação contra a mulher","Promulga a CEDAW, convenção da ONU de 1979 que obriga os Estados a eliminar a discriminação contra a mulher em todas as esferas.",["Decreto 4.377/2002"]],
+["6.13","Lei Maria da Penha","Mecanismos para coibir a violência doméstica e familiar contra a mulher: formas de violência, medidas protetivas de urgência e rede de atendimento.",["Lei 11.340/2006"]],
+["6.14","Estatuto da Igualdade Racial e de Combate à Intolerância Religiosa da Bahia","O estatuto baiano: políticas estaduais de promoção da igualdade racial e de proteção à liberdade religiosa.",["Lei est. 13.182/2014"]],
+["6.15","Convenção Interamericana para Prevenir, Punir e Erradicar a Violência contra a Mulher","Promulga a Convenção de Belém do Pará (1994), que reconhece a violência contra a mulher como violação de direitos humanos e fixa deveres dos Estados.",["Decreto 1.973/1996"]]
+]}]},
+{n:7,b:"g",nome:"Economia",resumo:"Macroeconomia básica, história econômica recente do Brasil e a economia da Bahia.",grupos:[
+{t:"7.1 Macroeconomia",itens:[
+["7.1.1","Contas nacionais e agregados macroeconômicos","Como se mede a economia: PIB pelas óticas do produto, da renda e da despesa; diferentes conceitos de produto (interno e nacional, bruto e líquido, nominal e real); consumo, investimento e poupança."],
+["7.1.2","Exportações, importações, balanço de pagamentos e câmbio","O registro das transações do país com o exterior e como a taxa de câmbio afeta exportações, importações e preços."],
+["7.1.3","Inflação e índices de preços","Causas da inflação (demanda, custos, inércia) e os principais índices brasileiros, como IPCA, INPC e IGP-M."],
+["7.1.4","Política monetária e taxas de juros","Instrumentos do Banco Central (taxa Selic, depósito compulsório, operações de mercado aberto) e o regime de metas de inflação."],
+["7.1.5","Política cambial","Regimes de câmbio fixo, flutuante e intermediários, intervenções do Banco Central e reservas internacionais."],
+["7.1.6","Ciclos econômicos e estabilização","Fases de expansão e recessão da atividade e as políticas anticíclicas usadas para suavizá-las."],
+["7.1.7","Globalização, multilateralismo e organismos internacionais","Integração comercial e financeira entre países e o papel de instituições como FMI, Banco Mundial, OMC e ONU na governança global."]
+]},
+{t:"7.2.1 Economia brasileira",itens:[
+["7.2.1.1","Hiperinflação e endividamento do Estado nos anos 1980","A década perdida: crise da dívida externa, descontrole fiscal, inflação crônica e a sucessão de planos de estabilização fracassados."],
+["7.2.1.2","Do modelo intervencionista ao neoliberalismo nos anos 1990","Abertura comercial, privatizações e redução do papel do Estado como produtor, em contraste com o modelo de substituição de importações."],
+["7.2.1.3","Plano Real e tripé macroeconômico","A estabilização de 1994 (URV e nova moeda) e, a partir de 1999, o tripé: metas de inflação, câmbio flutuante e meta de resultado primário."],
+["7.2.1.4","Planos de desenvolvimento versus planos de estabilização","O contraste entre planejar o crescimento de longo prazo e priorizar o controle da inflação e das contas públicas."],
+["7.2.1.5","Política fiscal: tributos e gastos do governo","Como a arrecadação e o gasto público influenciam demanda, distribuição de renda e crescimento, e como se estrutura a carga tributária brasileira."],
+["7.2.1.6","Déficit orçamentário, dívida pública e teto de gastos","Resultado primário e nominal, dinâmica da dívida e as regras que limitam o crescimento da despesa, como o teto da EC 95/2016 e o regime fiscal que o sucedeu."]
+]},
+{t:"7.2.2 Economia baiana",itens:[
+["7.2.2.1","Ciclos econômicos da Bahia nos séculos XX e XXI","Do auge à crise do cacau no sul do estado; a chegada da Petrobras ao Recôncavo, os distritos industriais do interior e o Polo Petroquímico de Camaçari."],
+["7.2.2.2","Turismo como vetor de desenvolvimento regional","O turismo como gerador de emprego e renda fora da capital: zonas turísticas, infraestrutura e políticas de fomento."],
+["7.2.2.3","Economia criativa e carnaval","Cultura, música, festas e audiovisual como atividade econômica; o carnaval como cadeia produtiva que movimenta serviços, turismo e trabalho."],
+["7.2.2.4","Desenvolvimento industrial por indução fiscal","Atração de indústrias com incentivos tributários, sobretudo de ICMS: resultados obtidos e o debate sobre a guerra fiscal."],
+["7.2.2.5","Problemas socioeconômicos e regionais","Concentração econômica na Região Metropolitana de Salvador, pobreza no semiárido, informalidade e desigualdade entre territórios."],
+["7.2.2.6","Vetores para o desenvolvimento","As apostas para o futuro listadas no edital: mineração, energias limpas, cadeias do agronegócio e da agricultura familiar e reestruturação da indústria."]
+]}]},
+{n:8,b:"e",nome:"Gestão Governamental",resumo:"A maior disciplina do edital: teoria das organizações, gestão de pessoas, logística, serviços digitais, estratégia, projetos e processos.",grupos:[
+{t:"Fundamentos de organização e gestão",itens:[
+["8.1","Tipos de estrutura organizacional","Formas de desenhar a organização: linear, funcional, linha-staff, divisional, matricial e em rede, cada uma com vantagens e limites."],
+["8.2","Critérios de departamentalização","Como agrupar atividades em unidades: por função, produto ou serviço, área geográfica, cliente, processo ou projeto."],
+["8.3","A organização como sistema social","A organização vista como conjunto de pessoas, papéis e relações formais e informais em troca constante com o ambiente."],
+["8.4","Atividades do gestor","As funções administrativas: planejar objetivos, coordenar recursos, dirigir pessoas, comunicar e controlar resultados."],
+["8.5","Processo decisório, tipos de decisão e gestão de conflitos","Etapas e modelos de decisão (racional, racionalidade limitada), decisões programadas e não programadas, e estilos de lidar com conflitos: competir, colaborar, evitar, acomodar e negociar."],
+["8.6","Processo de mudança organizacional","Como organizações mudam: forças a favor e resistências, e modelos como o de Lewin (descongelar, mudar, recongelar)."],
+["8.7","Descentralização","Levar o poder de decisão para níveis mais próximos da execução ou para outras entidades, ganhando agilidade ao custo de menor uniformidade."],
+["8.8","Delegação","Transferir a um subordinado a autoridade para executar uma tarefa, mantendo a responsabilidade final com quem delegou."],
+["8.9","Eficiência, eficácia e efetividade; qualidade e excelência","Eficiência é usar bem os recursos; eficácia, atingir a meta; efetividade, gerar impacto real. Inclui ferramentas da qualidade (PDCA, Ishikawa, Pareto) e modelos de excelência no setor público."],
+["8.10","Ênfase no cidadão: Nova Gestão Pública versus Novo Serviço Público","A Nova Gestão Pública trata o cidadão como cliente e busca eficiência com lógica de mercado; o Novo Serviço Público o trata como cidadão e valoriza participação e interesse público."],
+["8.11","Impacto do ambiente nas organizações: visão sistêmica","A organização como sistema aberto: fatores políticos, econômicos, sociais e tecnológicos influenciam sua estratégia e estrutura."],
+["8.12","Gestão de documentos","Ciclo de vida dos documentos: produção, classificação, tramitação, arquivos corrente, intermediário e permanente, tabela de temporalidade e destinação."]
+]},
+{t:"8.13 Gestão de pessoas",itens:[
+["8.13.1","Evolução e funções da gestão de pessoas","Da administração de pessoal à gestão estratégica de pessoas, e os processos de prover, aplicar, recompensar, desenvolver, manter e monitorar."],
+["8.13.2","Recrutamento e seleção","Atrair candidatos (recrutamento interno e externo) e escolher os mais adequados; no setor público, o concurso e suas particularidades."],
+["8.13.3","Avaliação e gestão do desempenho","Métodos de avaliação (escalas, 360 graus, por objetivos), erros comuns do avaliador e o ciclo contínuo de planejar, acompanhar e dar retorno."],
+["8.13.4","Valorização, recompensas e responsabilização","Remuneração fixa e variável, benefícios e reconhecimento não financeiro, ligados à responsabilização por resultados."],
+["8.13.5","Indicadores de gestão de pessoas","Métricas como rotatividade, absenteísmo, horas de capacitação e clima, usadas para apoiar decisões."],
+["8.13.6","Gestão por competências","Mapear os conhecimentos, habilidades e atitudes necessários, identificar lacunas e orientar seleção, capacitação e avaliação por elas."],
+["8.13.7","Gestão de redes organizacionais","Coordenar organizações interdependentes que cooperam sem hierarquia única, com base em confiança, governança e recursos compartilhados."],
+["8.13.8","Desenvolvimento gerencial","Formação de gestores: competências gerenciais, trilhas de desenvolvimento, mentoria e sucessão."],
+["8.13.9","Clima organizacional","A percepção coletiva dos servidores sobre o ambiente de trabalho em dado momento, medida por pesquisas e ligada a satisfação e desempenho."],
+["8.13.10","Comportamento e cultura organizacional","Comportamento organizacional estuda indivíduos e grupos no trabalho; cultura é o conjunto de valores, crenças e pressupostos compartilhados."],
+["8.13.11","Grupos e equipes de trabalho","Diferença entre grupo e equipe, estágios de desenvolvimento, papéis e fatores que explicam o desempenho coletivo."],
+["8.13.12","Qualidade de vida no trabalho","Condições físicas, psicológicas e sociais do trabalho: saúde, equilíbrio com a vida pessoal e modelos clássicos de avaliação, como o de Walton."],
+["8.13.13","Gestão da mudança: mudanças sociais, científicas, culturais e organizacionais","Como transformações da sociedade, da ciência, da cultura e das próprias organizações exigem conduzir pessoas por transições planejadas."],
+["8.13.14","Aprendizagem individual e organizacional","Como as pessoas aprendem e como a organização incorpora esse aprendizado em suas rotinas, na linha das organizações que aprendem, de Peter Senge."],
+["8.13.15","Educação a distância","Capacitação mediada por tecnologia: modalidades síncrona e assíncrona, ganhos de escala e desafios de engajamento."],
+["8.13.16","Gestão do conhecimento","Criar, registrar, compartilhar e aplicar conhecimento; conversão entre conhecimento tácito e explícito (Nonaka e Takeuchi)."],
+["8.13.17","Liderança, estilos de liderança e situações de trabalho","Teorias dos traços, comportamentais e situacionais; liderança transacional e transformacional. A ideia central é ajustar o estilo à situação e à equipe."],
+["8.13.18","Teorias da motivação","Maslow, Herzberg, McClelland e McGregor, que explicam o que motiva; e expectativa (Vroom), equidade e fixação de metas, que explicam como a motivação ocorre."],
+["8.13.19","Negociação e gestão de conflitos","Negociação distributiva e integrativa (ganha-ganha), preparação, concessões e técnicas de mediação."],
+["8.13.20","Legislação de pessoal: Estatuto dos Servidores da Bahia","O estatuto baiano aplicado à gestão de pessoas: provimento, direitos, deveres e regime disciplinar. É a mesma lei do item 3.16.",["Lei est. 6.677/1994"]],
+["8.13.21","Tendências do futuro do serviço público","Trabalho remoto e híbrido, digitalização, novas competências, vínculos mais flexíveis e foco em entregas."],
+["8.13.22","Política Nacional de Desenvolvimento de Pessoas","A PNDP federal (Decreto nº 9.991/2019): planejamento anual da capacitação alinhado às necessidades dos órgãos."],
+["8.13.23","Impacto da inteligência artificial nos processos de trabalho","Automação de tarefas, apoio à decisão e novos perfis profissionais; ganhos de produtividade e riscos como vieses e dependência tecnológica."]
+]},
+{t:"8.14 Gestão de logística e patrimônio",itens:[
+["8.14.1","Conceituação de material e patrimônio","Diferença entre material de consumo e material permanente e o que compõe o patrimônio de um órgão."],
+["8.14.2","O patrimônio das empresas e órgãos públicos","Conjunto de bens, direitos e obrigações: registro, inventário, depreciação e responsabilidade pela guarda."],
+["8.14.3","Patrimônio imobiliário","Imóveis públicos: cadastro, regularização, uso, cessão e alienação."],
+["8.14.4","Patrimônio mobiliário","Bens móveis: tombamento, controle, movimentação, inventário e desfazimento."],
+["8.14.5","Organização e controle logístico","Planejamento e controle de estoques, armazenagem e distribuição, com ferramentas como curva ABC e ponto de pedido."],
+["8.14.6","Gestão da cadeia de suprimentos","Integração de fornecedores, compras, armazenagem e distribuição para reduzir custos e garantir disponibilidade."],
+["8.14.7","Logística reversa","Retorno de produtos e resíduos ao ciclo produtivo ou ao descarte adequado, em linha com a Política Nacional de Resíduos Sólidos."],
+["8.14.8","Serviços de apoio e infraestrutura","As atividades-meio que sustentam o órgão: protocolo, movimentação de arquivos, sistemas de informação e manutenção de equipamentos e instalações."],
+["8.14.9","Logística","O conceito geral: fluxo de materiais e informações do fornecedor ao usuário final, no prazo e no custo certos."],
+["8.14.10","Sustentabilidade das compras públicas","Critérios ambientais, sociais e econômicos nas contratações: ciclo de vida do produto e desenvolvimento sustentável como objetivo da licitação."]
+]},
+{t:"8.15 Gestão de serviços públicos",itens:[
+["8.15.1","Inovação na gestão pública","Novas soluções para problemas públicos: laboratórios de inovação, design thinking, experimentação e cocriação com usuários."],
+["8.15.2","Transformação digital no serviço público","Governo digital: serviços online, simplificação, interoperabilidade de dados e identidade digital."],
+["8.15.3","Lei Geral de Proteção de Dados Pessoais (LGPD)","Regras para tratar dados pessoais: fundamentos e alcance, princípios, direitos do titular, responsabilidades de controlador e operador, transferência internacional, segurança e a ANPD.",["Lei 13.709/2018"]],
+["8.15.4","Ética na produção de conteúdo com IA generativa","Uso responsável de IA generativa: transparência sobre o uso, checagem de fatos, autoria, vieses e proteção de dados."]
+]},
+{t:"8.16 Estratégia, projetos e processos",itens:[
+["8.16.1","Planejamento e gestão estratégica organizacional","Níveis estratégico, tático e operacional; matriz SWOT; Balanced Scorecard e mapas estratégicos; análise de cenários; desdobramento de objetivos e metas em planos de ação; indicadores de desempenho e OKR (objetivos e resultados-chave)."],
+["8.16.2","Gestão de projetos","Projeto como esforço temporário com resultado único; processos e áreas do PMBOK (integração, escopo, tempo, custos, qualidade, recursos humanos, comunicações, riscos, aquisições e partes interessadas); metodologias ágeis."],
+["8.16.3","Gestão de processos e noções de dados","Mapear, analisar e melhorar processos (BPM) e desenhar serviços públicos; portais corporativos e web services; e conceitos de BI, data warehouse, data mart, data mining e big data."]
+]}]},
+{n:9,b:"e",nome:"Planejamento e Gestão Estratégica",resumo:"Os instrumentos de planejamento governamental e o modelo adotado pela Bahia.",grupos:[{t:"",itens:[
+["9.1","Retomada do planejamento estratégico de longo prazo","O esforço de planejar o desenvolvimento em horizontes além de um mandato, com visão de futuro que orienta os planos plurianuais."],
+["9.2","Instrumentos do ciclo quadrienal: PPA, LDO e LOA","O PPA define diretrizes, objetivos e metas para quatro anos; a LDO fixa metas e prioridades do ano e orienta o orçamento; a LOA estima receitas e fixa despesas."],
+["9.3","Política de Desenvolvimento Territorial","O planejamento baiano organizado por Territórios de Identidade, com instâncias colegiadas de participação.",["Lei est. 13.214/2014"]],
+["9.4","Modelo de governança do PPA 2024-2027","Quem monitora, avalia e revisa o PPA estadual vigente: instâncias, papéis e rotinas de acompanhamento definidos em decreto.",["Decreto est. 22.770/2024"]]
+]}]},
+{n:10,b:"e",nome:"Políticas Públicas",resumo:"Do conceito à avaliação: como políticas são formuladas, implementadas, coordenadas e medidas.",grupos:[
+{t:"Conceitos e elaboração",itens:[
+["10.1","As diferentes conceituações de políticas públicas","O que conta como política pública, da definição de Dye (o que o governo escolhe fazer ou não fazer) às centradas em problemas públicos, além de tipologias como a de Lowi."],
+["10.2","O processo de elaboração de políticas","O ciclo de políticas: formação da agenda, formulação, tomada de decisão, implementação e avaliação."],
+["10.2.1","O papel do Estado","O Estado como ator central: define prioridades, regula, financia e executa, com graus variados de autonomia frente à sociedade."],
+["10.2.2","A burocracia e o Estado","O corpo técnico permanente dá continuidade e capacidade ao Estado e também influencia o conteúdo das políticas."],
+["10.2.3","Poder, racionalidade e tomada de decisões","Modelos de decisão: racional-compreensivo, racionalidade limitada (Simon), incrementalismo (Lindblom) e lata de lixo."],
+["10.2.4","Burocracia e discricionariedade na formulação e implementação","Quem executa interpreta regras e decide caso a caso. Os burocratas de nível de rua, de Lipsky, moldam a política na ponta."]
+]},
+{t:"Teorias e implementação",itens:[
+["10.3","Teorias e modelos contemporâneos de análise","Cinco lentes: escolha racional institucional (regras moldam incentivos), redes de políticas, múltiplos fluxos de Kingdon (problemas, soluções e política), equilíbrio pontuado (estabilidade com rupturas) e coalizões de defesa de Sabatier."],
+["10.4","Implementação: problemas, dilemas e desafios","Por que políticas falham na execução: abordagens de cima para baixo e de baixo para cima, falhas de coordenação, de recursos e de capacidade."],
+["10.4.1","Arranjos institucionais para implementação","Regras, organizações e mecanismos de coordenação que definem quem faz o quê na execução de uma política."],
+["10.5","Diversidade e inclusão nas políticas públicas","Desenhar políticas que considerem diferenças de raça, gênero, deficiência, idade e território."],
+["10.5.1","Ações afirmativas, intersetorialidade, transversalidade e interseccionalidade","Ações afirmativas corrigem desigualdades históricas; intersetorialidade articula setores; transversalidade leva um tema a todas as políticas; interseccionalidade considera opressões que se sobrepõem."]
+]},
+{t:"Participação e coordenação",itens:[
+["10.6","Participação e controle social na governança","Canais pelos quais a sociedade influencia e fiscaliza o governo: conselhos, conferências, escutas, audiências públicas e outros fóruns."],
+["10.7","Processos participativos de gestão pública","Arranjos em que cidadãos decidem junto com o governo, como os conselhos de gestão e o orçamento participativo."],
+["10.7.1","Articulação versus fragmentação de ações governamentais","O desafio de alinhar órgãos e programas para evitar sobreposições, lacunas e esforços contraditórios."],
+["10.7.2","Dimensões da coordenação","Três eixos: dentro do mesmo governo (entre secretarias), entre níveis de governo (União, estados, municípios) e entre governo e sociedade."]
+]},
+{t:"Avaliação e estatística",itens:[
+["10.8","Avaliação de políticas públicas","Julgar o mérito de uma política com base em evidências, para aprimorar, ampliar ou encerrar."],
+["10.8.1","Componentes do processo de avaliação","Objetivos, critérios (eficiência, eficácia, efetividade), indicadores, coleta de dados e uso dos resultados."],
+["10.8.2","Tipologia de avaliação","Antes, durante e depois da política (ex ante, de processo, ex post); de resultados e de impacto; interna e externa; formativa e somativa."],
+["10.8.3","Pesquisa avaliativa","Avaliação com rigor de pesquisa: desenhos experimentais e quase-experimentais, métodos quantitativos e qualitativos."],
+["10.8.4","Estatística aplicada à avaliação","As ferramentas estatísticas básicas para medir resultados e generalizar conclusões, detalhadas nos três itens seguintes."],
+["10.8.4.1","Noções de amostragem","Probabilística (aleatória simples, sistemática, estratificada, por conglomerados), em que cada unidade tem chance conhecida de seleção, e não probabilística (conveniência, cotas, intencional)."],
+["10.8.4.2","Noções de inferência estatística","Usar a amostra para concluir sobre a população: parâmetro (valor da população), estatística (valor da amostra) e distribuição amostral."],
+["10.8.4.3","Estatísticas de localização","Média (soma dividida pelo número de valores), mediana (valor central dos dados ordenados) e moda (valor mais frequente)."]
+]}]},
+{n:11,b:"e",nome:"Finanças Públicas",resumo:"Orçamento, federalismo fiscal e responsabilidade na gestão das contas públicas.",grupos:[{t:"",itens:[
+["11.1","Orçamento público: conceitos, princípios e tipos","Princípios como unidade, universalidade, anualidade e exclusividade, e a evolução dos modelos: tradicional (foco no gasto), de desempenho, base zero (justificar tudo a cada ciclo) e orçamento-programa (ligado ao planejamento)."],
+["11.2","Política fiscal e equilíbrio orçamentário","O uso de receitas e despesas para estabilizar a economia e a busca de equilíbrio entre o que se arrecada e o que se gasta."],
+["11.3","Déficit público e dívida pública no Brasil","Os conceitos de déficit e como a dívida pública brasileira se formou, o que a faz crescer, suas consequências e a evolução recente."],
+["11.4","Pacto federativo e federalismo fiscal","Quem arrecada e quem gasta na federação: competências tributárias, repartição de receitas e o descompasso entre encargos e recursos."],
+["11.5","Classificação e execução da receita e da despesa","Classificações orçamentárias da receita e da despesa. Estágios da receita: previsão, lançamento, arrecadação e recolhimento; da despesa: fixação, empenho, liquidação e pagamento."],
+["11.6","Estrutura programática, ciclo orçamentário e programação financeira","Programas e ações; elaboração, aprovação, execução e controle do orçamento; créditos suplementares, especiais e extraordinários; descentralização de créditos, programação financeira e contingenciamento."],
+["11.7","Lei de Responsabilidade Fiscal e transparência","Planejamento, transparência e responsabilidade na gestão fiscal: geração de despesa, limites de pessoal e de dívida, regra de ouro, mínimos de saúde e educação, transferências voluntárias e desvinculação de receitas. A LC 131/2009 exige divulgação detalhada e em tempo real.",["LC 101/2000","LC 131/2009"]],
+["11.8","Emendas parlamentares ao orçamento","Alterações do Legislativo no projeto de orçamento: emendas individuais, de bancada e de comissão, e as regras de execução obrigatória."],
+["11.9","Previdência e precatórios","O peso dos regimes de previdência nas contas públicas e os precatórios, dívidas judiciais do poder público pagas em ordem cronológica."]
+]}]}
+];
+</script>
+<script>
+(function(){
+  var CHAVE="eppgg-ba-2026:estudados";
+  var BLOCO={g:"Conhecimentos gerais",e:"Conhecimentos específicos"};
+  var feitos=new Set(), filtro="todos", termo="";
+  try{ JSON.parse(localStorage.getItem(CHAVE)||"[]").forEach(function(x){feitos.add(x)}); }catch(e){}
+  function salvar(){ try{ localStorage.setItem(CHAVE,JSON.stringify(Array.from(feitos))); }catch(e){} }
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function norm(s){ return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
+  function $(id){ return document.getElementById(id); }
+  var CHECK='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>';
+
+  var total=0;
+  D.forEach(function(d){ d.qtd=d.grupos.reduce(function(a,g){return a+g.itens.length},0); total+=d.qtd; });
+  $("totalTopicos").textContent=total; $("totalGeral").textContent=total;
+
+  // Mapa proporcional e índice
+  var mapa="", indice="", ultimo="";
+  D.forEach(function(d){
+    mapa+='<a class="seg b-'+d.b+'" href="#d'+d.n+'" data-d="'+d.n+'" style="flex-grow:'+d.qtd+'" aria-label="'+esc(d.n+". "+d.nome+", "+d.qtd+" tópicos")+'"><span class="seg-fill"></span><b>'+d.n+'</b></a>';
+    if(d.b!==ultimo){ indice+='<p class="sep">'+BLOCO[d.b]+'</p>'; ultimo=d.b; }
+    indice+='<a class="b-'+d.b+'" href="#d'+d.n+'" data-d="'+d.n+'"><span class="n">'+d.n+'</span><span>'+esc(d.nome)+'</span><span class="c"></span></a>';
+  });
+  $("mapa").innerHTML=mapa; $("indice").innerHTML=indice;
+
+  // Disciplinas e tópicos
+  var html="";
+  D.forEach(function(d){
+    html+='<section class="disc b-'+d.b+'" id="d'+d.n+'" data-d="'+d.n+'"><header class="disc-topo"><span class="disc-n" aria-hidden="true">'+d.n+'</span><div><h2>'+esc(d.nome)+'</h2><p class="disc-resumo">'+esc(d.resumo)+'</p><p class="disc-meta"><span class="bloco">'+BLOCO[d.b]+'</span><span class="prog"></span></p></div></header>';
+    d.grupos.forEach(function(g){
+      html+='<div class="grupo">'+(g.t?'<h3>'+esc(g.t)+'</h3>':'')+'<ul class="itens">';
+      g.itens.forEach(function(it){
+        var leis=it[3]||[];
+        var busca=norm([it[0],it[1],it[2],leis.join(" "),d.nome,g.t].join(" "));
+        html+='<li class="item" data-num="'+it[0]+'" data-busca="'+esc(busca)+'"><span class="num">'+it[0]+'</span><div class="corpo"><div class="tit">'+esc(it[1])+'</div><p class="exp">'+esc(it[2])+'</p>'+
+          (leis.length?'<ul class="leis" aria-label="Normas citadas no edital">'+leis.map(function(l){return '<li>'+esc(l)+'</li>'}).join("")+'</ul>':'')+
+          '</div><label class="marca"><input type="checkbox"><span class="cx">'+CHECK+'</span><span class="vh">Marcar '+it[0]+' como estudado</span></label></li>';
+      });
+      html+='</ul></div>';
+    });
+    html+='</section>';
+  });
+  $("folha").innerHTML=html;
+
+  var itens=Array.prototype.slice.call(document.querySelectorAll(".item"));
+  itens.forEach(function(el){
+    if(feitos.has(el.dataset.num)){ el.classList.add("feito"); el.querySelector("input").checked=true; }
+  });
+
+  var legendaPadrao="A largura de cada bloco mostra quantos tópicos a disciplina tem.";
+  function progresso(){
+    var soma=0;
+    D.forEach(function(d){
+      var sec=$("d"+d.n), n=sec.querySelectorAll(".item.feito").length; soma+=n; d.feitos=n;
+      sec.querySelector(".prog").textContent=n+" de "+d.qtd+" estudados";
+      var seg=document.querySelector('.seg[data-d="'+d.n+'"]');
+      seg.querySelector(".seg-fill").style.width=(100*n/d.qtd)+"%";
+      seg.classList.toggle("has-done",n>0);
+      var a=document.querySelector('.indice a[data-d="'+d.n+'"]');
+      a.querySelector(".c").textContent=n+"/"+d.qtd;
+      a.classList.toggle("completo",n===d.qtd);
+    });
+    $("totalFeitos").textContent=soma;
+  }
+  function aplicar(){
+    var q=norm(termo.trim()), visiveis=0;
+    itens.forEach(function(el){
+      var ok=(!q||el.dataset.busca.indexOf(q)>-1) && (filtro==="todos"||(filtro==="feitos")===el.classList.contains("feito"));
+      el.hidden=!ok; if(ok) visiveis++;
+    });
+    document.querySelectorAll(".grupo").forEach(function(g){ g.hidden=!g.querySelector(".item:not([hidden])"); });
+    document.querySelectorAll(".disc").forEach(function(s){ s.hidden=!s.querySelector(".item:not([hidden])"); });
+    $("folha").hidden=visiveis===0; $("vazio").hidden=visiveis!==0;
+  }
+
+  $("folha").addEventListener("change",function(e){
+    var el=e.target.closest(".item"); if(!el) return;
+    var n=el.dataset.num;
+    if(e.target.checked){ feitos.add(n); el.classList.add("feito"); } else { feitos.delete(n); el.classList.remove("feito"); }
+    salvar(); progresso(); if(filtro!=="todos") aplicar();
+  });
+  $("busca").addEventListener("input",function(e){ termo=e.target.value; aplicar(); });
+  var botoes=document.querySelectorAll(".filtros button");
+  function definirFiltro(f){ filtro=f; botoes.forEach(function(b){ b.setAttribute("aria-pressed",String(b.dataset.filtro===f)); }); aplicar(); }
+  botoes.forEach(function(b){ b.addEventListener("click",function(){ definirFiltro(b.dataset.filtro); }); });
+  $("limpar").addEventListener("click",function(){ termo=""; $("busca").value=""; definirFiltro("todos"); });
+
+  var zerar=$("zerar"), armado=null;
+  zerar.addEventListener("click",function(){
+    if(!armado){ zerar.textContent="Confirmar: zerar todas as marcações"; armado=setTimeout(function(){ zerar.textContent="Zerar marcações"; armado=null; },4000); return; }
+    clearTimeout(armado); armado=null; zerar.textContent="Zerar marcações";
+    feitos.clear(); salvar();
+    itens.forEach(function(el){ el.classList.remove("feito"); el.querySelector("input").checked=false; });
+    progresso(); aplicar();
+  });
+
+  // Legenda do mapa responde ao foco e ao ponteiro
+  var legenda=$("mapaLegenda"); legenda.textContent=legendaPadrao;
+  document.querySelectorAll(".seg").forEach(function(seg){
+    var d=D[Number(seg.dataset.d)-1];
+    function mostrar(){ legenda.textContent=d.n+". "+d.nome+": "+d.qtd+" tópicos, "+(d.feitos||0)+" estudados"; }
+    function voltar(){ legenda.textContent=legendaPadrao; }
+    seg.addEventListener("mouseenter",mostrar); seg.addEventListener("focus",mostrar);
+    seg.addEventListener("mouseleave",voltar); seg.addEventListener("blur",voltar);
+  });
+
+  // Disciplina ativa no índice
+  var nav=$("indice");
+  if("IntersectionObserver" in window){
+    var obs=new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en){
+        if(!en.isIntersecting) return;
+        nav.querySelectorAll("a").forEach(function(a){
+          var ativo=a.dataset.d===en.target.dataset.d;
+          a.classList.toggle("ativo",ativo);
+          if(ativo && nav.scrollWidth>nav.clientWidth) nav.scrollTo({left:a.offsetLeft-nav.offsetLeft-12});
+        });
+      });
+    },{rootMargin:"-25% 0px -70% 0px"});
+    document.querySelectorAll(".disc").forEach(function(s){ obs.observe(s); });
+  }
+
+  // Contagem regressiva para a prova
+  var hoje=new Date(); hoje.setHours(0,0,0,0);
+  var dias=Math.round((new Date(2027,0,10)-hoje)/86400000), c=$("contagem");
+  if(dias>1){ c.textContent="Faltam "+dias+" dias para a prova."; c.hidden=false; }
+  else if(dias===1){ c.textContent="A prova é amanhã."; c.hidden=false; }
+  else if(dias===0){ c.textContent="A prova é hoje."; c.hidden=false; }
+
+  progresso(); aplicar();
+})();
+</script>
+</body>
+</html>
